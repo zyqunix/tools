@@ -57,6 +57,10 @@ body {
     width: 100%;
 }
 
+.welcome * {
+    color: white;
+}
+
 .tools-main {
     display: flex;
     flex-wrap: wrap;
@@ -88,6 +92,7 @@ body {
 #tool-div img {
     height: 200px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .visit-tool {
