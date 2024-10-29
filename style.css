@@ -102,11 +102,15 @@ body {
     font-weight: normal;
 }
 
-#tool-div img {
+.tool-media  {
     height: 200px;
     border-radius: 10px;
-    cursor: pointer;
     margin: 10px;
+    transition: 0.25s ease-in-out;
+}
+
+.tool-image.active {
+    opacity: 1;
 }
 
 .visit-tool {

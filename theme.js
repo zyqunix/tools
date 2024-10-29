@@ -69,6 +69,7 @@ themeToggle.addEventListener('click', function() {
         }
 
         topbar.style.backgroundColor = "rgba(59, 59, 59, 0.885)";
+        topbar.style.borderColor = "#505050";
 
         toolContainer.style.backgroundColor = "#4b4b4b";
         toolContainer.style.borderColor = "#505050";
