@@ -89,6 +89,7 @@ body {
     justify-content: center;
     height: 75%;
     width: 500px;
+    box-shadow: 0 4px 10px rgba(16, 16, 16, 0.5);
 }
 
 .tool-header {
