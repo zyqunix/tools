@@ -9,25 +9,33 @@ body {
     transition: background-color 0.3s, color 0.3s;
     color: #f0f0f0;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 ::selection {
     background-color: #3c7855;
 }
 
+img {
+    user-select: none;
+}
+
 .topbar {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: start;
+    gap: 2vw;
     width: 100%;
+    max-width: 100vw;
     position: fixed;
     background-color: rgba(59, 59, 59, 0.885);
-    padding: 20px;
+    padding: 1.5vh 2vw;
     backdrop-filter: blur(5px);
     font-size: large;
     top: 0;
     border-bottom: 1px solid rgba(70, 70, 70, 0.885);
     z-index: 9999;
+    overflow-x: hidden;
 }
 
 .home {
@@ -41,7 +49,7 @@ body {
     margin-left: 25px;
     margin-right: -10px;
     user-select: none;
-    cursor: pointer  !important;
+    cursor: pointer !important;
 }
 
 .theme-button {
@@ -60,7 +68,15 @@ body {
 .welcome {
     text-align: center;
     margin: 0;
-    width: 100%;
+    width: 100vw;
+    max-width: 1920px;
+    line-height: 1.4;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-top: 60px; 
+    box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 
 .welcome * {
@@ -70,14 +86,15 @@ body {
 .tools-main {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 2.5vw;
     justify-content: center;
     min-height: 10vh;
-    padding-top: 5vh; 
+    max-width: 100vw;
+    padding-bottom: 50px;
 }
 
 #tool-div {
-    padding: 10px 30px 30px 30px;
+    padding: 1vh 3vw;
     background-color: rgba(75, 75, 75, 1);
     border: 2px solid rgba(80, 80, 80, 1);
     border-radius: 7px;
@@ -87,8 +104,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 75%;
-    width: 500px;
+    height: auto;
+    max-width: 90vw;
     box-shadow: 0 4px 10px rgba(16, 16, 16, 0.5);
 }
 
@@ -103,7 +120,7 @@ body {
     font-weight: normal;
 }
 
-.tool-media  {
+.tool-media {
     height: 200px;
     border-radius: 10px;
     margin: 10px;
@@ -115,11 +132,7 @@ body {
 }
 
 .visit-tool {
-    padding-top: 10px;
-    padding-bottom: 12px;
-    padding-right: 20px;
-    padding-left: 20px;
-    
+    padding: 10px 20px;
     background-color: rgb(60, 120, 85);
     color: #f0f0f0;
     border: 2px solid rgb(75, 135, 100);
@@ -127,8 +140,7 @@ body {
     transition: 0.1s;
     font-weight: bolder;
     font-size: large;
-    margin-bottom: 15px;
-    margin-top: 5px;
+    margin: 5px 0 15px 0;
 }
 
 .visit-tool:hover {
@@ -136,17 +148,19 @@ body {
     border-color: rgb(90, 150, 115);
 }
 
-
 .slideshow-container {
     position: relative;
-    width: 100%;
+    width: 90vw;
     max-width: 500px;
     margin: auto;
 }
 
 .tool-image {
     width: 100%;
+    max-width: 90vw;
+    max-height: 40vh;
     border-radius: 10px;
+    object-fit: contain;
 }
 
 .prev, .next {
