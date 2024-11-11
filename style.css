@@ -13,7 +13,8 @@ body {
 }
 
 ::selection {
-    background-color: #3c7855;
+    background-color: #c099ff;
+    color: #2a2a2a;
 }
 
 img {
