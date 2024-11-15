@@ -123,6 +123,7 @@ img {
 .tool-desc {
     margin: 5px;
     font-weight: normal;
+    max-width: 60%;
 }
 
 .tool-media {
