@@ -1,5 +1,11 @@
 const songs = [
     { 
+        title: "woody - Paint Thinner", 
+        src: "https://easyfiles.cc/2024/8/2110cfc6-d700-4c42-bc66-bafa5799c1fc/youtube_rhaFMuU1_qw_1280x720_h264(1).mp4" ,
+        duration: 100
+    },
+
+    { 
         title: "Bladee & Ecco2k - Bleach", 
         src: "https://easyfiles.cc/2024/9/4ac37ab2-20d7-4fd8-863b-3dcee1c418cd/BLADEE%20&%20ECCO2K%20-%20BLEACH%20-%20drain%20gang%20(720p50,%20h264)(1).mp4" ,
         duration: 153
@@ -10,7 +16,6 @@ const songs = [
         src: "https://easyfiles.cc/2024/9/20fa08a2-8212-4212-93b7-9c62fc563505/woody%20heaven%20&%20hell%20prod.%201mint%20-%20real1woody%20(1080p,%20h264)(1).mp4" ,
         duration: 142
     },
-
 
     { 
         title: "woody - God Said I Was Good", 
@@ -34,14 +39,7 @@ const songs = [
         title: "Joeyy - PR Package", 
         src: "https://easyfiles.cc/2024/8/7c649f45-6573-4665-9675-4d869ea1332a/youtube_ZvphwrKo52s_1280x720_h264(1).mp4" ,
         duration: 111
-    },
-
-    { 
-        title: "woody - Paint Thinner", 
-        src: "https://easyfiles.cc/2024/8/2110cfc6-d700-4c42-bc66-bafa5799c1fc/youtube_rhaFMuU1_qw_1280x720_h264(1).mp4" ,
-        duration: 100
-    },
-
+    }
 ];
 
 let currentSongIndex = 0;
