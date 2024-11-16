@@ -3,7 +3,7 @@ const songs = [
         title: "woody - Paint Thinner", 
         src: "https://easyfiles.cc/2024/8/2110cfc6-d700-4c42-bc66-bafa5799c1fc/youtube_rhaFMuU1_qw_1280x720_h264(1).mp4" ,
         duration: 100
-    },
+    }, 
 
     { 
         title: "Bladee & Ecco2k - Bleach", 
