@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zyq's Tools</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Clicking Test Without Any Trackers, Fully Open-Source on GitHub! (https://github.com/zyqunix/click_test)">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://rimgo.pussthecat.org/RFbdMMB.png" type="image/x-icon">
+
 </head>
 <body>
     <div id="topbar" class="topbar">
@@ -18,34 +22,16 @@
         <h2>This is a website for future tools. The source code can be found on my <a href="https://github.com/zyqunix/tools" target="_blank">GitHub</a>!</h2>
         <h3>Clicking "Test It" will open the tool in the current tab.</h3>
         <h3>More tools will come in the future.</h3>
-        <h3>MOTD: "To the mind that is still, the whole universe surrenders." - Lao Tzu</h3>
         
     </div>
 
-    <div class="tools-main">
-        <div id="tool-div" class="click-test">
-            <h1 class="tool-header">Mouse Test</h1>
-            <h2 class="tool-desc">This allows you to test your mouse's keys!</h2>
-            <div class="slideshow-container">
-                <button class="prev" onclick="changeSlide(-1)">❮</button>
-                <button class="next" onclick="changeSlide(1)">❯</button>
-            </div>
-            <a id="visit" class="visit-tool" href="/click">Test It</a>
-        </div> 
+    <div class="tools-main" id="toolsMain"></div>
 
-        <div id="tool-div" class="mouse-test">
-            <h1 class="tool-header">Keyboard Test</h1>
-            <h2 class="tool-desc">This allows you to test your keyboard's keys to see if they all work!</h2>
-            <div class="slideshow-container">
-                <img class="tool-media"  src="assets/keyboard.png" alt="Keyboard Image">
-            </div>
-            <a id="visit" class="visit-tool" href="/keyboard">Test It</a>
-        </div> 
+    <!--<div id="footer">© zyqunix under the MIT License</div> -->
 
-    </div>
-
+    <script src="tools.js"></script>
+    <script src="quote.js"></script>
+    <!--    <script src="slide.js"></script>    -->
     <script src="theme.js"></script>
-    <script src="slide.js"></script>
-
 </body>
 </html>

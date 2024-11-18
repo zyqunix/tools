@@ -3,7 +3,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
     font-family: monospace;
     background-color: #2a2a2a;
     transition: background-color 0.3s, color 0.3s;
@@ -39,18 +38,21 @@ img {
     overflow-x: hidden;
 }
 
-.home {
-    text-decoration: none;
-    color: #f0f0f0;
-    padding: 10px;
-    background-color: rgba(75, 75, 75, 1);
-    border: 2px solid rgba(80, 80, 80, 1);
-    border-radius: 7px;
-    transition: 0.3s;
-    margin-left: 25px;
-    margin-right: -10px;
-    user-select: none;
-    cursor: pointer !important;
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    position: fixed;
+    background-color: #3b3b3b80;
+    padding: 1.5vh 2vw;
+    backdrop-filter: blur(3px);
+    font-size: large;
+    bottom: 0;
+    border-top: 1px solid #46464680;
+    z-index: 9999;
+    overflow-x: hidden;
 }
 
 .theme-button {
@@ -58,22 +60,15 @@ img {
     background: none;
     border: none;
     transition: 0.3s;
-}
-
-.home:hover {
-    background-color: rgba(85, 85, 85, 1);
-    border: 2px solid rgba(90, 90, 90, 1);
-    text-decoration: underline;
+    margin-left: 30px;
 }
 
 .welcome {
     text-align: center;
     margin: 0;
-    width: 100vw;
+    width: 60vw;
     max-width: 1920px;
     line-height: 1.4;
-    padding-left: 20px;
-    padding-right: 20px;
     padding-bottom: 25px;
     padding-top: 60px; 
     box-sizing: border-box;
@@ -94,11 +89,12 @@ img {
     gap: 2.5vw;
     justify-content: center;
     min-height: 10vh;
-    max-width: 100vw;
-    padding-bottom: 50px;
+    max-width: 80vw;
+    margin-bottom: 50px;
 }
 
 #tool-div {
+    bottom: 20px !important;
     padding: 1vh 3vw;
     background-color: rgba(75, 75, 75, 1);
     border: 2px solid rgba(80, 80, 80, 1);
@@ -111,6 +107,7 @@ img {
     justify-content: center;
     height: auto;
     max-width: 90vw;
+    width: 50vw;
     box-shadow: 0 4px 10px rgba(16, 16, 16, 0.5);
 }
 
@@ -127,14 +124,9 @@ img {
 }
 
 .tool-media {
-    height: 200px;
-    border-radius: 10px;
+    max-width: 30vw;
+    border-radius: 5px;
     margin: 10px;
-    transition: 0.25s ease-in-out;
-}
-
-.tool-image.active {
-    opacity: 1;
 }
 
 .visit-tool {

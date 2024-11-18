@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Mouse Test",
+        "subheader": "Test your mouse's keys",
+        "description": "This tool allows you to test your mouse's keys: Left Click; Middle Click; Right Click.",
+        "url": "/click"
+    },
+    {
+        "name": "Keyboard Test",
+        "subheader": "Test your keyboard's keys",
+        "description": "This tool allows you to test your keyboard's keys. To start, press any key to show its presses.",
+        "url": "/keyboard"
+    }
+]
