@@ -24,8 +24,6 @@ themeToggle.addEventListener('click', function () {
             toolContainers.style.borderColor = "#aeaeae";    
         });
 
-
-
         const welcomeChildren = welcome.querySelectorAll('*');
         welcomeChildren.forEach(child => {
             child.style.color = "#1E1E1E";
