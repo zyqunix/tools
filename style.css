@@ -2,13 +2,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    min-height: 100%;
     font-family: monospace;
     background-color: #2a2a2a;
     transition: background-color 0.3s, color 0.3s;
     color: #f0f0f0;
     flex-direction: column;
     overflow-x: hidden;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
 }
 
 ::selection {
@@ -90,10 +97,10 @@ img {
     justify-content: center;
     min-height: 10vh;
     max-width: 80vw;
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
 }
 
-#tool-div {
+.tool-div {
     bottom: 20px !important;
     padding: 1vh 3vw;
     background-color: rgba(75, 75, 75, 1);

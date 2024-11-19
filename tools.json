@@ -2,13 +2,33 @@
     {
         "name": "Mouse Test",
         "subheader": "Test your mouse's keys",
+        "subheader-de": "Teste die Tasten deiner Maus aus",
         "description": "This tool allows you to test your mouse's keys: Left Click; Middle Click; Right Click.",
+        "description-de": "Mit diesem Tool kannst du die Tasten deiner  Maus testen: Linksklick, Mittelklick, Rechtsklick..",
         "url": "/click"
     },
     {
         "name": "Keyboard Test",
         "subheader": "Test your keyboard's keys",
+        "subheader-de": "Teste die Tasten deiner Tastatur aus",
         "description": "This tool allows you to test your keyboard's keys. To start, press any key to show its presses.",
+        "description-de": "Mit diesem Tool kannst du die Tasten deiner Tastatur testen. Drücke eine beliebige Taste, um die Tastendrücke anzuzeigen.",
         "url": "/keyboard"
+    },
+    {
+        "name": "Bio",
+        "subheader": "A page with my links",
+        "subheader-de": "Eine Seite mit meinen Links",
+        "description": "This site includes my links like Instagram, so you can contact me easier.",
+        "description-de": "Diese Seite enthält meine Links wie Instagram, damit du mich einfacher kontaktieren kannst.",
+        "url": "/bio"
+    },
+    {
+        "name": "90's Bio",
+        "subheader": "A 90's inspired site",
+        "subheader-de": "Eine 90er inspirierte Seite",
+        "description": "This is a site inspired by a 90's 'About Me' site.",
+        "description-de": "Diese Seite ist von 90er Websites inspiriert.",
+        "url": "/old"
     }
 ]

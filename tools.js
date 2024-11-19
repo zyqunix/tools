@@ -24,14 +24,14 @@ function renderTools(filteredTools) {
     filteredTools.sort((a, b) => b.description - a.description);
     filteredTools.forEach(tool => {
         const toolItem = document.createElement("div");
-        toolItem.id = "tool-div";
+        toolItem.className = "tool-div";
 
         toolItem.innerHTML = `
-        <h1 class="tool-header">${tool.name}</h1>
+        <h1 class="tool-header">↬ ${tool.name} ↫</h1>
         <h2 class="tool-subhead"><u>${tool.subheader}</u></h2>
         <h2 class="tool-desc">${tool.description}</h2>
         <img class="tool-media" src="assets/${tool.name}.png" alt="${tool.name} Image">
-        <a id="visit" class="visit-tool" href="${tool.url}">Try the "${tool.name}" tool!</a>
+        <a id="visit" class="visit-tool" href="${tool.url}">Visit "${tool.name}"!</a>
         `;
 
         toolList.appendChild(toolItem);
