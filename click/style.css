@@ -2,6 +2,13 @@
 CSS CODE.. I DON'T KNOW WHAT ELSE TO SAY. IT WORKS, BUT COULD BE IMPROVED
 */
 
+@font-face {
+    font-family: 'Hack';
+    src: url('https://easyfiles.cc/2024/11/07377006-c12a-461a-b3c6-0d602bac58bf/Hack-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -14,7 +21,8 @@ body {
 }
 
 * {
-    font-family: monospace;
+    font-family: 'Hack', monospace;
+    font-size: medium;
 }
 
 button, p {
