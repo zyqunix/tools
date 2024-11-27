@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Hack';
+    src: url(fonts/Hack-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Hack', monospace;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+html {
+    height: 100%;
+}
+
+::selection {
+    background-color: #c099ff;
+    color: #2a2a2a;
+}
+
+.main {
+    width: 90%;
+    max-width: 85%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.projects h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.project-div,
+.futureproject-div {
+    width: calc(33% - 40px);
+    max-width: 350px;
+    padding: 20px;
+    background-color: rgba(59, 59, 59, 0.885);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.project-div *,
+.futureproject-div *  {
+    color: white;
+}
+
+.project-div .visit-project,
+.futureproject-div .visit-futureproject {
+    padding: 10px 20px;
+    background-color: #569470;
+    color: #cfcfcf;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0;
+    bottom: 0;
+    transition: 0.1s;
+}
+
+.project-div h1,
+.futureproject-div h1 {
+    font-size: 1.25rem;
+}
+
+.project-div .visit-project strong,
+.futureproject-div .visit-futureproject strong {
+    color: #cfcfcf;
+}
+
+.project-div .visit-project:hover,
+.futureproject-div .visit-futureproject:hover {
+    background-color: #47785b;
+    color: #ffffff;
+}
+
+.project-div .visit-project:hover strong,
+.futureproject-div .visit-futureproject:hover strong {
+    color: #ffffff;
+}
+
+.project-desc,
+.futureproject-desc {
+    font-size: 0.75rem;
+    margin-top: 10px;
+}
+
+.project-desc a,
+.futureproject-desc a {
+    transition: 0.1s;
+}
+
+.project-desc a:hover,
+.futureproject-desc a:hover {
+    color: #c099ff;
+}
+
+@media (max-width: 768px) {
+    .main {
+        width: 95%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-div {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-div {
+        padding: 15px;
+        font-size: 0.85rem;
+    }
+}

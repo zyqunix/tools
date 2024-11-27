@@ -1,0 +1,50 @@
+[
+    {
+        "name": "fentseller.lol",
+        "subheader": "The 'Tools' Site",
+        "description": "The site you are currently on is my biggest project as of right now.(Domain gifted by saif)",
+        "url": "https://fentseller.lol"
+    },
+    {
+        "name": "ZyMusic",
+        "subheader": "Android Music Streaming App",
+        "description": "A fork of <a href='https://github.com/vfsfitvnm/ViMusic/'>ViMusic</a> that includes more colors. (Very, very unfinished however; YouTube/Google added an anti-bot protection addition that broke it.",
+        "url": "https://github.com/zyqunix/ViMusic-master/"
+    },
+    {
+        "name": "Unexpected Keyboard",
+        "subheader": "Android Keyboard",
+        "description": "A fork of <a href='https://github.com/Julow/Unexpected-Keyboard/'>Unexpected Keyboard</a> that includes more colors, just like ZyMusic.",
+        "url": "https://github.com/zyqunix/Unexpected-Keyboard"
+    },
+    {
+        "name": "MyWig",
+        "subheader": "Android Widgets App",
+        "description": "An app with Flashcards; more widgets coming soon. Name means 'MyWidget'.",
+        "url": "https://github.com/zyqunix/MyWig"
+    },
+    {
+        "name": "Equicord",
+        "subheader": "Discord Client Modification",
+        "description": "A fork of <a href='https://github.com/Equicord/Equicord/'>Equicord</a> that includes more plugins and other stuff.",
+        "url": "https://github.com/zyqunix/Unexpected-Keyboard"
+    },
+    {
+        "name": "AutoClicker",
+        "subheader": "A C# AutoClicker",
+        "description": "An AutoClicker written in C# using the MouseKeyHook Library.",
+        "url": "https://github.com/zyqunix/AutoClicker"
+    },
+    {
+        "name": "Bio",
+        "subheader": "An 'About Me' Site",
+        "description": "A site about me with a music player.",
+        "url": "https://github.com/zyqunix/Bio"
+    },
+    {
+        "name": "GitHub Repositories",
+        "subheader": "My GitHub Repositories",
+        "description": "Here are all of my GitHub repositories, where you can fork, star, and make issues (if needed).",
+        "url": "https://github.com/zyqunix?tab=repositories"
+    }
+]
