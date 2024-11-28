@@ -52,5 +52,11 @@
         "subheader": "My GitHub Repositories",
         "description": "Here are all of my GitHub repositories, where you can fork, star, and open issues (if needed).",
         "url": "https://github.com/zyqunix?tab=repositories"
+    },
+    {
+        "name": "Hyprland Dots",
+        "subheader": "My Hyprland Dotfiles",
+        "description": "My Arch Hyprland dotfiles with my rofi, wallust and hypr",
+        "url": "/assets/.config.zip"
     }
 ]
