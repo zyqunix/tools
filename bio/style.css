@@ -8,8 +8,8 @@ html, body {
     align-items: center;
     font-family: monospace;
     background-color: black;
-    overflow: hidden;
     color: white !important;
+    overflow: hidden;
 }
 
 @font-face {
@@ -322,7 +322,7 @@ html, body {
 }
 
 .blurBG {
-    backdrop-filter: blur(0);
+    backdrop-filter: blur(0px);
     width: 105%;
     height: 110%;
     border-radius: 10px;
@@ -372,4 +372,11 @@ div.duration-info {
 
 button {
     user-select: none;
+}
+
+#cursoreffectelement {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    z-index: 0;
 }

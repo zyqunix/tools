@@ -83,9 +83,9 @@ var cursoreffects = function (t) {
             i = t?.characters || ["h", "e", "l", "l", "o"];
         const o = t?.colors || ["#6622CC", "#A755C2", "#B07C9E", "#B59194", "#D2A1B8"];
         let s, h, c, l = t?.cursorOffset || {
-                x: 0,
-                y: 0
-            },
+            x: 0,
+            y: 0
+        },
             a = window.innerWidth,
             r = window.innerHeight,
             d = {
@@ -286,21 +286,21 @@ var cursoreffects = function (t) {
                 W[0] = Math.round(S[0] += (l.y - S[0]) * m), H[0] = Math.round(Y[0] += (l.x - Y[0]) * m);
                 for (let t = 1; t < z; t++) W[t] = Math.round(S[t] += (W[t - 1] - S[t]) * m), H[t] = Math.round(Y[t] += (H[t - 1] - Y[t]) * m), S[t - 1] >= c - 80 && (S[t - 1] = c - 80), Y[t - 1] >= h - 80 && (Y[t - 1] = h - 80)
             }(),
-            function () {
-                n.clearRect(0, 0, h, c);
-                const t = new Date,
-                    e = t.getSeconds(),
-                    i = Math.PI * (e - 15) / 30,
-                    o = t.getMinutes(),
-                    s = Math.PI * (o - 15) / 30,
-                    l = t.getHours(),
-                    a = Math.PI * (l - 3) / 6 + Math.PI * parseInt(t.getMinutes()) / 360;
-                for (let t = 0; t < F.length; t++) F[t].y = S[t] + 67.5 * Math.sin(-i + t * b * Math.PI / 180), F[t].x = Y[t] + 67.5 * Math.cos(-i + t * b * Math.PI / 180), n.fillStyle = F[t].color, n.fillText(F[t].value, F[t].x, F[t].y);
-                for (let t = 0; t < T.length; t++) T[t].y = S[F.length + t] + 45 * Math.sin(t * B * Math.PI / 180), T[t].x = Y[F.length + t] + 45 * Math.cos(t * B * Math.PI / 180), n.fillStyle = T[t].color, n.fillText(T[t].value, T[t].x, T[t].y);
-                for (let t = 0; t < D.length; t++) D[t].y = S[F.length + E + t] + 0 + t * R * Math.sin(a), D[t].x = Y[F.length + E + t] + 0 + t * R * Math.cos(a), n.fillStyle = D[t].color, n.fillText(D[t].value, D[t].x, D[t].y);
-                for (let t = 0; t < X.length; t++) X[t].y = S[F.length + E + D.length + t] + 0 + t * R * Math.sin(s), X[t].x = Y[F.length + E + D.length + t] + 0 + t * R * Math.cos(s), n.fillStyle = X[t].color, n.fillText(X[t].value, X[t].x, X[t].y);
-                for (let t = 0; t < I.length; t++) I[t].y = S[F.length + E + D.length + X.length + t] + 0 + t * R * Math.sin(i), I[t].x = Y[F.length + E + D.length + X.length + t] + 0 + t * R * Math.cos(i), n.fillStyle = I[t].color, n.fillText(I[t].value, I[t].x, I[t].y)
-            }(), i = requestAnimationFrame(k)
+                function () {
+                    n.clearRect(0, 0, h, c);
+                    const t = new Date,
+                        e = t.getSeconds(),
+                        i = Math.PI * (e - 15) / 30,
+                        o = t.getMinutes(),
+                        s = Math.PI * (o - 15) / 30,
+                        l = t.getHours(),
+                        a = Math.PI * (l - 3) / 6 + Math.PI * parseInt(t.getMinutes()) / 360;
+                    for (let t = 0; t < F.length; t++) F[t].y = S[t] + 67.5 * Math.sin(-i + t * b * Math.PI / 180), F[t].x = Y[t] + 67.5 * Math.cos(-i + t * b * Math.PI / 180), n.fillStyle = F[t].color, n.fillText(F[t].value, F[t].x, F[t].y);
+                    for (let t = 0; t < T.length; t++) T[t].y = S[F.length + t] + 45 * Math.sin(t * B * Math.PI / 180), T[t].x = Y[F.length + t] + 45 * Math.cos(t * B * Math.PI / 180), n.fillStyle = T[t].color, n.fillText(T[t].value, T[t].x, T[t].y);
+                    for (let t = 0; t < D.length; t++) D[t].y = S[F.length + E + t] + 0 + t * R * Math.sin(a), D[t].x = Y[F.length + E + t] + 0 + t * R * Math.cos(a), n.fillStyle = D[t].color, n.fillText(D[t].value, D[t].x, D[t].y);
+                    for (let t = 0; t < X.length; t++) X[t].y = S[F.length + E + D.length + t] + 0 + t * R * Math.sin(s), X[t].x = Y[F.length + E + D.length + t] + 0 + t * R * Math.cos(s), n.fillStyle = X[t].color, n.fillText(X[t].value, X[t].x, X[t].y);
+                    for (let t = 0; t < I.length; t++) I[t].y = S[F.length + E + D.length + X.length + t] + 0 + t * R * Math.sin(i), I[t].x = Y[F.length + E + D.length + X.length + t] + 0 + t * R * Math.cos(i), n.fillStyle = I[t].color, n.fillText(I[t].value, I[t].x, I[t].y)
+                }(), i = requestAnimationFrame(k)
         }
 
         function N() {
@@ -318,9 +318,9 @@ var cursoreffects = function (t) {
             o = window.innerWidth,
             s = window.innerHeight;
         const h = {
-                x: o / 2,
-                y: o / 2
-            },
+            x: o / 2,
+            y: o / 2
+        },
             c = {
                 x: o / 2,
                 y: o / 2
@@ -411,9 +411,9 @@ var cursoreffects = function (t) {
             o = window.innerWidth,
             s = window.innerHeight;
         const h = {
-                x: o / 2,
-                y: o / 2
-            },
+            x: o / 2,
+            y: o / 2
+        },
             c = {
                 x: o / 2,
                 y: o / 2
@@ -1013,10 +1013,10 @@ var cursoreffects = function (t) {
     }), t
 }({});
 
-window.onload = function() {
+window.onload = function () {
 
     cursoreffects.fairyDustCursor({
-        element: document.body,
-        color:   "#FFFFFF"
+        element: document.getElementById('cursoreffectelement'),
+        color: "#FFFFFF"
     })
 };
