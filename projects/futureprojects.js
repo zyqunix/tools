@@ -17,7 +17,7 @@ function renderfutureprojects(filteredfutureprojects) {
     futureprojectList.innerHTML = "";
 
     if (filteredfutureprojects.length === 0) {
-        futureprojectList.innerHTML = "<div class='text-center'>No futureprojects.</div>"
+        futureprojectList.innerHTML = "<div class='text-center'>No Future Projects.</div>"
         return;
     }
 

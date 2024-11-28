@@ -16,10 +16,45 @@ body {
     font-size: 1rem;
     background-color: #2a2a2a;
     color: #f0f0f0;
+    overflow-x: hidden;
 }
 
 html {
     height: 100%;
+}
+
+img[class="img_header"] {
+    height: 3rem;
+    margin-top: 22px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+div.header-main {
+    width: 100%;
+    padding: 20px 0 20px 40px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(59, 59, 59, 0.885);
+    backdrop-filter: blur(5px);
+}
+
+div.header-main {
+    height: 1rem;
+}
+
+div.header-main a {
+    color: #c099ff;
+    margin: 0 5px 0 5px;
+}
+
+div.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 ::selection {
@@ -32,6 +67,7 @@ html {
     max-width: 85%;
     text-align: center;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 h2 {

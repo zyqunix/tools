@@ -12,6 +12,12 @@
         "url": "https://github.com/zyqunix/ViMusic-master/"
     },
     {
+        "name": "ZyMusic 2",
+        "subheader": "Android Music Streaming App",
+        "description": "A fork of <a href='https://github.com/25huizengek1/ViTune/'>ViTune</a> (fork of ViMusic) that includes more colors.",
+        "url": "https://github.com/zyqunix/ViTune/"
+    },
+    {
         "name": "Unexpected Keyboard",
         "subheader": "Android Keyboard",
         "description": "A fork of <a href='https://github.com/Julow/Unexpected-Keyboard/'>Unexpected Keyboard</a> that includes more colors, just like ZyMusic.",
@@ -38,13 +44,13 @@
     {
         "name": "Bio",
         "subheader": "An 'About Me' Site",
-        "description": "A site about me with a music player.",
+        "description": "A site about me with a music player. Donate Crypto to keep this site up!",
         "url": "https://github.com/zyqunix/Bio"
     },
     {
         "name": "GitHub Repositories",
         "subheader": "My GitHub Repositories",
-        "description": "Here are all of my GitHub repositories, where you can fork, star, and make issues (if needed).",
+        "description": "Here are all of my GitHub repositories, where you can fork, star, and open issues (if needed).",
         "url": "https://github.com/zyqunix?tab=repositories"
     }
 ]
