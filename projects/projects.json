@@ -57,6 +57,6 @@
         "name": "Hyprland Dots",
         "subheader": "My Hyprland Dotfiles",
         "description": "My Arch Hyprland dotfiles with my rofi, wallust and hypr",
-        "url": "/assets/.config.zip"
+        "url": "/assets/config.zip"
     }
 ]
