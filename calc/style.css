@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+    font-size: small;
+    background-color: #2a2a2a;
+    transition: background-color 0.3s, color 0.3s;
+    color: #f0f0f0;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+div.main {
+    padding: 50px;
+    text-align: right;
+    background-color: #909090;
+    max-width: 350px;
+    border-radius: 10px;
+    border: 2px solid #707070;
+}
+
+.result {
+    width: 98.5%;
+    height: 40px;
+    font-size: x-large;
+    background-color: #505050;
+    border: 2px solid #757575;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: right;
+    display: flex;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr); 
+    gap: 10px; 
+    margin-top: 25px;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #ccc;
+    background-color: #464646;
+    border: 2px solid #505050;
+    border-radius: 4px;
+    transition: background-color 0.1s linear;
+    font-size: large;
+}
+
+#resultnum {
+    display: flex;
+    justify-content: center;
+}
+
+button#sum {
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #ddd;
+    background-color: #b38eed;
+    border: 2px solid #a986e1;
+    border-radius: 4px;
+    transition: background-color 0.1s linear;
+    font-size: large;
+}
+
+button:hover {
+    background-color: #565656;
+    border: 2px solid #606060;
+    color: #fff;
+}
+
+button#sum:hover {
+    background-color: #c099ff;
+    border: 2px solid #b38eed;
+    color: #fff;
+}
+
+.result:hover {
+    background-color: #606060;
+    border: 2px solid #757575;
+}
