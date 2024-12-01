@@ -30,12 +30,6 @@
         "url": "https://github.com/zyqunix/MyWig"
     },
     {
-        "name": "Equicord",
-        "subheader": "Discord Client Modification",
-        "description": "A fork of <a href='https://github.com/Equicord/Equicord/'>Equicord</a> that includes more plugins and other stuff.",
-        "url": "https://github.com/zyqunix/Unexpected-Keyboard"
-    },
-    {
         "name": "AutoClicker",
         "subheader": "A C# AutoClicker",
         "description": "An AutoClicker written in C# using the MouseKeyHook Library.",
