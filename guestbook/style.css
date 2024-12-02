@@ -10,7 +10,7 @@
 
 body {
     background-color: #505050;
-    font-family: 'JetBrainsMono', 'Hack', monospace;
+    font-family: 'Hack', 'JetBrainsMono', monospace;
     margin: 20px 40px 20px 40px;
     display: flex;
     justify-content: center;

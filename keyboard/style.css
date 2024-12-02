@@ -17,7 +17,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
     overflow-x: hidden;
     overflow-y: visible;
-    font-family: 'JetBrainsMono', 'Hack', monospace;
+    font-family: 'Hack', 'JetBrainsMono', monospace;
 }
 
 * {

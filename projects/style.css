@@ -20,7 +20,7 @@ body {
     background-color: #2a2a2a;
     color: #f0f0f0;
     overflow-x: hidden;
-    font-family: 'JetBrainsMono', 'Hack', monospace;
+    font-family: 'Hack', 'JetBrainsMono', monospace;
 }
 
 html {

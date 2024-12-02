@@ -5,7 +5,6 @@ const help = document.getElementById('help');
 const container = document.getElementById('container');
 const seperator = document.getElementById('seperator');
 const counterMain = document.getElementById('key-counters');
-const fontButton = document.getElementById('font-button');
 
 let isLightMode = false;
 
@@ -41,33 +40,8 @@ document.addEventListener("keydown", (e) => {
     logKey(e.key);
 });
 
-
-
 help.addEventListener('click', function () {
     alert('Press any key to see how many times it was pressed.')
-});
-
-let isFunnyFont = false;
-fontButton.addEventListener('click', function() {
-    if (!isFunnyFont) {
-        document.querySelectorAll("*").forEach((e) => {
-            e.style.fontFamily = "crueltysquad";
-        });
-        isFunnyFont = true;
-        console.log(isFunnyFont);
-        document.getElementById('font-button').innerHTML = "Disable Funny Font";
-
-    } else {
-        document.querySelectorAll("*").forEach((e) => {
-            e.style.fontFamily = "monospace";
-        });
-        isFunnyFont = false;
-        console.log(isFunnyFont)
-        document.getElementById('font-button').innerHTML = "Enable Funny Font";
-
-
-    }
-    
 });
 
 themeToggle.addEventListener('click', function() {

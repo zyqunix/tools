@@ -21,7 +21,7 @@ body {
     padding: 20px;
     flex-direction: column;
     overflow: hidden;
-    font-family: 'JetBrainsMono', 'Hack', monospace;
+    font-family: 'Hack', 'JetBrainsMono', monospace;
 }
 
 .top {
