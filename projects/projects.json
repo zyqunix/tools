@@ -6,6 +6,12 @@
         "url": "https://fentseller.lol"
     },
     {
+        "name": "Guestbook",
+        "subheader": "A Guestbook frontend from SmartGB",
+        "description": "A custom frontend for a <a href='https://users2.smartgb.com/g/g.php?a=s&i=g26-39906-27/'>SmartGuestBook</a>, which uses a CORS Proxy to fetch the guestbook entries.",
+        "url": "/assets/config.zip"
+    },
+    {
         "name": "ZyMusic",
         "subheader": "Android Music Streaming App",
         "description": "A fork of <a href='https://github.com/vfsfitvnm/ViMusic/'>ViMusic</a> that includes more colors. (Very, very unfinished however; YouTube/Google added an anti-bot protection addition that broke it.)",

@@ -1,19 +1,11 @@
-/* 
-CSS CODE.. I DON'T KNOW WHAT ELSE TO SAY. IT WORKS, BUT COULD BE IMPROVED
-*/
-
 @font-face {
-    font-family: 'crueltysquad';
-    src: url('https://easyfiles.cc/2024/11/da8c7731-4b49-4155-bad5-e4344a2ab6da/gamefont(1).ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Hack';
+    src: url('/Fonts/Hack/Hack-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Hack';
-    src: url('https://easyfiles.cc/2024/11/07377006-c12a-461a-b3c6-0d602bac58bf/Hack-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'JetBrainsMono';
+    src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
 }
 
 body {
@@ -25,6 +17,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
     overflow-x: hidden;
     overflow-y: visible;
+    font-family: 'JetBrainsMono', 'Hack', monospace;
 }
 
 * {

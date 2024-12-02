@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'Hack';
+    src: url('/Fonts/Hack/Hack-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
+}
+
+body {
+    background-color: #505050;
+    color: white;
+    font-family: monospace;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'JetBrainsMono', 'Hack', monospace;
+}
+
+.top {
+    top: 0;
+    left: 0;
+}
+
+marquee {
+    position: relative;
+    font-size: 16px;
+    padding: 10px 0;
+    background-color: #454545;
+    color: #fff;
+    width: 100%;
+}
+
+::selection {
+    color: white;
+    background-color: #b49cdf;
+}
+
+button:not(#toggle) {
+    color: white;
+    background-color: #b49cdf;
+    border: 2px solid  #9f8ac7;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#toggle {
+    left: 10px;
+    bottom: 10px;
+    position: absolute;
+    cursor: pointer;
+    padding: 3px;
+    color: #c0c0c0;
+    background-color: #454545;
+    border: 2px solid #404040;
+    border: none;
+}
+
+#toggle:hover {
+    color: #b49cdf;
+    background-color: #404040;
+}
+
+button:hover:not(#toggle) {
+    background-color: #9f8ac7;
+    border-color: #947fb9;
+}
+
+.main {
+    max-width: 80%;
+    text-align: center;
+    padding: 30px;
+    background-color: #454545;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(16, 16, 16, 0.5);
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: underline;
+    color: white;
+    transition: color 0.1s;
+}
+
+a:hover {
+    color: #cdb1ff;
+}
+
+@media (min-width: 1024px) {
+    .main {
+        max-width: 50%;
+        padding: 40px;
+        transform: scale(1.2);
+    }
+
+    button {
+        padding: 12px 30px;
+    }
+
+    marquee { 
+        position: absolute;
+        top: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main {
+        max-width: 70%;
+        padding: 35px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+
+    marquee { 
+        position: absolute;
+        top: 0;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .main {
+        max-width: 100%;
+        padding: 20px;
+        transform: scale(1);
+    }
+
+    marquee {
+        font-size: 14px;
+        position: absolute;
+        top: 0;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

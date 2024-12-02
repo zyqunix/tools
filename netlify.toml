@@ -1,0 +1,8 @@
+[build]
+  publish = "guestbook"  # or the directory that contains your index.html
+  functions = "functions"
+
+[[redirects]]
+  from = "/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
