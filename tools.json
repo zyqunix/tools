@@ -28,5 +28,11 @@
         "subheader": "My most popular projects",
         "description": "Some of my projects I'd like to showcase. All on GitHub",
         "url": "/projects"
+    },
+    {
+        "name": "Autist",
+        "subheader": "Autstic friend",
+        "description": "A site for my autistic friend who does funny noises",
+        "url": "/autist"
     }
 ]

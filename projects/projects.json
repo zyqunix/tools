@@ -9,7 +9,7 @@
         "name": "Guestbook",
         "subheader": "A Guestbook frontend from SmartGB",
         "description": "A custom frontend for a <a href='https://users2.smartgb.com/g/g.php?a=s&i=g26-39906-27/'>SmartGuestBook</a>, which uses a CORS Proxy to fetch the guestbook entries.",
-        "url": "/assets/config.zip"
+        "url": "/guestbook"
     },
     {
         "name": "ZyMusic",
