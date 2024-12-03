@@ -1,4 +1,4 @@
-fetch('https://corsproxy.io/?https%3A%2F%2Fusers2.smartgb.com%2Fg%2Fg.php%3Fa%3Ds%26i%3Dg26-39906-27')
+fetch('https://api.allorigins.win/raw?url=https%3A%2F%2Fusers2.smartgb.com%2Fg%2Fg.php%3Fa%3Ds%26i%3Dg26-39906-27')
     .then(response => response.text())
     .then(html => {
         let parser = new DOMParser();
@@ -6,8 +6,8 @@ fetch('https://corsproxy.io/?https%3A%2F%2Fusers2.smartgb.com%2Fg%2Fg.php%3Fa%3D
         let entries = doc.querySelectorAll('table[bgcolor="#F4F4F4"]');
 
         entries.forEach(entry => {
-            let dateElement = entry.querySelector('tr > td > font > b');
-            let date = dateElement && dateElement.textContent.includes('Date:') ? dateElement.textContent.replace('Date:', '').trim() : 'No date';
+            let dateElement = entry.querySelector('tr > td > font');
+            let date = dateElement.parentNode.nextSibling.textContent.trim();
             let name = entry.querySelector('tr:nth-child(2) td:nth-child(2)') ? entry.querySelector('tr:nth-child(2) td:nth-child(2)').textContent.trim() : 'No name';
             let email = entry.querySelector('tr:nth-child(3) td:nth-child(2) a') ? entry.querySelector('tr:nth-child(3) td:nth-child(2) a').textContent.trim() : 'No email';
             let web = entry.querySelector('tr:nth-child(4) td:nth-child(2) a') ? entry.querySelector('tr:nth-child(4) td:nth-child(2) a').textContent.trim() : 'No website';

@@ -8,6 +8,10 @@
     src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
 }
 
+h6 {
+    margin-top: -10px;
+}
+
 body {
     background-color: #505050;
     font-family: 'Hack', 'JetBrainsMono', monospace;
