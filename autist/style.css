@@ -24,6 +24,10 @@ body {
     font-family: 'Hack', 'JetBrainsMono', monospace;
 }
 
+* {
+    font-family: 'Hack', 'JetBrainsMono', monospace;
+}
+
 .top {
     top: 0;
     left: 0;
@@ -60,7 +64,7 @@ button:not(#toggle) {
     bottom: 10px;
     position: absolute;
     cursor: pointer;
-    padding: 3px;
+    padding: 5px;
     color: #c0c0c0;
     background-color: #454545;
     border: 2px solid #404040;
