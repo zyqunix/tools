@@ -156,30 +156,66 @@ html {
 }
 
 @media (max-width: 768px) {
-    .main {
-        width: 95%;
+    .tools-main {
+        max-width: 100%;
+        gap: 1.5vw;
     }
 
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .project-div {
+    .tool-div {
+        width: 100%;
+        scale: 1;
+        margin-bottom: 20px;
         font-size: 0.9rem;
+    }
+
+    .tool-header {
+        font-size: 1.2rem;
+    }
+
+    .tool-desc {
+        font-size: 0.8rem;
+    }
+
+    .visit-tool {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .welcome {
+        font-size: 0.9rem;
+        width: 90vw;
+        padding-top: 40px;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 0.9rem;
+    .tools-main {
+        max-width: 100%;
     }
 
-    h2 {
-        font-size: 1.2rem;
+    .tool-div {
+        width: 100%;
+        scale: 1;
+        margin-bottom: 20px;
+        font-size: 0.8rem;
     }
 
-    .project-div {
-        padding: 15px;
+    .tool-header {
+        font-size: 1rem;
+    }
+
+    .tool-desc {
+        font-size: 0.75rem;
+    }
+
+    .visit-tool {
         font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .welcome {
+        font-size: 0.8rem;
+        width: 100%;
+        padding-top: 30px;
     }
 }
