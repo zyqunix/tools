@@ -36,7 +36,7 @@
         "url": "/autist"
     },
     {
-        "name": "Guestook",
+        "name": "Guestbook",
         "subheader": "Custom Guestbook Frontend",
         "description": "A custo SmartGB frontend that uses a CORS Proxy to fetch reviews",
         "url": "/guestbook"
