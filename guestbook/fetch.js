@@ -12,7 +12,7 @@ fetch('https://api.allorigins.win/raw?url=https%3A%2F%2Fusers2.smartgb.com%2Fg%2
             let email = entry.querySelector('tr:nth-child(3) td:nth-child(2) a') ? entry.querySelector('tr:nth-child(3) td:nth-child(2) a').textContent.trim() : 'No email';
             let web = entry.querySelector('tr:nth-child(4) td:nth-child(2) a') ? entry.querySelector('tr:nth-child(4) td:nth-child(2) a').textContent.trim() : 'No website';
             let number = entry.querySelector('tr:nth-child(5) td:nth-child(2)') ? entry.querySelector('tr:nth-child(5) td:nth-child(2)').textContent.trim() : 'No number';
-            let message = entry.querySelector('.divmess') ? entry.querySelector('.divmess').textContent.trim() : 'No message';
+            let message = entry.querySelector('.divmess') ? entry.querySelector('.divmess').innerHTML.trim() : 'No message';
 
             let guestbookEntry = document.createElement('div');
             guestbookEntry.classList.add('guestbook-entry');
