@@ -2,25 +2,25 @@
     {
         "name": "Mouse Test",
         "subheader": "Test your mouse's keys",
-        "description": "This tool allows you to test your mouse's keys: Left Click; Middle Click; Right Click.",
+        "description": "This tool allows you to test your mouse's keys: Left Click; Middle Click; Right Click",
         "url": "/click"
     },
     {
         "name": "Keyboard Test",
         "subheader": "Test your keyboard's keys",
-        "description": "This tool allows you to test your keyboard's keys. To start, press any key to show its presses.",
+        "description": "This tool allows you to test your keyboard's keys. To start, press any key to show its presses",
         "url": "/keyboard"
     },
     {
         "name": "Bio",
         "subheader": "A page with my links",
-        "description": "This site includes my links like Instagram, so you can contact me easier.",
+        "description": "This site includes my links like Instagram, so you can contact me easier",
         "url": "/bio"
     },
     {
         "name": "90's Bio",
         "subheader": "A 90's inspired site",
-        "description": "This is a site inspired by a 90's 'About Me' site.",
+        "description": "This is a site inspired by a 90's 'About Me' site",
         "url": "/old"
     },
     {
@@ -33,6 +33,12 @@
         "name": "Autist",
         "subheader": "Autstic friend",
         "description": "A site for my autistic friend who does funny noises",
+        "url": "/autist"
+    },
+    {
+        "name": "Guestook",
+        "subheader": "Custom Guestbook Frontend",
+        "description": "A custo SmartGB frontend that uses a CORS Proxy to fetch reviews",
         "url": "/autist"
     }
 ]
