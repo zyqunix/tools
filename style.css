@@ -32,6 +32,10 @@ html {
     color: #2a2a2a;
 }
 
+#motd {
+    font-style: italic;
+}
+
 .topbar {
     display: flex;
     align-items: center;

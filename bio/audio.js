@@ -6,6 +6,12 @@ const songs = [
     }, 
 
     { 
+        title: "Joeyy - PR Package", 
+        src: "https://easyfiles.cc/2024/8/7c649f45-6573-4665-9675-4d869ea1332a/youtube_ZvphwrKo52s_1280x720_h264(1).mp4" ,
+        duration: 111
+    },
+
+    { 
         title: "Bladee & Ecco2k - Bleach", 
         src: "https://easyfiles.cc/2024/9/4ac37ab2-20d7-4fd8-863b-3dcee1c418cd/BLADEE%20&%20ECCO2K%20-%20BLEACH%20-%20drain%20gang%20(720p50,%20h264)(1).mp4" ,
         duration: 153
@@ -27,12 +33,6 @@ const songs = [
         title: "sniper2004 - la ny", 
         src: "https://easyfiles.cc/2024/8/b8332c2a-e70b-4ec0-9ba8-acc7e5449db7/youtube_mkmn3QZSZUM_874x720_h264(1).mp4" ,
         duration: 87
-    },
-
-    { 
-        title: "Joeyy - PR Package", 
-        src: "https://easyfiles.cc/2024/8/7c649f45-6573-4665-9675-4d869ea1332a/youtube_ZvphwrKo52s_1280x720_h264(1).mp4" ,
-        duration: 111
     }
 ];
 

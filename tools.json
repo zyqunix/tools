@@ -3,42 +3,71 @@
         "name": "Mouse Test",
         "subheader": "Test your mouse's keys",
         "description": "This tool allows you to test your mouse's keys: Left Click; Middle Click; Right Click",
-        "url": "/click"
+        "url": "/click",
+
+        "name-de": "Maus Test",
+        "subheader-de": "Teste deine Maustasten",
+        "description-de": "Dieses Tool erlaubt dir die Tasten deiner Maus zu Testen: LMB; MMB; RMB"
     },
     {
         "name": "Keyboard Test",
         "subheader": "Test your keyboard's keys",
         "description": "This tool allows you to test your keyboard's keys. To start, press any key to show its presses",
-        "url": "/keyboard"
+        "url": "/keyboard",
+
+        "name-de": "Tastatur Test",
+        "subheader-de": "Teste deine Tastaturtasten",
+        "description-de": "Dieses Tool erlaubt dir die Tasten deiner Tastatur zu Testen"
+
     },
     {
         "name": "Bio",
         "subheader": "A page with my links",
         "description": "This site includes my links like Instagram, so you can contact me easier",
-        "url": "/bio"
+        "url": "/bio",
+
+        "name-de": "Bio",
+        "subheader-de": "Eine Seite mit meinen Links",
+        "description-de": "Diese Seite beinhaltet meine Links wie Instagram, sie hat auch einen Musikspieler"
     },
     {
         "name": "90's Bio",
         "subheader": "A 90's inspired site",
         "description": "This is a site inspired by a 90's 'About Me' site",
-        "url": "/old"
+        "url": "/old",
+
+        "name-de": "90-er Bio",
+        "subheader-de": "Eine Seite mit einen 90-er Stil",
+        "description-de": "Diese Seite ist wie /bio, aber wie in den 90ern"
     },
     {
         "name": "Projects",
         "subheader": "My most popular projects",
         "description": "Some of my projects I'd like to showcase. All on GitHub",
-        "url": "/projects"
+        "url": "/projects",
+
+        "name-de": "Projekte",
+        "subheader-de": "Meine bekannteste Projekte",
+        "description-de": "Einige meiner Projekte die ich gerne zeigen möchte. Alle auf GitHub"
     },
     {
         "name": "Autist",
         "subheader": "Autstic friend",
         "description": "A site for my autistic friend who does funny noises",
-        "url": "/autist"
+        "url": "/autist",
+
+        "name-de": "Autist",
+        "subheader-de": "Autistischer Freund",
+        "description-de": "Eine Seite für meinen autistischen Freund, der lustige Geräusche macht"
     },
     {
         "name": "Guestbook",
         "subheader": "Custom Guestbook Frontend",
-        "description": "A custo SmartGB frontend that uses a CORS Proxy to fetch reviews",
-        "url": "/guestbook"
+        "description": "A custom SmartGB frontend that uses a CORS Proxy to fetch reviews",
+        "url": "/guestbook",
+
+        "name-de": "Gästebuch",
+        "subheader-de": "Eigenes SmartGB Frontend",
+        "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
     }
 ]

@@ -68,5 +68,5 @@ const randomQuote = quotes[randomIndex];
 
 const motd = document.createElement('h3');
 motd.id = "motd";
-motd.innerHTML = `MOTD: ${randomQuote}`;
+motd.innerHTML = `MOTD: "${randomQuote}"`;
 document.getElementById('welcome').appendChild(motd)
