@@ -61,6 +61,11 @@ progressBar.addEventListener('wheel', function (event) {
     event.preventDefault();
 });
 
+progressBar.addEventListener("input", function (event) {
+    const newTime = (progressBar.value / 100) * videoPlayer.duration;
+    videoPlayer.currentTime = newTime;
+});
+
 document.getElementById("prev").addEventListener("click", () => {
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
     loadSong(currentSongIndex);
