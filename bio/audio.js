@@ -23,12 +23,6 @@ const songs = [
         duration: 135
     },
 
-    {
-        title: "SmokeTeam6 - PackistanFlashback", 
-        src: "file:///C:/Users/Fabio/Downloads/SmokeTeam6%20-%20PackistanFlashback%20(VEVO%20Official%20Music%20Video)%20-%20benwbush%20(1080p,%20h264)(1).mp4" ,
-        duration: 92
-    },
-
     { 
         title: "sniper2004 - la ny", 
         src: "https://easyfiles.cc/2024/8/b8332c2a-e70b-4ec0-9ba8-acc7e5449db7/youtube_mkmn3QZSZUM_874x720_h264(1).mp4" ,
