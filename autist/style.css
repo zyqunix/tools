@@ -55,8 +55,8 @@ button:not(#toggle) {
     cursor: pointer;
     transition: 0.1s ease-in-out;
     padding: 10px 20px;
-    font-weight: bold;
     margin: 10px;
+
 }
 
 #toggle {
