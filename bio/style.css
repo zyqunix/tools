@@ -167,7 +167,7 @@ html, body {
 
 .dci, .igi, .lki, .bci, .eti, .lci, .xmi {
     pointer-events: all;
-    transition: 0.2s;
+    transition: transform  0.2s;
     width: 2.75em;
     height: 2.75em;
 }
@@ -379,4 +379,8 @@ button {
     height: 99.9%;
     position: absolute;
     z-index: 0;
+}
+
+svg {
+    filter: drop-shadow(#cccccc 0.4px 0 7px) !important;
 }
