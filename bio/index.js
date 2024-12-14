@@ -1,8 +1,8 @@
 const messages = [
     "Amateur Programmer",
     "Donate Crypto!",
-    "lispnb and pluggnb <3 <3",
-    "woody.. my dearest ૮˶ᵔᵕᵔ˶ა",
+    "lispnb and pluggnb 💖💖",
+    "woody.. my dearest 🥰💓",
     "iluvshed",
     "#lacethemwithfent",
     "#lifeiseasy",
