@@ -1,12 +1,11 @@
 const messages = [
-    "Amateur Programmer",
-    "Donate Crypto!",
+    "PinkPantheress 💘💘💖🥰",
     "lispnb and pluggnb 💖💖",
     "woody.. my dearest 🥰💓",
+    "Donate Crypto!",
     "iluvshed",
     "#lacethemwithfent",
     "#lifeiseasy",
-    "#teammhuman"
 ];
 
 let currentMessageIndex = 0;
@@ -118,5 +117,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text);
-    alert("Copied to clipboard!");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const tooltips = document.querySelectorAll('[class*="tooltip"]');
+
+    tooltips.forEach(tooltip => {
+        tooltip.addEventListener('mouseenter', () => {
+            tooltip.classList.add('active');
+        });
+
+        tooltip.addEventListener('mouseleave', () => {
+            tooltip.classList.remove('active');
+        });
+
+        tooltip.addEventListener('click', () => {
+            const originalTooltip = tooltip.getAttribute('data-tooltip');
+            tooltip.setAttribute('data-tooltip', 'Copied to Clipboard!');
+            setTimeout(() => {
+                tooltip.setAttribute('data-tooltip', originalTooltip);
+            }, 1000);
+        });
+    });
+});

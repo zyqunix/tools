@@ -1,36 +1,42 @@
 const songs = [
+    {
+        song: "PinkPantheress - Mosquito",
+        src: "https://easyfiles.cc/2024/12/895c8869-5a2e-4458-b70a-5b91a3d99b64/PinkPantheress%20-%20Mosquito%20(Official%20Video)%20-%20Pinkpantheress%20(1080p,%20av1).mp4",
+        duration: 159
+    },
+
     { 
-        title: "woody - Paint Thinner", 
+        song: "woody - Paint Thinner", 
         src: "https://easyfiles.cc/2024/8/2110cfc6-d700-4c42-bc66-bafa5799c1fc/youtube_rhaFMuU1_qw_1280x720_h264(1).mp4" ,
         duration: 100
     }, 
 
     { 
-        title: "Joeyy - PR Package", 
+        song: "Joeyy - PR Package", 
         src: "https://easyfiles.cc/2024/8/7c649f45-6573-4665-9675-4d869ea1332a/youtube_ZvphwrKo52s_1280x720_h264(1).mp4" ,
         duration: 111
     },
 
     { 
-        title: "Bladee & Ecco2k - Bleach", 
+        song: "Bladee & Ecco2k - Bleach", 
         src: "https://easyfiles.cc/2024/9/4ac37ab2-20d7-4fd8-863b-3dcee1c418cd/BLADEE%20&%20ECCO2K%20-%20BLEACH%20-%20drain%20gang%20(720p50,%20h264)(1).mp4" ,
         duration: 153
     },
 
     { 
-        title: "woody - Heaven & Hell", 
+        song: "woody - Heaven & Hell", 
         src: "https://easyfiles.cc/2024/9/20fa08a2-8212-4212-93b7-9c62fc563505/woody%20heaven%20&%20hell%20prod.%201mint%20-%20real1woody%20(1080p,%20h264)(1).mp4" ,
         duration: 142
     },
 
     { 
-        title: "woody - God Said I Was Good", 
+        song: "woody - God Said I Was Good", 
         src: "https://easyfiles.cc/2024/8/9cafa851-0405-4009-b639-08ff5e029dc3/youtube_Z4IF2ujq1Xk_1280x720_h264(1).mp4" ,
         duration: 135
     },
 
     { 
-        title: "sniper2004 - la ny", 
+        song: "sniper2004 - la ny", 
         src: "https://easyfiles.cc/2024/8/b8332c2a-e70b-4ec0-9ba8-acc7e5449db7/youtube_mkmn3QZSZUM_874x720_h264(1).mp4" ,
         duration: 87
     }
@@ -105,7 +111,7 @@ function updateSliderBackground(slider, value) {
 
 function loadSong(index) {
     videoPlayer.src = songs[index].src;
-    songInfo.innerText = songs[index].title;
+    songInfo.innerText = songs[index].song;
     progressBar.value = 0;
     totalDuration.innerText = formatTime(songs[index].duration);
     videoPlayer.load();
