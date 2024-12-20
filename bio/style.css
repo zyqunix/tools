@@ -57,7 +57,7 @@ body {
     transition: 1s;
 }
 
-.clickToEnter > p {
+.clickToEnter>p {
     color: #fff;
     position: absolute;
     top: 10px;
@@ -229,8 +229,8 @@ body {
 .controls button {
     background: none;
     border: none;
-    color: white;
-    font-size: 16px;
+    color: #ddd;
+    font-size: 18px;
     cursor: pointer;
     border-radius: 7px;
     width: 40px;
@@ -240,7 +240,15 @@ body {
     box-shadow: #000000 3px 3px 20px !important;
     border: 2px solid rgba(150, 150, 150, 0.25);
     text-shadow: #000000 3px 2px 7px !important;
+    display: flex;
+    justify-content: center;
+    transition: color 0.1s;
 }
+
+.controls button:hover {
+    color: #fff;
+}
+
 
 .controls button:active {
     transform: translateY(1px);
@@ -406,7 +414,7 @@ svg {
     position: absolute;
     bottom: 125%;
     transform: translateX(-60%);
-    background-color: rgb(51, 51, 51, 0.5);    
+    background-color: rgb(51, 51, 51, 0.5);
     border: 2px solid rgba(150, 150, 150, 0.1);
     color: #fff;
     padding: 5px 10px;
@@ -490,7 +498,7 @@ svg {
         margin-left: 35px;
     }
 
-    .clickToEnter > p {
+    .clickToEnter>p {
         color: #fff;
         position: absolute;
         top: 0px;
