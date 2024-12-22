@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Hack';
+    src: url('/Fonts/Hack/Hack-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    overflow-x: hidden;
+    font-family: 'Hack', 'JetBrainsMono', monospace;
+    user-select: none;
+}
+
+html {
+    height: 100%;
+}
+
+button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #c099ff;
+    border-radius: 10px;
+    border: 2px solid #d0aaff;
+    color: #191622;
+    cursor: pointer;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+button:active {
+    scale: 0.98;
+}
+
+.main {
+    padding: 150px 225px;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    border: 5px solid #3f3f3f;
+    max-width: 450px;
+    max-height: 300px;
+    display: flex;
+    cursor: copy;
+    justify-content: center;
+}
+
+#offscreenalert {
+    position: absolute;
+    padding: 20px;
+    background-color: #3a3a3a;
+    border: 3px solid #3f3f3f;
+    border-radius: 4px;
+    top: -70px;
+    transition: 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+#fullColor {
+    cursor: copy;
+    height: fit-content;
+    width: fit-content;
+}

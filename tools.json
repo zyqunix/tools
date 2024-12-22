@@ -21,6 +21,17 @@
 
     },
     {
+        "name": "Color Generator",
+        "subheader": "Generate Random Hexadecimal Colors",
+        "description": "Generate random Hexadecimal colors using a single click",
+        "url": "/color",
+
+        "name-de": "Farben Generator",
+        "subheader-de": "Generiere Zufällige Farben",
+        "description-de": "Generiere zufällige hexadezimale Farben mit einem Click"
+
+    },
+    {
         "name": "Bio",
         "subheader": "A page with my links",
         "description": "This site includes my links like Instagram, so you can contact me easier",
