@@ -5,41 +5,29 @@ const songs = [
         duration: 159
     },
 
-    { 
-        song: "woody - Paint Thinner", 
-        src: "https://easyfiles.cc/2024/8/2110cfc6-d700-4c42-bc66-bafa5799c1fc/youtube_rhaFMuU1_qw_1280x720_h264(1).mp4" ,
+    {
+        song: "woody - Paint Thinner",
+        src: "https://easyfiles.cc/2024/8/2110cfc6-d700-4c42-bc66-bafa5799c1fc/youtube_rhaFMuU1_qw_1280x720_h264(1).mp4",
         duration: 100
-    }, 
+    },
 
-    { 
-        song: "Joeyy - PR Package", 
-        src: "https://easyfiles.cc/2024/8/7c649f45-6573-4665-9675-4d869ea1332a/youtube_ZvphwrKo52s_1280x720_h264(1).mp4" ,
+    {
+        song: "Joeyy - PR Package",
+        src: "https://easyfiles.cc/2024/8/7c649f45-6573-4665-9675-4d869ea1332a/youtube_ZvphwrKo52s_1280x720_h264(1).mp4",
         duration: 111
     },
 
-    { 
-        song: "Bladee & Ecco2k - Bleach", 
-        src: "https://easyfiles.cc/2024/9/4ac37ab2-20d7-4fd8-863b-3dcee1c418cd/BLADEE%20&%20ECCO2K%20-%20BLEACH%20-%20drain%20gang%20(720p50,%20h264)(1).mp4" ,
-        duration: 153
-    },
-
-    { 
-        song: "woody - Heaven & Hell", 
-        src: "https://easyfiles.cc/2024/9/20fa08a2-8212-4212-93b7-9c62fc563505/woody%20heaven%20&%20hell%20prod.%201mint%20-%20real1woody%20(1080p,%20h264)(1).mp4" ,
+    {
+        song: "woody - Heaven & Hell",
+        src: "https://easyfiles.cc/2024/9/20fa08a2-8212-4212-93b7-9c62fc563505/woody%20heaven%20&%20hell%20prod.%201mint%20-%20real1woody%20(1080p,%20h264)(1).mp4",
         duration: 142
-    },
-
-    { 
-        song: "woody - God Said I Was Good", 
-        src: "https://easyfiles.cc/2024/8/9cafa851-0405-4009-b639-08ff5e029dc3/youtube_Z4IF2ujq1Xk_1280x720_h264(1).mp4" ,
+    }, 
+    
+    {
+        song: "woody - God Said I Was Good",
+        src: "https://easyfiles.cc/2024/8/9cafa851-0405-4009-b639-08ff5e029dc3/youtube_Z4IF2ujq1Xk_1280x720_h264(1).mp4",
         duration: 135
     },
-
-    { 
-        song: "sniper2004 - la ny", 
-        src: "https://easyfiles.cc/2024/8/b8332c2a-e70b-4ec0-9ba8-acc7e5449db7/youtube_mkmn3QZSZUM_874x720_h264(1).mp4" ,
-        duration: 87
-    }
 ];
 
 let currentSongIndex = 0;
@@ -95,8 +83,7 @@ playPauseButton.addEventListener("click", () => {
     } else {
         videoPlayer.play();
         playPauseButton.innerHTML = "&#10074;&#10074;";
-    }
-    isPlaying =!isPlaying;
+    } isPlaying = ! isPlaying;
 });
 
 videoPlayer.addEventListener("ended", () => {
@@ -119,12 +106,16 @@ function loadSong(index) {
 }
 
 videoPlayer.volume = volumeSlider.value / 100;
-volumePercent.innerText = `${volumeSlider.value}%`;
+volumePercent.innerText = `${
+    volumeSlider.value
+}%`;
 updateVolumeSliderBackground(volumeSlider, volumeSlider.value);
 
 volumeSlider.addEventListener('input', function () {
     videoPlayer.volume = volumeSlider.value / 100;
-    volumePercent.innerText = `${volumeSlider.value}%`;
+    volumePercent.innerText = `${
+        volumeSlider.value
+    }%`;
     updateVolumeSliderBackground(volumeSlider, volumeSlider.value);
 });
 
@@ -135,7 +126,9 @@ function updateVolumeSliderBackground(slider, value) {
 function formatTime(time) {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
-    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+    return `${minutes}:${
+        seconds.toString().padStart(2, "0")
+    }`;
 }
 
 loadSong(0);

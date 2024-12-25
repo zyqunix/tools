@@ -26,8 +26,8 @@ body {
 }
 
 ::selection {
-    background-color: #fefefe;
-    color: #000000;
+    background-color: #eeeeee;
+    color: #0e0e0e;
 }
 
 :focus-visible {
