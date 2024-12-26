@@ -32,12 +32,47 @@ button {
     font-size: 1em;
     background-color: #c099ff;
     border-radius: 10px;
-    border: 2px solid #d0aaff;
+    border: 3px solid #d0aaff;
     color: #191622;
     cursor: pointer;
 }
 
-p {
+input {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #886db4;
+    border-radius: 10px;
+    border: 3px solid #644f84;
+    color: #191622;
+    cursor: text;
+    outline: none;
+    transition: background-color 0.25s, border 0.25s;
+}
+
+.inputButton {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #886db4;
+    border-radius: 10px;
+    border: 3px solid #644f84;
+    color: #191622;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.25s, border 0.25s;
+}
+
+input::placeholder {
+    color: #3f3f3f;
+}
+
+input:not(:placeholder-shown),
+.inputButton:hover {
+    background-color: #a986e2;
+    border-radius: 10px;
+    border-color:rgb(168, 134, 209);
+}
+
+p:not(.hint) {
     margin-bottom: 15px;
 }
 
@@ -71,4 +106,29 @@ button:active {
     cursor: copy;
     height: fit-content;
     width: fit-content;
+}
+
+.colors {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .main {
+        padding: 75px 70.5px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    button, input {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 75px 10.5px;
+    }
 }

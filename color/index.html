@@ -9,8 +9,17 @@
 </head>
 <body>
     <div id="offscreenalert">Copied to clipboard!</div>
-    <button id="colorButton">Get Random Color</button>
+
+    <button class="colors" id="colorButton">Get Random Color</button>
+
+    <div class="input">
+        <input class="colors" type="text" name="input color" id="colorInput" placeholder="Your Color" maxlength="7"> 
+        <button class="inputButton" id="inputButton" type="button">Enter</button>
+    </div>
+
     <p>Press the hexadecimal to copy the color!</p>
+    <p class="hint" id="hint"></p>
+
     <div id="main" class="main">
         <div id="fullColor">Press the button to get a color!</div>
     </div>

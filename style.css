@@ -193,6 +193,11 @@ html {
 }
 
 @media (max-width: 480px) {
+
+    body {
+        margin: 0 10px;
+    }
+
     .tools-main {
         max-width: 100%;
     }
@@ -220,6 +225,6 @@ html {
     .welcome {
         font-size: 0.8rem;
         width: 100%;
-        padding-top: 30px;
+        margin-top: 70px;
     }
 }
