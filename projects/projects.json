@@ -36,6 +36,12 @@
         "url": "https://github.com/zyqunix/MyWig"
     },
     {
+        "name": "Pickaxes",
+        "subheader": "Minecraft Mod",
+        "description": "App that adds some pickaxes, blocks and other items. Still in development",
+        "url": "https://github.com/zyqunix/Pickaxes"
+    },
+    {
         "name": "AutoClicker",
         "subheader": "A C# AutoClicker",
         "description": "An AutoClicker written in C# using the MouseKeyHook Library.",
