@@ -32,6 +32,16 @@
 
     },
     {
+        "name": "Code Stuff/Snippets",
+        "subheader": "View WinAPI Keys and other stuff",
+        "description": "Ripped WinAPI Keys from Microsoft's site and made my own for snippets, etc.",
+        "url": "/code",
+
+        "name-de": "Code Sachen",
+        "subheader-de": "WinAPI-Schlüssel und andere Sachen ansehen",
+        "description-de": "WinAPI Keys Von Microsofts Website genommen und meine eigene Sammlung für erstellt"
+    },
+    {
         "name": "Bio",
         "subheader": "A page with my links",
         "description": "This site includes my links like Instagram, so you can contact me easier",
