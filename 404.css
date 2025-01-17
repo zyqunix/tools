@@ -1,26 +1,4 @@
-@font-face {
-    font-family: 'Hack';
-    src: url('/Fonts/Hack/Hack-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'JetBrainsMono';
-    src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: monospace;
-    background-color: #2a2a2a;
-    transition: background-color 0.3s, color 0.3s;
-    color: white;
-    font-family: 'Hack', 'JetBrainsMono', monospace;
-}
-
+@import url(/global.css);
 
 .main {
     text-align: center;
@@ -31,16 +9,6 @@ body {
     width: 30vw;
     max-width: 30vw;
 }
-
-a {
-    color: #c099ff;
-}
-
-::selection {
-    background-color: #c099ff;
-    color: #2a2a2a;
-}
-
 
 h1 {
     font-size: 1.5rem;

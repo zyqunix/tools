@@ -1,27 +1,4 @@
-@font-face {
-    font-family: 'Hack';
-    src: url('/Fonts/Hack/Hack-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'JetBrainsMono';
-    src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-size: 1rem;
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    overflow-x: hidden;
-    font-family: 'Hack', 'JetBrainsMono', monospace;
-    user-select: none;
-}
+@import url(/global.css);
 
 html {
     height: 100%;
@@ -74,6 +51,11 @@ input:not(:placeholder-shown),
 
 p:not(.hint) {
     margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #cdadff;
+    border: 3px solid rgb(201, 161, 250);
 }
 
 button:active {

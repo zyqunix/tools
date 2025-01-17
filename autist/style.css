@@ -1,32 +1,4 @@
-@font-face {
-    font-family: 'Hack';
-    src: url('/Fonts/Hack/Hack-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'JetBrainsMono';
-    src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
-}
-
-body {
-    background-color: #505050;
-    color: white;
-    font-family: monospace;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
-    padding: 20px;
-    flex-direction: column;
-    overflow: hidden;
-    font-family: 'Hack', 'JetBrainsMono', monospace;
-}
-
-* {
-    font-family: 'Hack', 'JetBrainsMono', monospace;
-}
+@import url(/global.css);
 
 .top {
     top: 0;
@@ -40,11 +12,6 @@ marquee {
     background-color: #454545;
     color: #fff;
     width: 100%;
-}
-
-::selection {
-    color: white;
-    background-color: #b49cdf;
 }
 
 button:not(#toggle) {
@@ -89,16 +56,6 @@ button:hover:not(#toggle) {
     border-radius: 4px;
     box-shadow: 0 4px 10px rgba(16, 16, 16, 0.5);
     transform: scale(1.1);
-}
-
-a {
-    text-decoration: underline;
-    color: white;
-    transition: color 0.1s;
-}
-
-a:hover {
-    color: #cdb1ff;
 }
 
 @media (min-width: 1024px) {

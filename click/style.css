@@ -1,24 +1,4 @@
-@font-face {
-    font-family: 'Hack';
-    src: url('/Fonts/Hack/Hack-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'JetBrainsMono';
-    src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #2a2a2a;
-    user-select: none;
-    transition: background-color 0.3s, color 0.3s;
-    font-family: 'Hack', 'JetBrainsMono', monospace;
-}
+@import url(/global.css);
 
 button, p {
     font-weight: 600;
