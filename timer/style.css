@@ -1,0 +1,82 @@
+@import url(/global.css);
+
+div.main {
+    padding: 60px;
+    display: grid;
+    justify-content: center;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    margin: 50px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    text-align: center;
+}
+
+div.main button {
+    margin: 0 10px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border-radius: 8px;
+}
+
+#time {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#start {
+    background-color: #4caf50;
+    border: 2px solid #4caf50;
+}
+
+#lap {
+    background-color: #3b5998;
+    border: 2px solid #3b5998;
+}
+
+#reset {
+    background-color: #f44336;
+    border: 2px solid #f44336;
+}
+
+#start:hover {
+    background-color: #45a049;
+    transform: scale(1.01);
+}
+
+#lap:hover {
+    background-color: #2e486f;
+    transform: scale(1.01);
+}
+
+#reset:hover {
+    background-color: #e53935;
+    transform: scale(1.01);
+}
+
+a {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #fff;
+}
