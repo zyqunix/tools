@@ -12,10 +12,23 @@ let elapsedTime = 0;
 function formatTime(duration) {
     const milliseconds = Math.floor((duration % 1000) / 10);
     const seconds = Math.floor((duration / 1000) % 60);
-    const minutes = Math.floor((duration / 1000) / 60);
-    const hours = Math.floor((duration / 1000) / 60 / 60);
+    const minutes = Math.floor((duration / 1000) / 60) % 60;
+    const hours = Math.floor((duration / 1000) / 3600);
     return `
-    ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}:${String(milliseconds).padStart(2, '0')}`;
+    ${
+        String(hours).padStart(2, '0')
+    }:${
+        String(minutes).padStart(2, '0')
+    }:${
+        String(seconds).padStart(2, '0')
+    }:${
+        String(milliseconds).padStart(2, '0')
+    }`;
+}
+
+function updateTimer() {
+    elapsedTime = Date.now() - startTime;
+    time.textContent = formatTime(elapsedTime);
 }
 
 start.addEventListener('click', () => {
@@ -23,10 +36,7 @@ start.addEventListener('click', () => {
         isActive = true;
         start.innerHTML = "Stop";
         startTime = Date.now() - elapsedTime;
-        timer = setInterval(() => {
-            elapsedTime = Date.now() - startTime;
-            time.textContent = formatTime(elapsedTime);
-        }, 10);
+        timer = setInterval(updateTimer, 10);
     } else {
         isActive = false;
         clearInterval(timer);

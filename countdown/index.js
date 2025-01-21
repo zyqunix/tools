@@ -9,17 +9,43 @@ const sound = new Audio('/assets/pipe.mp3');
 let timer = null;
 let isActive = false;
 let remainingTime = 0;
+let startTime = null;
 
 function formatTime(duration) {
     const milliseconds = Math.floor((duration % 1000) / 10);
     const seconds = Math.floor((duration / 1000) % 60);
     const minutes = Math.floor((duration / 1000 / 60) % 60);
     const hours = Math.floor(duration / 1000 / 60 / 60);
-    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}:${String(milliseconds).padStart(2, '0')}`;
+    return `${
+        String(hours).padStart(2, '0')
+    }:${
+        String(minutes).padStart(2, '0')
+    }:${
+        String(seconds).padStart(2, '0')
+    }:${
+        String(milliseconds).padStart(2, '0')
+    }`;
+}
+
+function updateTimer() {
+    const now = Date.now();
+    const elapsed = now - startTime;
+    remainingTime -= elapsed;
+    startTime = now;
+
+    if (remainingTime <= 0) {
+        clearInterval(timer);
+        sound.play();
+        time.textContent = "00:00:00:00";
+        isActive = false;
+        start.innerHTML = "Start";
+    } else {
+        time.textContent = formatTime(remainingTime);
+    }
 }
 
 start.addEventListener('click', () => {
-    if (!isActive) {
+    if (! isActive) {
         const hours = parseInt(hoursInput.value, 10) || 0;
         const minutes = parseInt(minutesInput.value, 10) || 0;
         const seconds = parseInt(secondsInput.value, 10) || 0;
@@ -38,19 +64,9 @@ start.addEventListener('click', () => {
 
         isActive = true;
         start.innerHTML = "Stop";
+        startTime = Date.now();
 
-        timer = setInterval(() => {
-            remainingTime -= 10;
-            if (remainingTime <= 0) {
-                clearInterval(timer);
-                sound.play();
-                time.textContent = "00:00:00:00";
-                isActive = false;
-                start.innerHTML = "Start";
-            } else {
-                time.textContent = formatTime(remainingTime);
-            }
-        }, 10);
+        timer = setInterval(updateTimer, 10);
     } else {
         isActive = false;
         clearInterval(timer);
