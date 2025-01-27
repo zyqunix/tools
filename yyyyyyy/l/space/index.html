@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <title>(━┳━○░░░░░░░░|_・YY</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+  }
+
+  #vidbg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    pointer-events: none;
+    z-index: -10;
+  }
+
+  .image {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1000ms ease-in-out;
+    animation: floatingY 4s ease-in-out infinite;
+  }
+
+  .image img {
+    animation: floatingX 5.5s ease-in-out infinite;
+  }
+
+  .image.visible {
+    opacity: 1;
+  }
+
+  @keyframes floatingY {
+    from { transform: translateY(0px) rotate(-2deg); }
+    50% { transform: translateY(15px) rotate(2deg); }
+    to {transform: translateY(0px) rotate(-2deg); }
+  }
+
+  @keyframes floatingX {
+    from { transform: translateX(0px) rotate(1deg); }
+    50% { transform: translateX(30px) rotate(-1deg); }
+    to { transform: translateX(0px) rotate(1deg); }
+  }
+</style><script src="js/howler.core.min.js"></script><script src="js/index.js" defer=""></script></head>
+
+
+
+<body>
+  <video muted="" autoplay="" loop="" id="vidbg">
+    <source src="media/mist.mp4" type="video/mp4">
+    <source src="media/mist.ogg" type="video/ogg">
+  </video>
+
+
+</body></html>
