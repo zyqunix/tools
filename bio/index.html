@@ -16,16 +16,19 @@
 </head>
 
 <body>
-
-    <script disable-devtool-auto="" src="htps://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+    <script src="https://cdn.jsdelivr.net/gh/0x5841524f4e/js-lanyard/lanyard.js"></script>
+    <script disable-devtool-auto="" src="ttps://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
 
     <div class="video-container">
         <video id="videoPlayer"></video>
     </div>
 
     <div class="player" id="player">
-        <img class="pfp" src="https://easyfiles.cc/2024/12/a3046d6f-a1b1-415a-8f55-8981a8e45ddb/3ccc13a2825eb8c98b5371fa0706e450.webp">
-        <h1>zyqunix</h1>
+        <div>
+            <img class="pfp" id="pfp" src="https://easyfiles.cc/2024/12/a3046d6f-a1b1-415a-8f55-8981a8e45ddb/3ccc13a2825eb8c98b5371fa0706e450.webp">
+            <div id="status"></div>
+        </div>
+        <div data-tooltip="" class="tooltip" id="name">zyqunix</div>
         <span class="desc" id="typewriter"></span>
 
         <div class="icons">
@@ -128,6 +131,7 @@
     <script src="index.js"></script>
     <script src="audio.js"></script>
     <script src="particle.js"></script>
+    <script src="lanyard.js"></script>
 
 </body>
 

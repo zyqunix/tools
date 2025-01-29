@@ -120,7 +120,7 @@ function copyToClipboard(text) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const tooltips = document.querySelectorAll('[class*="tooltip"]');
+    const tooltips = document.querySelectorAll('[class*="tooltip"]:not([id="name"])');
 
     tooltips.forEach(tooltip => {
         tooltip.addEventListener('mouseenter', () => {
