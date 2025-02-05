@@ -4,7 +4,6 @@
         "subheader": "Test your mouse's keys",
         "description": "This tool allows you to test your mouse's keys: Left Click; Middle Click; Right Click",
         "url": "/click",
-
         "name-de": "Maus Test",
         "subheader-de": "Teste deine Maustasten",
         "description-de": "Dieses Tool erlaubt dir die Tasten deiner Maus zu Testen: LMB; MMB; RMB"
@@ -14,29 +13,33 @@
         "subheader": "Test your keyboard's keys",
         "description": "This tool allows you to test your keyboard's keys. To start, press any key to show its presses",
         "url": "/keyboard",
-
         "name-de": "Tastatur Test",
         "subheader-de": "Teste deine Tastaturtasten",
         "description-de": "Dieses Tool erlaubt dir die Tasten deiner Tastatur zu Testen"
-
     },
     {
         "name": "Color Generator",
         "subheader": "Generate Random Hexadecimal Colors",
         "description": "Generate random Hexadecimal colors using a single click",
         "url": "/color",
-
         "name-de": "Farben Generator",
         "subheader-de": "Generiere Zufällige Farben",
         "description-de": "Generiere zufällige hexadezimale Farben mit einem Click"
-
+    },
+    {
+        "name": "Notes",
+        "subheader": "Write Notes for later",
+        "description": "Write Notes for later, export and import them via JSON file",
+        "url": "/notes",
+        "name-de": "Notizen",
+        "subheader-de": "Schreibe Notizen für später",
+        "description-de": "Notizen für später schreiben  und sie über eine JSON-Datei exportieren und importieren"
     },
     {
         "name": "Code Stuff/Snippets",
         "subheader": "View WinAPI Keys and other stuff",
         "description": "Ripped WinAPI Keys from Microsoft's site and made my own for snippets, etc.",
         "url": "/code",
-
         "name-de": "Code Sachen",
         "subheader-de": "WinAPI-Schlüssel und andere Sachen ansehen",
         "description-de": "WinAPI Keys Von Microsofts Website genommen und meine eigene Sammlung für erstellt"
@@ -46,7 +49,6 @@
         "subheader": "A page with my links",
         "description": "This site includes my links like Instagram, so you can contact me easier",
         "url": "/bio",
-
         "name-de": "Bio",
         "subheader-de": "Eine Seite mit meinen Links",
         "description-de": "Diese Seite beinhaltet meine Links wie Instagram, sie hat auch einen Musikspieler"
@@ -56,7 +58,6 @@
         "subheader": "A 90's inspired site",
         "description": "This is a site inspired by a 90's 'About Me' site",
         "url": "/old",
-
         "name-de": "90-er Bio",
         "subheader-de": "Eine Seite mit einen 90-er Stil",
         "description-de": "Diese Seite ist wie /bio, aber wie in den 90ern"
@@ -66,7 +67,6 @@
         "subheader": "My most popular projects",
         "description": "Some of my projects I'd like to showcase. All on GitHub",
         "url": "/projects",
-
         "name-de": "Projekte",
         "subheader-de": "Meine bekannteste Projekte",
         "description-de": "Einige meiner Projekte die ich gerne zeigen möchte. Alle auf GitHub"
@@ -76,7 +76,6 @@
         "subheader": "Autstic friend",
         "description": "A site for my autistic friend who does funny noises",
         "url": "/autist",
-
         "name-de": "Autist",
         "subheader-de": "Autistischer Freund",
         "description-de": "Eine Seite für meinen autistischen Freund, der lustige Geräusche macht"
@@ -86,7 +85,6 @@
         "subheader": "Custom Guestbook Frontend",
         "description": "A custom SmartGB frontend that uses a CORS Proxy to fetch reviews",
         "url": "/guestbook",
-
         "name-de": "Gästebuch",
         "subheader-de": "Eigenes SmartGB Frontend",
         "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
