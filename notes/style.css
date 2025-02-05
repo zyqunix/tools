@@ -1,0 +1,96 @@
+@import url(/global.css);
+
+textarea::selection {
+    background: Highlight;
+    color: HighlightText;
+}
+
+div.top {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #242424dd;
+    backdrop-filter: blur(5px);
+    user-select: none;
+    z-index: 9999;
+}
+
+div.top div#editing {
+    width: max-content;
+}
+
+div.top > button {
+    padding: 8px;
+    margin: 10px 4px 10px 10px;
+    cursor: pointer;
+    background-color: #242424;
+    color: white;
+    border: 2px solid #242424;
+    border-radius: 5px;
+}
+
+div.top > button:not(:nth-child(1)) {
+    margin: 10px 4px 10px 4px;
+}
+
+div.top > button:hover {
+    cursor: pointer;
+    background-color: rgb(42, 42, 42);
+    color: white;
+    border: 2px solid #282828;
+}
+
+div.left {
+    left: 0;
+    top: 55px;
+    position: absolute;
+    background-color: #242424;
+    height: 100%;
+    max-width: 35%;
+    z-index: 2;
+}
+
+#notes {
+    display: grid;
+    scroll-behavior: smooth;
+}
+
+#notes > button {
+    cursor: pointer;
+    user-select: none;
+    padding: 4px 4px;
+    margin: 4px 7px;
+    background-color: #303030;
+    color: white;
+    border: 2px solid transparent;
+    text-align: left;
+    border-radius: 5px;
+}
+
+button[class="new-note open"] {
+    background-color: #353535;
+}
+
+#notes > button:hover {
+    background-color: #343434;
+}
+
+#editor-area {
+    width: calc(100% - 190px);
+    height: 100%;
+    position: absolute;
+    top: 55px;  
+    left: 190px;
+    background-color: #2a2a2a;
+    color: white;
+    border: none;
+    outline: none;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    display: none;
+}
