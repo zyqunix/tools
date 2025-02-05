@@ -29,7 +29,7 @@
     {
         "name": "Notes",
         "subheader": "Write Notes for later",
-        "description": "Write Notes for later, export and import them via JSON file",
+        "description": "Write Notes for later, export and import them via a JSON file",
         "url": "/notes",
         "name-de": "Notizen",
         "subheader-de": "Schreibe Notizen für später",
