@@ -40,13 +40,36 @@ function createNoteElement(note) {
     });
 
     newNote.addEventListener('mousedown', (e) => {
-        if (e.shiftKey) {
+        if (e.shiftKey && e.button === 0) {
             renameCurrentNote();
+        } else if (e.shiftKey && e.button === 2) {
+            deleteNote(note.id);
         }
+    });
+
+    newNote.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
     });
 
     return newNote;
 }
+
+function deleteNote(noteId) {
+    if (confirm("Are you sure you want to delete this note?")) {
+        let savedNotes = getNotesFromCookies();
+        savedNotes = savedNotes.filter(note => note.id !== noteId);
+        saveNotesToCookies(savedNotes);
+        updateNotesList();
+
+        if (currentNote && parseInt(currentNote.id) === noteId) {
+            editor.style.display = 'none';
+            document.querySelector('h2[class="hint"]').style.opacity = "1";
+            currentNote = null;
+            noteOpen = false;
+        }
+    }
+}
+
 
 function updateNotesList() {
     const savedNotes = getNotesFromCookies();
@@ -133,7 +156,10 @@ newNoteButton.addEventListener('click', () => {
     savedNotes.push(newNote);
     saveNotesToCookies(savedNotes);
     updateNotesList();
+    
+    newNoteElement.click();
 });
+
 
 stopNote.addEventListener('click', () => {
     document.querySelector('h2[class="hint"]').style.opacity = "1";
