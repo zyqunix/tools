@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://rimgo.pussthecat.org/RFbdMMB.png" type="image/x-icon">
 </head>
 <body>
     <div class="top">
         <button id="new-note">New Note</button>
+        <button id="stop-note">Stop Editing</button>
+        <button id="export">Export JSON</button>
+        <label for="import">Import JSON</label>
+        <input type="file" id="import" accept="application/json">
         <span id="editing"></span>
     </div>
     <div class="main">
@@ -17,7 +22,7 @@
         </div>
         <div class="editor" id="editor">
             <textarea name="editor" id="editor-area" placeholder="Enter Text Here..."></textarea>
-            <h1 class="hint">Click on "New Note" and click on the new note to open it!</h1>
+            <h2 class="hint">Click on "New Note" and click on the new note to open it!</h2>
         </div>
     </div>
 
