@@ -36,7 +36,7 @@
         "description-de": "Notizen für später schreiben  und sie über eine JSON-Datei exportieren und importieren"
     },
     {
-        "name": "Code Stuff/Snippets",
+        "name": "Code Stuff & Snippets",
         "subheader": "View WinAPI Keys and other stuff",
         "description": "Ripped WinAPI Keys from Microsoft's site and made my own for snippets, etc.",
         "url": "/code",
