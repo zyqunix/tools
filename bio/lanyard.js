@@ -21,4 +21,5 @@ lanyard({
         nameDiv.setAttribute("data-tooltip", "No custom status");
     }
 
+    status.setAttribute("data-tooltip", data.discord_status);
 })
