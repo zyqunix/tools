@@ -1,0 +1,28 @@
+{
+	"skills": [
+		{
+			"name": "Python",
+			"url": "https://www.python.org",
+			"tooltip": "The second programming language I've learned",
+			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2F1.bp.blogspot.com%2F-wAuQ3GCX8r4%2FWgIvLOr23tI%2FAAAAAAAACdA%2Fppii2ACqTR8VqkYW-MeYJqXr1myTdR01ACLcBGAs%2Fs1600%2Flogo-python-programacion.png&h=59be89f2146eb4db14955882451f2a4631f92e88832a7e7627804d7968a63755"
+		},
+		{
+			"name": "JavaScript",
+			"url": "https://www.javascript.com/",
+			"tooltip": "Its syntax pisses me off sometimes",
+			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F6a%2FJavaScript-logo.png%2F640px-JavaScript-logo.png&h=bc8b69a465219df76ce937bf1c6e32deda0d982f1fa0bf41d13f51b58ccef960"
+		},
+		{
+			"name": "HTML/CSS",
+			"url": "https://www.w3schools.com/html/default.asp",
+			"tooltip": "I hate you, CSS",
+			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F61%2FHTML5_logo_and_wordmark.svg%2F640px-HTML5_logo_and_wordmark.svg.png&h=60a773175af1c2795e1afb8ba22e19e3089744ca988c667999c756319c6c09e3"
+		},
+		{
+			"name": "Discord.JS",
+			"url": "https://discord.js.org/",
+			"tooltip": "Used in my selfbot",
+			"img": "https://avatars.githubusercontent.com/u/26492485?s=200&v=4"
+		}
+	]
+}

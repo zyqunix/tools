@@ -1,0 +1,306 @@
+@import url(/global.css);
+
+img {
+	pointer-events: none;
+}
+
+body {
+    color: #ffffff;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #2a2a2a;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.languages {
+    margin-bottom: 20px;
+}
+
+strong {
+    font-weight: 900;
+    color: #dddddd;
+}
+
+.info {
+    margin-top: 50px;
+}
+
+#profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #80848e;
+}
+
+.name {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.time {
+	font-size: 18px;
+	margin-bottom: 10px;
+	color: #cccccc;
+}
+
+.age {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #cccccc;
+}
+
+.hobbies {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #bbbbbb;
+}
+
+.cards {
+    margin-top: 30px !important;
+    background-color: #252525;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px !important;
+    text-align: left;
+}
+
+div[class*="cards"]:last-of-type {
+	margin-bottom: 50px !important;
+}
+
+#status {
+    font-weight: bold;
+    margin: 10px 0 15px 10px;
+    color: #cccccc;
+}
+
+.activity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    gap: 2px;
+}
+
+#activity-name {
+    flex-grow: 1;
+    text-align: left;
+	color: #cccccc;
+}
+
+#activity-image {
+    display: block;
+    height: 36px;
+    width: 36px;
+}
+
+.languages {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.language-item {
+    display: block;
+    background-color: #3b3b3b;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+.language-item:hover {
+    background-color: #4d4d4d;
+    transform: translateY(-5px);
+}
+
+.language-item:hover span,
+.language-item:hover .language-name {
+    color: #f0f0f0;
+}
+
+.name-percent-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.language-item img.language-image {
+    width: 30px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+
+.language-item .language-name {
+	cursor: default;
+    font-size: 18px;
+    color: #aaaaaa;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.language-item .percent {
+    font-size: 16px;
+    color: #aaaaaa;
+    font-weight: bold;
+}
+
+.percentage-bar {
+    display: block;
+    width: 100%;
+    height: 8px;
+    background-color: #444;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.percentage-bar .bar-after {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #00aa00;
+    border-radius: 5px;
+    background: linear-gradient(to right, #005500 0%, #009900 50%, #005500 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite linear;
+}
+
+.language-item:hover .percentage-bar .bar-after {
+    background: linear-gradient(to right, #008800 0%, #00ff00 50%, #008800 100%);
+	animation: shimmer 3s infinite linear;
+    background-size: 200% 100%;
+}
+
+.tooltip {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 125%;
+    background-color: #2a2a2a;
+    border: 2px solid rgba(150, 150, 150, 0.1);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+	cursor: default; 
+}
+
+a[class="skill-item tooltip"]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 110%;
+    background-color: #2a2a2a;
+    border: 2px solid rgba(150, 150, 150, 0.1);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+	cursor: default; 
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+#skills-div:not(#skills-div > h2) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.skill-item {
+	text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b3b3b;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+	margin: 0 20px;
+}
+
+.skill-item:hover {
+    background-color: #4d4d4d;
+    transform: translateY(-5px);
+}
+
+.skill-image {
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    font-size: 16px;
+    color: #aaaaaa;
+}
+
+#skills-div > h2 {
+    color: white;
+    text-align: left;
+    width: 100%;
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .language-item {
+        width: 150px;
+        margin: 10px;
+    }
+
+    .language-item img.language-image {
+        width: 25px;
+        height: 17px;
+    }
+
+    .language-item .language-name {
+        font-size: 16px;
+    }
+
+    .language-item .percent {
+        font-size: 14px;
+    }
+}

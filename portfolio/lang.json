@@ -1,0 +1,34 @@
+{
+	"languages": [
+		{
+			"name": "English",
+			"percentage": 100,
+			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fb%2Fbe%2FFlag_of_England.svg%2F1200px-Flag_of_England.svg.png&h=3ab694f926f7ab0c024da77e1d5e3a1f4de267f6bf9984f7adc3a9743114ef95",
+			"tooltip": "Started learning in 1st grade"
+		},
+		{
+			"name": "German",
+			"percentage": 100,
+			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fb%2Fba%2FFlag_of_Germany.svg%2F640px-Flag_of_Germany.svg.png&h=3921b6290fe87e6919522a8e273efe494d70123859d147682c935a29e375aaae",
+			"tooltip": "Started learning in 2nd grade"
+		},
+		{
+			"name": "French",
+			"percentage": 50,
+			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F1f%2FFlag_of_France_official.svg&h=d139dd7e87b1d627b8079636ea584d96d71161f57d41ce44c465ea4cb3fe23e9",
+			"tooltip": "Started learning in 7th grade"
+		},
+		{
+			"name": "Slovak",
+			"percentage": 100,
+			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fe6%2FFlag_of_Slovakia.svg%2F800px-Flag_of_Slovakia.svg.png&h=aa2494acbea2f461750d3d2b5ecace7289323834862f071b082e511c6e11e71c",
+			"tooltip": "First language, born in Slovakia"
+		},
+		{
+			"name": "Czech",
+			"percentage": 90,
+			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fcb%2FFlag_of_the_Czech_Republic.svg%2F640px-Flag_of_the_Czech_Republic.svg.png&h=aaf894a4054a000fd36036b44cfeb3a81a3d65e0ec0688a81c299224a9bec60e",
+			"tooltip": "Free DLC when you're born in Slovakia, you understand Czech fluently"
+		}
+	]
+}
