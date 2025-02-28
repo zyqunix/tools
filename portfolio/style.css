@@ -57,7 +57,7 @@ strong {
 .hobbies {
     margin-top: 10px;
     font-size: 16px;
-    color: #bbbbbb;
+    color: #cccccc;
 }
 
 .cards {
@@ -69,7 +69,7 @@ strong {
     text-align: left;
 }
 
-div[class*="cards"]:last-of-type {
+footer {
 	margin-bottom: 50px !important;
 }
 
@@ -100,7 +100,8 @@ div[class*="cards"]:last-of-type {
     width: 36px;
 }
 
-.languages {
+.languages,
+.contact {
     margin-top: 30px;
     width: 100%;
 }
@@ -132,7 +133,7 @@ div[class*="cards"]:last-of-type {
     width: 100%;
 }
 
-.language-item img.language-image {
+div[class="name-percent-container"] > img.image {
     width: 30px;
     height: 20px;
     border-radius: 2px;
@@ -263,15 +264,37 @@ a[class="skill-item tooltip"]::after {
 	margin: 0 20px;
 }
 
+.contact-item {
+	text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b3b3b;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+	margin: 10px;
+}
+
 .skill-item:hover {
     background-color: #4d4d4d;
     transform: translateY(-5px);
 }
 
-.skill-image {
+.skill-item:hover .skill-name {
+	color: #ffffff;
+}
+
+.skill-item > .image {
+	margin-bottom: 10px;
+}
+
+.image {
     height: 50px;
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 .skill-name {
@@ -279,12 +302,55 @@ a[class="skill-item tooltip"]::after {
     color: #aaaaaa;
 }
 
-#skills-div > h2 {
+.contact-name {
+    font-size: 16px;
+    color: #efefef;
+	margin-left: 10px;
+}
+
+.card-header {
     color: white;
     text-align: left;
     width: 100%;
     grid-column: span 2;
 }
+
+.contact-item:hover {
+	transform: translateY(-5px);
+}
+
+.github-contact {
+	background-color: #040404;
+}
+
+.github-contact:hover {
+	background-color: #080808;
+}
+
+.instagram-contact {
+	background-color: #c13584;
+}
+
+.instagram-contact:hover {
+	background-color: #d44190;
+}
+
+.twitter-contact {
+	background-color: #1da1f2;
+}
+
+.twitter-contact:hover {
+	background-color: #33b2ff;
+}
+
+.youtube-contact {
+	background-color: #e03535;
+}
+
+.youtube-contact:hover {
+	background-color: #ff4444;
+}
+
 
 @media (max-width: 768px) {
     .language-item {
@@ -292,7 +358,8 @@ a[class="skill-item tooltip"]::after {
         margin: 10px;
     }
 
-    .language-item img.language-image {
+    .language-item img.image {
+		height: 1px;
         width: 25px;
         height: 17px;
     }
@@ -303,5 +370,70 @@ a[class="skill-item tooltip"]::after {
 
     .language-item .percent {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        width: 90% !important;
+        padding: 15px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .time, .age, .hobbies {
+        font-size: 16px;
+    }
+
+    #profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    #skills-div:not(#skills-div > h2) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .language-item {
+        width: 100%;
+    }
+
+    .skill-item {
+        margin: 0 10px;
+        padding: 10px;
+    }
+
+    .contact-item {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .name {
+        font-size: 18px;
+    }
+
+    .time, .age, .hobbies {
+        font-size: 14px;
+    }
+
+    #profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cards {
+        width: 100% !important;
+        padding: 10px;
+    }
+
+    .skill-item {
+        padding: 8px;
+    }
+
+    .contact-item {
+        padding: 8px;
     }
 }

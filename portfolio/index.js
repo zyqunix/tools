@@ -1,6 +1,8 @@
 const timeElem = document.getElementById('time');
 const timezone = 'Europe/Berlin';
 
+timeElem.setAttribute('data-tooltip',timezone);
+
 function getTime(timezone) {
 	const now = new Date();
 	return now.toLocaleString("en-US", {
@@ -88,7 +90,7 @@ function generateLanguageCards(languagesData) {
 		namePercentContainer.classList.add('name-percent-container');
 
 		const languageImage = document.createElement('img');
-		languageImage.classList.add('language-image');
+		languageImage.classList.add('image');
 		languageImage.src = language.img;
 
 		const languageName = document.createElement('div');
@@ -127,7 +129,7 @@ function generateSkillCards(skillData) {
 		skillItem.target = '_blank';
 		
 		const skillImage = document.createElement('img');
-		skillImage.classList.add('skill-image');
+		skillImage.classList.add('image');
 		skillImage.src = skill.img;
 
 		const skillName = document.createElement('span');
