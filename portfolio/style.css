@@ -437,3 +437,11 @@ a[class="skill-item tooltip"]::after {
         padding: 8px;
     }
 }
+
+div[class="stats cards"] {
+    text-align: center;
+}
+
+div[class="stats cards"] > h2 {
+    text-align: left;
+} 
