@@ -444,4 +444,9 @@ div[class="stats cards"] {
 
 div[class="stats cards"] > h2 {
     text-align: left;
-} 
+}
+
+div[class="stats cards"] > p {
+	text-align: left;
+	color: #AAAAAA;
+}
