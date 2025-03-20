@@ -54,6 +54,7 @@ body {
     font-weight: bold;
     background-color: rgba(9, 9, 9, 0.95);
     backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
     transition: 1s;
 }
 
@@ -96,6 +97,7 @@ body {
     transition-duration: 1s;
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 20px;
     text-align: center;
@@ -246,6 +248,7 @@ body {
     height: 30px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
     box-shadow: #000000 3px 3px 20px !important;
     border: 2px solid rgba(150, 150, 150, 0.25);
     text-shadow: #000000 3px 2px 7px !important;
@@ -384,6 +387,7 @@ body {
 
 .blurBG {
     backdrop-filter: blur(0px);
+	-webkit-backdrop-filter: blur(0px);
     width: 105%;
     height: 110%;
     border-radius: 10px;
@@ -453,6 +457,7 @@ div[id="name"]::after {
     font-family: monospace;
     bottom: 87% !important;
     backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
     left: 50%;
     text-wrap: pretty;
 }

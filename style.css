@@ -46,6 +46,7 @@ html {
     position: fixed;
     background-color: rgba(59, 59, 59, 0.885);
     backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
     font-size: large;
     top: 0;
     border-bottom: 1px solid rgba(70, 70, 70, 0.885);
@@ -84,8 +85,8 @@ html {
 
 .tool-div {
     bottom: 20px !important;
-    background-color: rgba(75, 75, 75, 1);
-    border: 2px solid rgba(80, 80, 80, 1);
+    background-color: rgba(50, 50, 50, 1);
+    border: 2px solid rgba(65, 65, 65, 1);
     border-radius: 7px;
     transition: 0.3s;
     text-align: center;
@@ -121,8 +122,8 @@ html {
 
 .visit-tool {
     padding: 10px 20px;
-    background-color: rgb(60, 120, 85);
-    color: #f0f0f0;
+    background-color: rgb(40, 100, 65);
+    color: #fff;
     border: 2px solid rgb(75, 135, 100);
     border-radius: 4px;
     transition: 0.1s;
@@ -132,7 +133,7 @@ html {
 }
 
 .visit-tool:hover {
-    background-color: rgb(75, 135, 100);
+    background-color: rgb(35, 95, 60);
     border-color: rgb(90, 150, 115);
 }
 

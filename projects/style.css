@@ -16,6 +16,7 @@ div.header-main {
     left: 0;
     background-color: rgba(59, 59, 59, 0.885);
     backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 }
 
 div.header-main {

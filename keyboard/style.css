@@ -109,6 +109,7 @@ p, h6, h1, h3 {
     justify-content: left;
     background-color: rgb(42,42,42,0.775);
     backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
     width: 100%;
 }
 
