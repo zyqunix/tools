@@ -5,6 +5,28 @@ img {
 	user-select: none;
 }
 
+summary::marker {
+	content: "" !important;
+}
+
+details[open] > summary > h2::before {
+    display: inline-block;
+    transform: rotate(-90deg);
+	margin-right: 8px;
+}
+
+summary > h2::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"/></svg>');
+    transition: transform 0.2s ease;
+}
+
 body {
     color: #ffffff;
     padding: 0;
@@ -101,7 +123,8 @@ footer {
 }
 
 .languages,
-.contact {
+.contact,
+.software {
     margin-top: 30px;
     width: 100%;
 }
@@ -225,6 +248,25 @@ a[class="skill-item tooltip"]::after {
 	cursor: default; 
 }
 
+a[class^="software-item tooltip"]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    background-color: #2a2a2a;
+    border: 2px solid rgba(150, 150, 150, 0.1);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+	cursor: default; 
+}
+
 .tooltip:hover::after {
     opacity: 1;
     visibility: visible;
@@ -264,7 +306,8 @@ a[class="skill-item tooltip"]::after {
 	margin: 0 20px;
 }
 
-.contact-item {
+.contact-item,
+.software-item {
 	text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -282,30 +325,53 @@ a[class="skill-item tooltip"]::after {
 .skill-item:hover {
     background-color: #4d4d4d;
     transform: translateY(-5px);
+	filter: brightness(1);
 }
 
 .skill-item:hover .skill-name {
 	color: #ffffff;
 }
 
-.skill-item > .image {
+.skill-item > .image,
+.software-item > .image {
 	margin-bottom: 10px;
+	filter: brightness(0.8);
+}
+
+
+.skill-item:hover > .image,
+.software-item:hover> .image {
+	filter: brightness(1);
 }
 
 .image {
     height: 50px;
     border-radius: 5px;
+	transition: 0.1s;
+}
+
+.software-item > .image {
+    height: 50px !important;
+    border-radius: 0px;
 }
 
 .skill-name {
     font-size: 16px;
     color: #aaaaaa;
+	transition: 0.1s;
 }
 
-.contact-name {
+.contact-name,
+.software-name {
     font-size: 16px;
-    color: #efefef;
+    color: #ccc;
 	margin-left: 10px;
+	transition: 0.1s;
+}
+
+.contact-item > .image,
+.software-item > .image {
+	margin-top: 5px;
 }
 
 .card-header {
@@ -315,8 +381,9 @@ a[class="skill-item tooltip"]::after {
     grid-column: span 2;
 }
 
-.contact-item:hover {
-	transform: translateY(-5px);
+.contact-item:hover .contact-name,
+.software-item:hover .software-name {
+	color: #fff;
 }
 
 .github-contact {
@@ -405,7 +472,8 @@ a[class="skill-item tooltip"]::after {
         padding: 10px;
     }
 
-    .contact-item {
+    .contact-item,
+	.software-item {
         padding: 10px;
     }
 }
@@ -429,11 +497,13 @@ a[class="skill-item tooltip"]::after {
         padding: 10px;
     }
 
-    .skill-item {
+    .skill-item,
+	.software-item {
         padding: 8px;
     }
 
-    .contact-item {
+    .contact-item,
+	.software-item {
         padding: 8px;
     }
 }
