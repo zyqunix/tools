@@ -37,7 +37,14 @@ a:hover, svg:hover {
     color: #c099ff;
 }
 
-::selection {
-    background-color: #c099ff;
-    color: #2a2a2a;
+.card {
+    background-color: #252525;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px !important;
+    text-align: center;
+}
+
+.shadow {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }

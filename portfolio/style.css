@@ -184,7 +184,6 @@ div[class="name-percent-container"] > img.image {
 }
 
 .tooltip {
-	cursor: help;
     display: flex;
     justify-content: center;
     position: relative;

@@ -1,0 +1,33 @@
+@import url(/global.css);
+
+.container { 
+	text-align: center; 
+	padding: 20px; 
+	border-radius: 20px; 
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); 
+}
+
+textarea, input, button { 
+	width: 70%; 
+	margin-top: 10px; 
+	padding: 10px; 
+	border-radius: 10px; 
+	border: none; 
+	background-color: #333; 
+	color: #f0f0f0; 
+}
+
+textarea {
+	resize: none;
+	margin-right: 10px;
+}
+
+button { 
+	cursor: pointer; 
+	background-color: #444; 
+}
+
+button:hover { 
+	background-color: #555; 
+}
+
