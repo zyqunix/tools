@@ -1,0 +1,37 @@
+@import url(/global.css);
+
+div {
+	margin-bottom: 50px;
+}
+
+textarea {
+	resize: none;
+	background-color: #2a2a2a;
+	color: #f0f0f0;
+	border: 2px solid #2c2c2c;
+	margin-bottom: 25px;
+	border-radius: 5px;
+	outline: none;
+}
+
+textarea[readonly] {
+	background-color: #282828;
+	color: #999;
+}
+
+button {
+	margin: 5px 0 50px 0;
+	width: 50%;	
+	height: 15%;
+	background-color: #2a2a2a;
+	color: #f0f0f0;
+	border: 2px solid #2c2c2c;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+button:hover {
+	background-color: #2c2c2c;
+	border: 2px solid #2e2e2e;
+}
