@@ -251,6 +251,14 @@ a[class^="software-item tooltip"]::after {
     visibility: visible;
 }
 
+.tooltip.slide-left::after {
+    transform: translateX(-100%);
+}
+
+.tooltip.slide-right::after {
+    transform: translateX(0%);
+}
+
 @keyframes shimmer {
     0% {
         background-position: 100% 0;
@@ -321,6 +329,10 @@ a[class^="software-item tooltip"]::after {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 	margin: 10px;
+}
+
+.software > .software-item:last-child {
+	grid-column: 1 / -1;
 }
 
 .skill-item:hover,
@@ -422,7 +434,6 @@ a[class^="software-item tooltip"]::after {
 
 @media (max-width: 768px) {
     .language-item {
-        width: 150px;
         margin: 10px;
     }
 
@@ -460,19 +471,13 @@ a[class^="software-item tooltip"]::after {
         height: 120px;
     }
 
-    #skills-div:not(#skills-div > h2),
-	.software:not(.software > h2) {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-
-    .language-item {
+	.stat-img {
         width: 100%;
     }
 
-	.skill-item,
+    .skill-item,
     .contact-item,
 	.software-item {
-		margin: 0 10px;
         padding: 10px;
     }
 }
@@ -515,3 +520,4 @@ div[class="stats cards"] > p {
 	text-align: left;
 	color: #AAAAAA;
 }
+

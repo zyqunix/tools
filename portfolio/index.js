@@ -152,4 +152,35 @@ fetch('lang.json')
 fetch('skills.json')
 	.then(response => response.json())
 	.then(generateSkillCards)
-	.catch(error => console.error('Error fetching skills.json', error))
+	.catch(error => console.error('Error fetching skills.json', error));
+
+document.querySelectorAll('.tooltip').forEach(elem => {
+    elem.addEventListener('mouseenter', () => {
+        const tooltipText = elem.getAttribute('data-tooltip');
+        if (!tooltipText) return;
+
+        const dummy = document.createElement('div');
+        dummy.style.position = 'absolute';
+        dummy.style.visibility = 'hidden';
+        dummy.style.whiteSpace = 'nowrap';
+        dummy.style.padding = '5px 10px';
+        dummy.style.fontSize = '14px';
+        dummy.innerText = tooltipText;
+        document.body.appendChild(dummy);
+
+        const elemRect = elem.getBoundingClientRect();
+        const tipRect = dummy.getBoundingClientRect();
+        const leftEdge = elemRect.left + (elemRect.width / 2) - (tipRect.width / 2);
+        const rightEdge = elemRect.left + (elemRect.width / 2) + (tipRect.width / 2);
+
+        elem.classList.remove('slide-left', 'slide-right');
+
+        if (rightEdge > window.innerWidth) {
+            elem.classList.add('slide-left');
+        } else if (leftEdge < 0) {
+            elem.classList.add('slide-right');
+        }
+
+        dummy.remove();
+    });
+});
