@@ -1,5 +1,10 @@
 const songs = [
     {
+        song: "Julia - Between the Bars",
+        src: "https://atums.world/raw/between%20the%20bars%20-%20julia%20(1080p,%20h264).mp4",
+        duration: 201
+    },
+    {
         song: "PinkPantheress - Mosquito",
         src: "https://easyfiles.cc/2024/12/895c8869-5a2e-4458-b70a-5b91a3d99b64/PinkPantheress%20-%20Mosquito%20(Official%20Video)%20-%20Pinkpantheress%20(1080p,%20av1).mp4",
         duration: 159
