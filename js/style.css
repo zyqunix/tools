@@ -1,0 +1,47 @@
+@import url(/global.css);
+
+.container { 
+	text-align: center; 
+	padding: 20px; 
+	border-radius: 20px; 
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); 
+}
+
+textarea {
+	width: 90%;
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+	background-color: #333;
+	color: #f0f0f0;
+	resize: none;
+	outline: none;
+}
+
+button { 
+	width: 70%; 
+	margin-top: 10px; 
+	padding: 10px; 
+	border-radius: 10px; 
+	border: none; 
+	background-color: #333; 
+	color: #f0f0f0; 
+}
+
+button { 
+	cursor: pointer; 
+	background-color: #444; 
+}
+
+button:hover { 
+	background-color: #555; 
+}
+
+pre {
+	font-family: "JetBrainsMono";
+	background-color: #333;
+	color: #fff;
+	text-align: left;
+	padding: 3px;
+}
