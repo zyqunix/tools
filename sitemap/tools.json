@@ -88,5 +88,86 @@
         "name-de": "Gästebuch",
         "subheader-de": "Eigenes SmartGB Frontend",
         "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
+    },
+    {
+        "name": "Morse",
+        "subheader": "Generate Morse code",
+        "description": "A Morse code generator that allows you to export the morse",
+        "url": "/morse",
+        "name-de": "Gästebuch",
+        "subheader-de": "Eigenes SmartGB Frontend",
+        "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
+    },
+    {
+        "name": "Binary",
+        "subheader": "Binary translator",
+        "description": "A Binary-to-Ascii/Ascii-to-Binary translator",
+        "url": "/morse",
+        "name-de": "Gästebuch",
+        "subheader-de": "Eigenes SmartGB Frontend",
+        "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
+    },
+    {
+        "name": "Base64",
+        "subheader": "Base64 Encoder/Decoder",
+        "description": "A Base64 encoder/decoder without ads, because those other sites have tons in them",
+        "url": "/base64",
+        "name-de": "Gästebuch",
+        "subheader-de": "Eigenes SmartGB Frontend",
+        "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
+    },
+    {
+        "name": "IP",
+        "subheader": "IP Lookup",
+        "description": "A site to lookup any IP",
+        "url": "/ip",
+        "name-de": "Gästebuch",
+        "subheader-de": "Eigenes SmartGB Frontend",
+        "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
+    },
+    {
+        "name": "Timer",
+        "subheader": "Stopwatch Timer",
+        "description": "A simple stopwatch timer",
+        "url": "/timer",
+        "name-de": "Gästebuch",
+        "subheader-de": "Eigenes SmartGB Frontend",
+        "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
+    },
+    {
+        "name": "Countdown",
+        "subheader": "A simple countdown timer",
+        "description": "A simple countdown timer that allows you to set a custom duration",
+        "url": "/countdown",
+        "name-de": "Gästebuch",
+        "subheader-de": "Eigenes SmartGB Frontend",
+        "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
+    },
+    {
+        "name": "Microphone",
+        "subheader": "A microphone tester",
+        "description": "A simple microphone tester in your browser",
+        "url": "/microphone",
+        "name-de": "Gästebuch",
+        "subheader-de": "Eigenes SmartGB Frontend",
+        "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
+    },
+    {
+        "name": "Character",
+        "subheader": "A character counter",
+        "description": "A simple character counter",
+        "url": "/microphone",
+        "name-de": "Gästebuch",
+        "subheader-de": "Eigenes SmartGB Frontend",
+        "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
+    },
+    {
+        "name": "JavaScript",
+        "subheader": "A JS runner",
+        "description": "A simple JS evaluator in your browser",
+        "url": "/microphone",
+        "name-de": "Gästebuch",
+        "subheader-de": "Eigenes SmartGB Frontend",
+        "description-de": "Ein eigenes SmartGB Frontend, der eine CORS-Proxy benutzt, um Bewertungen abzurufen"
     }
 ]
