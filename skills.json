@@ -23,6 +23,36 @@
 			"url": "https://discord.js.org/",
 			"tooltip": "Used in my selfbot",
 			"img": "https://avatars.githubusercontent.com/u/26492485?s=200&v=4"
+		},
+		{
+			"name": "C",
+			"url": "https://wikiless.funami.tech/wiki/C_(programming_language)",
+			"tooltip": "Made little software",
+			"img": "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"
+		},
+		{
+			"name": "C++",
+			"url": "https://wikiless.funami.tech/wiki/C%252B%252B",
+			"tooltip": "Made cheats for CS2",
+			"img": "https://wikiless.funami.tech/media/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+		},
+		{
+			"name": "C#",
+			"url": "https://wikiless.funami.tech/wiki/C_Sharp_(programming_language)",
+			"tooltip": "Made a lot of malware",
+			"img": "https://wikiless.funami.tech/media/wikipedia/commons/b/bd/Logo_C_sharp.svg"
+		},
+		{
+			"name": "Java",
+			"url": "https://wikiless.funami.tech/wiki/Java_(programming_language)",
+			"tooltip": "Made a Minecraft mod and an Android app",
+			"img": "https://wikiless.funami.tech/media/wikipedia/en/3/30/Java_programming_language_logo.svg"
+		},
+		{
+			"name": "Kotlin",
+			"url": "https://wikiless.funami.tech/wiki/Kotlin_(programming_language)",
+			"tooltip": "Made Android apps",
+			"img": "https://upload.wikimedia.org/wikipedia/commons/3/37/Kotlin_Icon_2021.svg"
 		}
 	]
 }

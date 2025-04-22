@@ -8,6 +8,7 @@ img {
 body {
     color: #ffffff;
     padding: 0;
+	margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,11 +271,10 @@ a[class^="software-item tooltip"]::after {
 
 #skills-div:not(#skills-div > h2) {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
+    margin: 20px auto 0 auto;
+    width: calc(100% - 40px);
     max-width: 600px;
 }
 
@@ -349,7 +349,7 @@ a[class^="software-item tooltip"]::after {
 .skill-item > .image,
 .software-item > .image {
 	margin-bottom: 10px;
-	filter: brightness(0.8);
+	filter: brightness(0.75);
 }
 
 .skill-item:hover > .image,
@@ -433,7 +433,14 @@ a[class^="software-item tooltip"]::after {
 
 
 @media (max-width: 768px) {
-    .language-item {
+	.cards {
+        width: 100% !important;
+		max-width: 80% !important;
+        padding: 15px;
+		margin: 15px;
+    }
+    
+	.language-item {
         margin: 10px;
     }
 
@@ -450,12 +457,18 @@ a[class^="software-item tooltip"]::after {
     .language-item .percent {
         font-size: 14px;
     }
+	
+	a > img {
+		height: 25px;
+	}
 }
 
 @media (max-width: 600px) {
     .cards {
-        width: 90% !important;
+        width: 100% !important;
+		max-width: 80% !important;
         padding: 15px;
+		margin: 15px;
     }
 
     .name {
@@ -480,6 +493,10 @@ a[class^="software-item tooltip"]::after {
 	.software-item {
         padding: 10px;
     }
+
+	a > img {
+		height: 25px;
+	}
 }
 
 @media (max-width: 400px) {
@@ -498,6 +515,7 @@ a[class^="software-item tooltip"]::after {
 
     .cards {
         width: 100% !important;
+		max-width: 80% !important;
         padding: 10px;
     }
 
@@ -506,6 +524,14 @@ a[class^="software-item tooltip"]::after {
 	.software-item {
         padding: 8px;
     }
+
+	a > img {
+		transform: scale(0.75);
+	}
+
+	.software-name {
+		font-size: 10px;
+	}
 }
 
 div[class="stats cards"] {
