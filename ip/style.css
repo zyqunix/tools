@@ -70,7 +70,7 @@ th {
 }
 
 #your-ip {
-	margin-right: 5px;
+	margin-left: 5px;
 }
 
 #your-ip:not(:hover) {
