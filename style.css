@@ -8,7 +8,7 @@ img {
 body {
     color: #ffffff;
     padding: 0;
-	margin: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -547,3 +547,6 @@ div[class="stats cards"] > p {
 	color: #AAAAAA;
 }
 
+div[class="cards sitemap shadow"] > h3,
+div[class="cards sitemap shadow"] > h4 {
+	font-weight: normal;
