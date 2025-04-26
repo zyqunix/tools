@@ -156,7 +156,7 @@
         "name": "Character",
         "subheader": "Character counter",
         "description": "A simple character counter",
-        "url": "/microphone",
+        "url": "/character",
         "name-de": "Zeichenzähler",
         "subheader-de": "Ein Zeichenzähler",
         "description-de": "Ein einfacher Zeichenzähler"
@@ -165,7 +165,7 @@
         "name": "JavaScript",
         "subheader": "JS runner",
         "description": "A simple JS evaluator in your browser",
-        "url": "/microphone",
+        "url": "/js",
         "name-de": "JavaScript",
         "subheader-de": "Ein JS-Ausführer",
         "description-de": "Ein einfacher JavaScript-Ausführer im Browser"
