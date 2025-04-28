@@ -102,7 +102,7 @@
         "name": "Binary",
         "subheader": "Binary translator",
         "description": "A Binary-to-Ascii/Ascii-to-Binary translator",
-        "url": "/morse",
+        "url": "/binary",
         "name-de": "Binär",
         "subheader-de": "Binärübersetzer",
         "description-de": "Ein Binär-zu-ASCII/ASCII-zu-Binär-Übersetzer"
