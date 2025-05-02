@@ -37,47 +37,56 @@ const timeInterval = setInterval(() => {
 	updateAge();
 }, 3600 * 1000);
 
-
-lanyard({
-	userId: "1201415921802170388",
-}).then(data => {
-	const statusElem = document.getElementById('status');
-	const pfpElem = document.getElementById('profile-picture');
-	const activityNameElem = document.getElementById('activity-name');
-	const activityImageElem = document.getElementById('activity-image');
-
-	const gameActivity = data.activities.find(activity => activity.type === 0);
-	const status = data.activities.find(activity => activity.type === 4);
-	const statusColors = {
-		online: "#23a55a",
-		idle: "#f0b232",
-		dnd: "#f23f43",
-		offline: "#80848e"
-	};
-
-	const borderColor = statusColors[data.discord_status] || statusColors.offline;
-	pfpElem.style.borderColor = borderColor;
-
-	statusElem.innerHTML = `<strong class="quote">"${status ? status.state : "No Custom Status"}"</strong> - zyqunix`;
-
-	if (gameActivity) {
-		activityNameElem.innerHTML = `<strong>Playing</strong> ${gameActivity.name}: ${gameActivity.details}, ${gameActivity.state}`;
-
-		if (gameActivity.assets && gameActivity.assets.large_image) {
-			const imgId = gameActivity.assets.large_image;
-			const imageUrl = imgId.startsWith("mp:external/")
-				? `https://media.discordapp.net/${imgId.replace("mp:", "")}`
-				: `https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${imgId}.png`;
-			activityImageElem.src = imageUrl;
-			activityImageElem.style.display = "block";
+function lan() {
+	lanyard({
+		userId: "1201415921802170388",
+	}).then(data => {
+		const statusElem = document.getElementById('status');
+		const pfpElem = document.getElementById('profile-picture');
+		const activityNameElem = document.getElementById('activity-name');
+		const activityImageElem = document.getElementById('activity-image');
+	
+		const gameActivity = data.activities.find(activity => activity.type === 0);
+		const status = data.activities.find(activity => activity.type === 4);
+		const statusColors = {
+			online: "#23a55a",
+			idle: "#f0b232",
+			dnd: "#f23f43",
+			offline: "#80848e"
+		};
+	
+		const borderColor = statusColors[data.discord_status] || statusColors.offline;
+		pfpElem.style.borderColor = borderColor;
+	
+		statusElem.innerHTML = `<strong class="quote">"${status ? status.state : "No Custom Status"}"</strong> - zyqunix`;
+	
+		if (gameActivity) {
+			activityNameElem.innerHTML = `<strong>Playing</strong> ${gameActivity.name}: ${gameActivity.details}, ${gameActivity.state}`;
+	
+			if (gameActivity.assets && gameActivity.assets.large_image) {
+				const imgId = gameActivity.assets.large_image;
+				const imageUrl = imgId.startsWith("mp:external/")
+					? `https://media.discordapp.net/${imgId.replace("mp:", "")}`
+					: `https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${imgId}.png`;
+				activityImageElem.src = imageUrl;
+				activityImageElem.style.display = "block";
+			} else {
+				activityImageElem.style.display = "none";
+			}
 		} else {
+			activityNameElem.innerHTML = "<strong>Playing</strong> No Game Activity";
 			activityImageElem.style.display = "none";
 		}
-	} else {
-		activityNameElem.innerHTML = "<strong>Playing</strong> No Game Activity";
-		activityImageElem.style.display = "none";
-	}
-});
+	});
+}
+
+window.onload = (event) => {
+	lan();
+};
+
+setInterval(() => {
+	lan();
+}, 6000);
 
 function generateLanguageCards(languagesData) {
     const container = document.querySelector('.languages');
@@ -187,11 +196,8 @@ document.querySelectorAll('.tooltip').forEach(elem => {
 });
 
 
-window.onload = function() {
-	const frEl = document.getElementById('fr');
-	let rn = Math.floor(Math.random() * 2) + 1;
-	console.log(rn);
-	if (rn == 1) {
-		frEl.innerHTML = "Fr*nch";
-	}
+const frEl = document.getElementById('fr');
+let rn = Math.floor(Math.random() * 2) + 1;
+if (rn == 1) {
+	frEl.innerHTML = "Fr*nch";
 }
