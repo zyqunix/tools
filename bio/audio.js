@@ -2,7 +2,7 @@ const songs = [
     {
         song: "Yabujin - Open",
         src: "https://easyfiles.cc/2025/5/5a9bf2f5-3844-4e0c-8dfb-943012f4acd8/YABUJIN%20-%20open.mp4",
-        duration: 201
+        duration: 123
     },
     {
         song: "PinkPantheress - Mosquito",
