@@ -541,3 +541,15 @@ div[id="name"]::after {
         transition: 1s;
     }
 }
+
+#bkIcon,
+#fwIcon {
+	filter: invert(100%);
+	transition: 0.1s;
+	margin: 5px;
+}
+
+#bkIcon:not(:hover),
+#fwIcon:not(:hover) {
+	filter: invert(1) brightness(86.6%) grayscale(1) !important;
+}

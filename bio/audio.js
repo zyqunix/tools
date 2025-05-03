@@ -1,6 +1,6 @@
 const songs = [
     {
-        song: "Yabujin - Open",
+        song: "YABUJIN - Open",
         src: "https://easyfiles.cc/2025/5/5a9bf2f5-3844-4e0c-8dfb-943012f4acd8/YABUJIN%20-%20open.mp4",
         duration: 123
     },
@@ -81,15 +81,19 @@ document.getElementById("next").addEventListener("click", () => {
     }
 });
 
+playPauseButton.innerHTML = '<img id="plIcon" src="./assets/pause.svg">';
+const icon = document.getElementById('plIcon');
 playPauseButton.addEventListener("click", () => {
     if (isPlaying) {
         videoPlayer.pause();
-        playPauseButton.innerHTML = "&#9658;";
+        icon.src = "./assets/play.svg";
     } else {
         videoPlayer.play();
-        playPauseButton.innerHTML = "&#10074;&#10074;";
-    } isPlaying = ! isPlaying;
+        icon.src = "./assets/pause.svg";
+    }
+    isPlaying = !isPlaying;
 });
+
 
 videoPlayer.addEventListener("ended", () => {
     currentSongIndex = (currentSongIndex + 1) % songs.length;
