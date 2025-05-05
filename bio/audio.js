@@ -1,5 +1,10 @@
 const songs = [
     {
+        song: "YABUJIN - 8888 Dolphin Web World",
+        src: "https://atums.world/raw/epic%206455.mp4",
+        duration: 106
+    },
+    {
         song: "YABUJIN - Open",
         src: "https://easyfiles.cc/2025/5/5a9bf2f5-3844-4e0c-8dfb-943012f4acd8/YABUJIN%20-%20open.mp4",
         duration: 123
