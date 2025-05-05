@@ -4,17 +4,13 @@ const songs = [
         src: "https://atums.world/raw/epic%206455.mp4",
         duration: 106
     },
+    
     {
         song: "YABUJIN - Open",
         src: "https://easyfiles.cc/2025/5/5a9bf2f5-3844-4e0c-8dfb-943012f4acd8/YABUJIN%20-%20open.mp4",
         duration: 123
     },
-    {
-        song: "PinkPantheress - Mosquito",
-        src: "https://easyfiles.cc/2024/12/895c8869-5a2e-4458-b70a-5b91a3d99b64/PinkPantheress%20-%20Mosquito%20(Official%20Video)%20-%20Pinkpantheress%20(1080p,%20av1).mp4",
-        duration: 159
-    },
-
+    
     {
         song: "woody - Paint Thinner",
         src: "https://easyfiles.cc/2024/8/2110cfc6-d700-4c42-bc66-bafa5799c1fc/youtube_rhaFMuU1_qw_1280x720_h264(1).mp4",
