@@ -53,6 +53,12 @@
 			"url": "https://wikiless.funami.tech/wiki/Kotlin_(programming_language)",
 			"tooltip": "Made Android apps",
 			"img": "https://upload.wikimedia.org/wikipedia/commons/3/37/Kotlin_Icon_2021.svg"
+		},
+		{
+			"name": "Mongolian Stone Throwing",
+			"url": "https://wikiless.funami.tech/wiki/Mongolia",
+			"tooltip": "Professional Mongolian Stone Thrower",
+			"img": "https://wikiless.funami.tech/media/wikipedia/commons/4/4c/Flag_of_Mongolia.svg"
 		}
 	]
 }
