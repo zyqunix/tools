@@ -39,7 +39,7 @@
      data-name="Group 132"
      id="Group_132"
      style="fill:#ffffff;stroke:#ffffff;stroke-width:3.3994;stroke-dasharray:none;stroke-opacity:1"
-     transform="matrix(0.97092346,0,0,-0.93896068,-10.016879,50.421841) rotate(180deg)">
+     transform="matrix(0.97092346,0,0,-0.93896068,-10.016879,50.421841)">
     <path
        d="M 14,52 A 2,2 0 0 1 12.59,48.59 L 35.17,26 12.59,3.41 a 2,2 0 0 1 0,-2.82 2,2 0 0 1 2.82,0 l 24,24 a 2,2 0 0 1 0,2.82 l -24,24 A 2,2 0 0 1 14,52 Z"
        id="path1"
@@ -49,7 +49,7 @@
      data-name="Group 132"
      id="Group_132-5"
      style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.25;stroke-dasharray:none;stroke-opacity:1"
-     transform="matrix(1.0033522,0,0,-0.93965207,10.251062,50.439764) rotate(180deg)">
+     transform="matrix(1.0033522,0,0,-0.93965207,10.251062,50.439764)">
     <path
        d="M 14,52 A 2,2 0 0 1 12.59,48.59 L 35.17,26 12.59,3.41 a 2,2 0 0 1 0,-2.82 2,2 0 0 1 2.82,0 l 24,24 a 2,2 0 0 1 0,2.82 l -24,24 A 2,2 0 0 1 14,52 Z"
        id="path1-3"
