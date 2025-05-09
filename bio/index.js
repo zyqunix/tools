@@ -1,8 +1,6 @@
 const messages = [
-    "PinkPantheress 💘💘💖🥰",
-    "lispnb and pluggnb 💖💖",
     "woody.. my dearest 🥰💓",
-    "Donate Crypto!",
+    "giv crypto",
     "iluvshed",
     "#lacethemwithfent",
     "#lifeiseasy",
@@ -88,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateTitle();
 });
 
-let clickToEnterOverlay = document.getElementById("clickToEnter");
+const clickToEnterOverlay = document.getElementById("clickToEnter");
 clickToEnterOverlay.onclick = () => {
     clickToEnterOverlay.style.transition = '0.75s';
     clickToEnterOverlay.style.opacity = '0';
@@ -98,7 +96,7 @@ clickToEnterOverlay.onclick = () => {
     main.style.marginTop = "0px";
 
     videoPlayer.play();
-    playPauseButton.innerHTML = "&#10074;&#10074;";
+    document.getElementById('plIcon').src = "./assets/pause.svg";
     isPlaying = !isPlaying;
 
     typeWriter();
@@ -140,3 +138,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+const canvas = document.getElementById('ambient-canvas');
+const ctx = canvas.getContext('2d');
+const video = document.getElementById('videoPlayer')
+
+function resizeCanvas() {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+}
+
+video.addEventListener('loadeddata', () => {
+    resizeCanvas();
+    drawLoop();
+});
+
+function drawLoop() {
+    if (!video.paused && !video.ended) {
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    }
+    requestAnimationFrame(drawLoop);
+}

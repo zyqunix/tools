@@ -4,7 +4,13 @@ const songs = [
         src: "https://atums.world/raw/epic%206455.mp4",
         duration: 106
     },
-    
+
+    {
+        song: "Tenkay - Jerry Springer Based Freestyle",
+        src: "https://atums.world/raw/2025-05-08_22%3A08%3A44.mp4",
+        duration: 179 
+    },
+
     {
         song: "YABUJIN - Open",
         src: "https://easyfiles.cc/2025/5/5a9bf2f5-3844-4e0c-8dfb-943012f4acd8/YABUJIN%20-%20open.mp4",
@@ -17,13 +23,7 @@ const songs = [
         duration: 100
     },
 
-    {
-        song: "Joeyy - PR Package",
-        src: "https://easyfiles.cc/2024/8/7c649f45-6573-4665-9675-4d869ea1332a/youtube_ZvphwrKo52s_1280x720_h264(1).mp4",
-        duration: 111
-    },
-
-    {
+	{
         song: "woody - Heaven & Hell",
         src: "https://easyfiles.cc/2024/9/20fa08a2-8212-4212-93b7-9c62fc563505/woody%20heaven%20&%20hell%20prod.%201mint%20-%20real1woody%20(1080p,%20h264)(1).mp4",
         duration: 142

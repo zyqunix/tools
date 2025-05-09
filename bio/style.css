@@ -543,13 +543,19 @@ div[id="name"]::after {
 }
 
 #bkIcon,
-#fwIcon {
-	filter: invert(100%);
+#fwIcon,
+#plIcon {
 	transition: 0.1s;
 	margin: 5px;
+	height: 16px;
 }
 
-#bkIcon:not(:hover),
-#fwIcon:not(:hover) {
-	filter: invert(1) brightness(86.6%) grayscale(1) !important;
+#ambient-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+	filter: brightness(50%) blur(1000px);
 }
