@@ -368,6 +368,25 @@ body {
     border: 1px solid #ffffff;
 }
 
+.slider::-moz-range-thumb,
+#volumeSlider::-moz-range-thumb {
+	opacity: 1;
+	transition: 0.1s;
+}
+
+.slider::-moz-range-thumb:active,
+#volumeSlider::-moz-range-thumb:active {
+	width: 14px;
+	height: 14px;
+}
+
+.slider:not(:hover)::-moz-range-thumb,
+#volumeSlider:not(:hover)::-moz-range-thumb {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
 #currentTime,
 #totalDuration {
     text-shadow: #000000 3px 2px 7px !important;

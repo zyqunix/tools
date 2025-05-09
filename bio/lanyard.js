@@ -12,14 +12,10 @@ lanyard({
         offline: "#80848e"
     };
 
-    const borderColor = statusColors[data.discord_status] || offline;
-    status.style.background = `${borderColor}`;
-
     if (customStatus) {
         nameDiv.setAttribute("data-tooltip", customStatus.state);
     } else {
         nameDiv.setAttribute("data-tooltip", "No custom status");
     }
 
-    status.setAttribute("data-tooltip", data.discord_status);
 })
