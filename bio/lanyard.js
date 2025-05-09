@@ -12,6 +12,8 @@ lanyard({
         offline: "#80848e"
     };
 
+	document.getElementById('pfp').style.borderColor = statusColors[data.discord_status] || offline;
+
     if (customStatus) {
         nameDiv.setAttribute("data-tooltip", customStatus.state);
     } else {
