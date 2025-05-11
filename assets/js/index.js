@@ -236,3 +236,13 @@ setInterval(() => {
 	fetchSong();
 }, 60000)
 
+document.getElementById('banan').addEventListener('click', function() {
+	document.getElementById('music-pop').style.visibility = 'visible';
+	document.getElementById('music-pop').style.opacity = '1';
+})
+
+document.getElementById('close').addEventListener('click', function() {
+	document.getElementById('music-pop').style.opacity = '0';
+	document.getElementById('music-pop').style.visibility = 'hidden';
+})
+
