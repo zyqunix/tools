@@ -154,12 +154,12 @@ function generateSkillCards(skillData) {
 	});
 }
 
-fetch('lang.json')
+fetch('assets/js/lang.json')
     .then(response => response.json())
     .then(generateLanguageCards)
     .catch(error => console.error('Error fetching lang.json:', error));
 
-fetch('skills.json')
+fetch('assets/js/skills.json')
 	.then(response => response.json())
 	.then(generateSkillCards)
 	.catch(error => console.error('Error fetching skills.json', error));
