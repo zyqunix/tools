@@ -196,8 +196,43 @@ document.querySelectorAll('.tooltip').forEach(elem => {
 });
 
 
-const frEl = document.getElementById('fr');
-let rn = Math.floor(Math.random() * 2) + 1;
-if (rn == 1) {
-	frEl.innerHTML = "Fr*nch";
+const LASTFM_API_KEY = "04f747e38bebf69efbbfab7b20612bac";
+const LASTFM_USERNAME = "zyqunix";
+
+const params = new URLSearchParams({
+  method: "user.getrecenttracks",
+  user: LASTFM_USERNAME,
+  api_key: LASTFM_API_KEY,
+  format: "json",
+  limit: "1"
+});
+
+const url = `http://ws.audioscrobbler.com/2.0/?${params.toString()}`;
+
+function fetchSong() {
+	fetch(url)
+		.then(response => response.json())
+		.then(data => {
+			console.log(data);
+			const track = data?.recenttracks?.track?.[0];
+			if (!track) return;
+			const artist = track.artist["#text"];
+			const title = track.name;
+			const image = track.image.find(img => img.size === "extralarge")?.["#text"] || "";
+
+			document.getElementById("artist").innerText = artist;
+			document.getElementById("song-name").innerText = title;
+			document.getElementById("song-cover").src = !image ? "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg" : image;
+			document.getElementById("song-url").href = track.url;
+		})
+		.catch(error => {
+			console.error("Error:", error);
+		});
 }
+
+fetchSong();
+
+setInterval(() => {
+	fetchSong();
+}, 60000)
+
