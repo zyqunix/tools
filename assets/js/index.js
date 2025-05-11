@@ -211,7 +211,7 @@ function fetchSong() {
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
-			console.log(data);
+			//console.log(data);
 			const track = data?.recenttracks?.track?.[0];
 			if (!track) return;
 			const artist = track.artist["#text"];
@@ -251,13 +251,21 @@ setInterval(() => {
 	fetchSong();
 }, 60000)
 
-document.getElementById('banan').addEventListener('click', function() {
-	document.getElementById('music-pop').style.visibility = 'visible';
-	document.getElementById('music-pop').style.opacity = '1';
-})
-
-document.getElementById('close').addEventListener('click', function() {
+function close() {
 	document.getElementById('music-pop').style.opacity = '0';
+	document.getElementById('overlay').style.opacity = '0';
 	document.getElementById('music-pop').style.visibility = 'hidden';
-})
+	document.getElementById('overlay').style.visibility = 'hidden';
+}
 
+function open() {
+	document.getElementById('music-pop').style.visibility = 'visible';
+	document.getElementById('overlay').style.visibility = 'visible';
+	document.getElementById('music-pop').style.opacity = '1';
+	document.getElementById('overlay').style.opacity = '1';
+}
+
+document.getElementById('banan').addEventListener('click', open);
+document.getElementById('close').addEventListener('click', close);
+document.getElementById('overlay').addEventListener('click', close);
+document.getElementById('refresh').addEventListener('click', fetchSong);
