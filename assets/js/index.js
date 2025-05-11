@@ -43,6 +43,7 @@ function lan() {
 	}).then(data => {
 		const statusElem = document.getElementById('status');
 		const pfpElem = document.getElementById('profile-picture');
+		const activity = document.querySelector('.activity');
 		const activityNameElem = document.getElementById('activity-name');
 		const activityImageElem = document.getElementById('activity-image');
 	
@@ -73,10 +74,7 @@ function lan() {
 			} else {
 				activityImageElem.style.display = "none";
 			}
-		} else {
-			activityNameElem.innerHTML = "<strong>Playing</strong> No Game Activity";
-			activityImageElem.style.display = "none";
-		}
+		} else activity.style.display = "none";
 	});
 }
 
@@ -213,7 +211,6 @@ function fetchSong() {
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
-			console.log(data);
 			const track = data?.recenttracks?.track?.[0];
 			if (!track) return;
 			const artist = track.artist["#text"];
@@ -230,6 +227,22 @@ function fetchSong() {
 		});
 }
 
+function fetchWeather(location) {
+	if (!location) {
+		fetch(`https://wttr.in/muc?format=%t | %C`)
+		.then(response => response.text())
+		.then(data => {
+			document.getElementById('weather').innerText = data;
+		})
+	} else {
+		fetch(`https://wttr.in/${location}?format=%t | %C`)
+		.then(data => {
+			document.getElementById('weather').innerText = data;
+		})
+	}
+}
+
+fetchWeather();
 fetchSong();
 
 setInterval(() => {

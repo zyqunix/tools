@@ -43,7 +43,8 @@ strong {
     margin-top: 10px;
 }
 
-.time {
+.time,
+.weather {
 	font-size: 18px;
 	margin-bottom: 10px;
 	color: #cccccc;
@@ -560,7 +561,7 @@ div[class="cards sitemap shadow"] > h4 {
 
 .banan {
 	position: fixed;
-	left: 30px !important;
+	right: 30px !important;
 	bottom: 30px !important;
 	width: 64px;
     cursor: pointer;
