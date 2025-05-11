@@ -58,8 +58,12 @@ function lan() {
 	
 		const borderColor = statusColors[data.discord_status] || statusColors.offline;
 		pfpElem.style.borderColor = borderColor;
-	
-		statusElem.innerHTML = `<strong class="quote">"${status ? status.state : "No Custom Status"}"</strong> - zyqunix`;
+
+		if (status) {
+			statusElem.innerHTML = `<strong class="quote">"${status.state}"</strong> - zyqunix`;
+		} else {
+			statusElem.innerHTML = `<strong class="quote">Empty void. Nothingness.</strong>`;
+		}
 	
 		if (gameActivity) {
 			activityNameElem.innerHTML = `<strong>Playing</strong> ${gameActivity.name}: ${gameActivity.details}, ${gameActivity.state}`;
