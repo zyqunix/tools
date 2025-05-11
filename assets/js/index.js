@@ -211,6 +211,7 @@ function fetchSong() {
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
+			console.log(data);
 			const track = data?.recenttracks?.track?.[0];
 			if (!track) return;
 			const artist = track.artist["#text"];
@@ -218,6 +219,7 @@ function fetchSong() {
 			const image = track.image.find(img => img.size === "extralarge")?.["#text"] || "";
 
 			document.getElementById("artist").innerText = artist;
+			document.getElementById("artist").href = `https://duckduckgo.com/?q=${artist}`;
 			document.getElementById("song-name").innerText = title;
 			document.getElementById("song-cover").src = !image ? "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg" : image;
 			document.getElementById("song-url").href = track.url;

@@ -624,7 +624,11 @@ div[class="cards sitemap shadow"] > h4 {
 }
 
 #artist {
-	cursor: pointer;
+    transition: color 0.1s;
+}
+
+#artist:hover {
+	color: #c099ff;
 }
 
 #song-cover {
