@@ -66,7 +66,12 @@ function lan() {
 		}
 	
 		if (gameActivity) {
-			activityNameElem.innerHTML = `<strong>Playing</strong> ${gameActivity.name}: ${gameActivity.details}, ${gameActivity.state}`;
+			
+			const parts = [];
+			if (gameActivity.name) parts.push(`<strong>Playing</strong> ${gameActivity.name}`);
+			if (gameActivity.details) parts.push(gameActivity.details);
+			if (gameActivity.state) parts.push(gameActivity.state);
+			activityNameElem.innerHTML = parts.join(': ');
 	
 			if (gameActivity.assets && gameActivity.assets.large_image) {
 				const imgId = gameActivity.assets.large_image;
@@ -137,6 +142,7 @@ function generateSkillCards(skillData) {
 	skillData.skills.forEach(skill => {
 		const skillItem = document.createElement('a');
 		skillItem.classList.add('skill-item', 'tooltip');
+		skillItem.id = skill.id;
 		skillItem.href = skill.url;
 		skillItem.target = '_blank';
 		

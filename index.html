@@ -18,7 +18,7 @@
             <h1 class="name tooltip" data-tooltip="zyqunix / Fabio / Laetitia / fentboiswag / монгол / 192.168.2.217">zyqunix</h1>
 			<span><div class="time tooltip" id="time"></div><div class="weather" id="weather"></div></span></span>
 			<div class="age" id="age"></div>
-            <div class="hobbies">
+            <div class="hobbies" id="hobbies">
                 Coding, Listening to Music, Reverse Engineering, Playing Counter-Strike
             </div>
         </div>
@@ -32,26 +32,26 @@
         </div>
 
         <div class="languages cards">
-			<h2 class="card-header">Languages</h2>
+			<h2 class="card-header" id="languages">Languages</h2>
 		</div>
 
 		<div class="skills cards" id="skills-div">
-			<h2 class="card-header">Skills</h2>
+			<h2 class="card-header" id="skills">Skills</h2>
 		</div>
 
 		<div class="stats cards">
-			<h2>Coding Stats</h2>
-			<p>Since January 5th, 2025</p>
+			<h2 id="coding_stats">Coding Stats</h2>
+			<p id="since">Since January 5th, 2025</p>
 			<img class="stat-img" src="https://github-readme-stats.vercel.app/api/wakatime?username=zyqunix&theme=transparent&hide_border=true&layout=compact">
 		</div>
 
 		<div class="contact cards">
-			<h2 class="card-header">Contact</h2>
+			<h2 class="card-header" id="contact">Contact</h2>
 			<a class="contact-item github-contact" href="https://github.com/zyqunix" target="_blank">
 				<img class="image" src="https://raw.githubusercontent.com/zyqunix/devicon/404c165ff8d0b7eda226ec5eb66fdfc64f5f381f/icons/github/github-original.svg">
 				<span class="contact-name">GitHub</span>
 			</a>
-			<a class="contact-item instagram-contact" href="https://instagram.com/192.168.2.223" target="_blank">
+			<a class="contact-item instagram-contact" href="https://instagram.com/byte_ptr" target="_blank">
 				<img class="image" src="https://raw.githubusercontent.com/zyqunix/simple-icons/725d82d3e0d7feb029b84fb3ccaec2f5ec1e5fb5/icons/instagram.svg">
 				<span class="contact-name">Instagram</span>
 			</a>
@@ -66,7 +66,7 @@
 		</div>
 
 		<div class="software cards">
-			<h2 class="card-header">Software I Use</h2>
+			<h2 class="card-header" id="software_header">Software I Use</h2>
 			<a class="software-item neovim" href="https://neovim.io/" target="_blank">
 				<img class="image" src="https://upload.wikimedia.org/wikipedia/commons/0/07/Neovim-mark-flat.svg">
 				<span class="software-name">Neovim</span>
@@ -87,10 +87,6 @@
 				<img class="image" src="https://raw.githubusercontent.com/Floorp-Projects/Floorp/refs/heads/ESR128/browser/branding/official/content/about-logo.svg">
 				<span class="software-name">Floorp</span>
 			</a>
-			<a class="software-item" href="https://codeberg.org/librewolf" target="_blank">
-				<img class="image" src="https://wikiless.funami.tech/media/wikipedia/commons/d/d0/LibreWolf_icon.svg">
-				<span class="software-name">LibreWolf</span>
-			</a>
 			<a class="software-item tooltip" data-tooltip="Used to make my Minecraft Mod" href="https://www.jetbrains.com/idea" target="_blank">
 				<img class="image" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg">
 				<span class="software-name">IntelliJ IDEA</span>
@@ -106,7 +102,7 @@
 		</div>
 
 		<div class="cards sitemap shadow">
-			<h2 class="card-header">Sitemap</h2>
+			<h2 class="card-header" id="sitemap">Sitemap</h2>
 			<h3>More can be found on the <a href="sitemap">sitemap/sites page</a></h3>
 			<h4>Note: I do forget to add new sites there sometimes. So check the <a href="https://github.com/zyqunix/tools">GitHub</a> if you think there are some missing</h4>
 		</div>
@@ -114,7 +110,7 @@
 		<div class="music">
 			<img src="assets/img/dancing-banan.gif" class="banan" id="banan">
 			<div class="music-pop shadow" id="music-pop">
-				<div class="top"><h3>Listening To <a id="artist" target="_blank">No one</a></h3>
+				<div class="top"><h3 id="listening_to">Listening To <a id="artist" target="_blank">No one</a></h3>
 					<button id="close"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Menu / Close_MD"> <path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="--darkreader-inline-stroke: var(--darkreader-text-ffffff, #e8e6e3);" data-darkreader-inline-stroke=""></path> </g> </g></svg></button></div>							
 				<div class="song">
 					<div>
@@ -138,5 +134,6 @@
 		</footer>
         
 		<script src="assets/js/index.js"></script>
+		<script src="assets/js/lang.js"></script>
     </body>
 </html>

@@ -573,6 +573,10 @@ div[class="cards sitemap shadow"] > h4 {
 	scale: 1.04;
 }
 
+.banan:active {
+	scale: 0.98;
+}
+
 .music-pop {
 	text-align: left;
 	position: fixed;
