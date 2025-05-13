@@ -25,25 +25,55 @@ setTimeout(() => {
 		}
 	}
 
+
+
 	function applyTranslations(lang) {
 		if (!translations[lang]) return;
 
 		document.title = translations[lang].title;
 
-		const elements = [
-			"hobbies", "status", "languages", "skills", "coding_stats", "stats_since",
-			"contact", "software", "tooltip_py", "tooltip_js", "tooltip_djs", "tooltip_c",
-			"tooltip_cpp", "tooltip_cs", "tooltip_java", "tooltip_kt", "tooltip_mn", "tooltip_en", 
-			"tooltip_de", "tooltip_fr", "tooltip_sk", "tooltip_cz"
-		];
+		const map = {
+			hobbies: "hobbies",
+			status: "status",
+			languages: "languages_header",
+			skills: "skills_header",
+			coding_stats: "stats_header",
+			stats_since: "stats_since",
+			contact: "contact_header",
+			software_header: "software_header",
+			software_equicord_tooltip: "software_equicord_tooltip",
+			software_intellij_tooltip: "software_intellij_tooltip",
+			software_android_tooltip: "software_android_tooltip",
+			software_kitty_tooltip: "software_kitty_tooltip",
+			tooltip_py: "tooltip_py",
+			tooltip_js: "tooltip_js",
+			tooltip_djs: "tooltip_djs",
+			tooltip_c: "tooltip_c",
+			tooltip_cpp: "tooltip_cpp",
+			tooltip_cs: "tooltip_cs",
+			tooltip_java: "tooltip_java",
+			tooltip_kt: "tooltip_kt",
+			tooltip_mn: "tooltip_mn",
+			more: "more",
+			more_sm: "more_sm",
+			note: "note",
+			copyright: "copyright",
+			foss: "foss",
+			inspired: "inspired",
+			bw: "bw"
+		};
 
-		elements.forEach((selector) => {
-			const element = document.getElementById(selector);
-			if (element) {
-				const key = selector.replace('#', '');
-				element.textContent = translations[lang][key] || element.textContent;
+		Object.entries(map).forEach(([id, key]) => {
+			const el = document.getElementById(id);
+			if (!el) return;
+
+			const text = translations[lang][key];
+			if (!text) return;
+
+			if (el.hasAttribute("data-tooltip")) {
+				el.setAttribute("data-tooltip", text);
 			} else {
-				console.warn(`Element with ID '${selector}' not found`);
+				el.innerHTML = text;
 			}
 		});
 	}
@@ -52,10 +82,10 @@ setTimeout(() => {
 		await fetchLang(lang);
 	}
 
-	document.querySelector("div#en.language-name.tooltip").addEventListener('click', () => switchLanguage('en'));
-	document.querySelector("div#de.language-name.tooltip").addEventListener('click', () => switchLanguage('de'));
-	document.querySelector("div#fr.language-name.tooltip").addEventListener('click', () => switchLanguage('fr'));
-	document.querySelector("div#sk.language-name.tooltip").addEventListener('click', () => switchLanguage('sk'));
-	document.querySelector("div#cz.language-name.tooltip").addEventListener('click', () => switchLanguage('cz'));
+	document.getElementById("en").addEventListener("click", () => location.reload());
+	document.getElementById("de").addEventListener("click", () => switchLanguage("de"));
+	document.getElementById("fr").addEventListener("click", () => switchLanguage("fr"));
+	document.getElementById("sk").addEventListener("click", () => switchLanguage("sk"));
+	document.getElementById("cz").addEventListener("click", () => switchLanguage("cz"));
 
 }, 1000);

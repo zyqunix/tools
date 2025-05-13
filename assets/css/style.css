@@ -182,12 +182,12 @@ div[class="name-percent-container"] > img.image {
     border-radius: 5px;
     background: linear-gradient(to right, #005500 0%, #009900 50%, #005500 100%);
     background-size: 200% 100%;
-    animation: shimmer 3s infinite linear;
+    animation: shimmer 2s infinite ease-in;
 }
 
 .language-item:hover .percentage-bar .bar-after {
     background: linear-gradient(to right, #008800 0%, #00ff00 50%, #008800 100%);
-	animation: shimmer 3s infinite linear;
+	animation: shimmer 2s infinite ease-in;
     background-size: 200% 100%;
 }
 
@@ -338,10 +338,6 @@ a[class^="software-item tooltip"]::after {
 	margin: 10px;
 }
 
-.software > .software-item:last-child {
-	grid-column: 1 / -1;
-}
-
 .skill-item:hover,
 .software-item:hover {
     background-color: #4d4d4d;
@@ -468,6 +464,23 @@ a[class^="software-item tooltip"]::after {
 	a > img {
 		height: 25px;
 	}
+
+	.music-pop {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #song-cover {
+    width: 60px;
+    margin-right: 10px;
+    }
+
+    .top button,
+    #song-url,
+    #refresh {
+    max-width: 28px;
+    max-height: 28px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -504,6 +517,38 @@ a[class^="software-item tooltip"]::after {
 	a > img {
 		height: 25px;
 	}
+
+	.music-pop {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .song {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .song > div:nth-of-type(2) {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 8px;
+    }
+
+    #song-cover {
+    width: 56px;
+    margin-right: 10px;
+    }
+
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top button {
+        margin-top: 8px;
+        width: 28px;
+        height: 28px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -539,6 +584,36 @@ a[class^="software-item tooltip"]::after {
 	.software-name {
 		font-size: 10px;
 	}
+
+	.music-pop {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .song {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .song > div:nth-of-type(2) {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+
+    #song-cover {
+    width: 50px;
+    margin-right: 8px;
+    }
+
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top button {
+        margin-top: 10px;
+    }
 }
 
 div[class="stats cards"] {

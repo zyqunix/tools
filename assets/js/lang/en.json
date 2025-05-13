@@ -9,6 +9,9 @@
 	"contact_header": "Contact",
 	"software_header": "Software I Use",
 	"software_equicord_tooltip": "I have contributed in making 2 plugins",
+	"software_intellij_tooltip": "Used to make my Minecraft Mod",
+	"software_android_tooltip": "Used to make/customize open-source apps",
+	"software_kitty_tooltip": "Main Terminal on Linux",
 	"tooltip_py": "The second programming language I've learned",
 	"tooltip_html": "I hate you, CSS",
 	"tooltip_js": "Fun language with the cleanest syntax after C",
@@ -19,9 +22,10 @@
 	"tooltip_java": "Made a Minecraft mod and an Android app",
 	"tooltip_kt": "Made Android apps",
 	"tooltip_mn": "Professional Mongolian Stone Thrower",
-	"tooltip_en": "Started learning in 1st grade",
-	"tooltip_de": "Started learning in 2nd grade",
-	"tooltip_fr": "Started learning in 7th grade",
-	"tooltip_sk": "First language, born in Slovakia",
-	"tooltip_cz": "Free DLC when you're born in Slovakia, you understand Czech fluently"
+	"more": "More can be found on the <a href='sitemap' id='more_sm'>sitemap/sites page</a>",
+	"note": "Note: I do forget to add new sites there sometimes. So check the <a href='https://github.com/zyqunix/tools'>GitHub</a> if you think there are some missing",
+	"copyright": "© 2025 zyqunix - all rights reserved",
+	"foss": "❤️ This website is open-source on <a href='https://github.com/zyqunix/tools' target='_blank'>GitHub</a>",
+	"inspired": "✨ Inspired by <a href='https://vmohammad.dev' target='_blank'>vMohammad's Portfolio</a>",
+	"bw": "❤️ Made with love by zyqunix in Germany"
 }

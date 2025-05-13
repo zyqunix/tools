@@ -8,31 +8,31 @@
 			"id": "en"
 		},
 		{
-			"name": "German",
+			"name": "Deutsch",
 			"percentage": 100,
 			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fb%2Fba%2FFlag_of_Germany.svg%2F640px-Flag_of_Germany.svg.png&h=3921b6290fe87e6919522a8e273efe494d70123859d147682c935a29e375aaae",
-			"tooltip": "Started learning in 2nd grade",
+			"tooltip": "In der 2. Klasse angefangen zu lernen",
 			"id": "de"
 		},
 		{
-			"name": "French",
+			"name": "Français",
 			"percentage": 50,
 			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F1f%2FFlag_of_France_official.svg&h=d139dd7e87b1d627b8079636ea584d96d71161f57d41ce44c465ea4cb3fe23e9",
-			"tooltip": "Started learning in 7th grade",
+			"tooltip": "Commencé en 5ème",
 			"id": "fr"
 		},
 		{
-			"name": "Slovak",
+			"name": "Slovenčina",
 			"percentage": 100,
 			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fe6%2FFlag_of_Slovakia.svg%2F800px-Flag_of_Slovakia.svg.png&h=aa2494acbea2f461750d3d2b5ecace7289323834862f071b082e511c6e11e71c",
-			"tooltip": "First language, born in Slovakia",
+			"tooltip": "Materný jazyk, narodený na Slovensku",
 			"id": "sk"
 		},
 		{
-			"name": "Czech",
+			"name": "Česky",
 			"percentage": 90,
 			"img": "https://search.im-in.space/image_proxy?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fcb%2FFlag_of_the_Czech_Republic.svg%2F640px-Flag_of_the_Czech_Republic.svg.png&h=aaf894a4054a000fd36036b44cfeb3a81a3d65e0ec0688a81c299224a9bec60e",
-			"tooltip": "Free DLC when you're born in Slovakia, you understand Czech fluently",
+			"tooltip": "Free DLC pokud se narodíš na Slovensku, česky rozumíš plynule",
 			"id": "cz"
 		}
 	]
