@@ -1,19 +1,19 @@
 @import url(/global.css);
 
 img {
-	pointer-events: none;
-	user-select: none;
+    pointer-events: none;
+    user-select: none;
 }
 
 body {
-    color: #ffffff;
+    color: #cdd6f4;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #2a2a2a;
+    background-color: #1e1e2e;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -24,7 +24,7 @@ body {
 
 strong {
     font-weight: 900;
-    color: #dddddd;
+    color: #cdd6f4;
 }
 
 .info {
@@ -35,7 +35,7 @@ strong {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid #80848e;
+    border: 3px solid #b4befe;
 }
 
 .name {
@@ -45,47 +45,47 @@ strong {
 
 .time,
 .weather {
-	font-size: 18px;
-	margin-bottom: 10px;
-	color: #cccccc;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #bac2de;
 }
 
 .age {
     font-size: 18px;
     margin-top: 5px;
-    color: #cccccc;
+    color: #bac2de;
 }
 
 .hobbies {
     margin-top: 10px;
     font-size: 16px;
-    color: #cccccc;
+    color: #bac2de;
 }
 
 .cards {
     margin-top: 30px !important;
-    background-color: #252525;
-	border: 2px solid #333;
+    background-color: #313244;
+    border: 2px solid #45475a;
     padding: 20px;
     border-radius: 10px;
     width: 600px !important;
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-	transition: border 0.1s;
+    transition: border 0.1s;
 }
 
 .cards:hover {
-	border: 2px solid #444;
+    border: 2px solid #585b70;
 }
 
 footer {
-	margin-bottom: 50px !important;
+    margin-bottom: 50px !important;
 }
 
 #status {
     font-weight: bold;
     margin: 10px 0 15px 10px;
-    color: #cccccc;
+    color: #bac2de;
 }
 
 .activity {
@@ -100,7 +100,7 @@ footer {
 #activity-name {
     flex-grow: 1;
     text-align: left;
-	color: #cccccc;
+    color: #bac2de;
 }
 
 #activity-image {
@@ -118,7 +118,7 @@ footer {
 
 .language-item {
     display: block;
-    background-color: #2b2b2b;
+    background-color: #313244;
     padding: 10px 15px;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.2s;
@@ -127,13 +127,13 @@ footer {
 }
 
 .language-item:hover {
-    background-color: #3b3b3b;
+    background-color: #45475a;
     transform: translateY(-5px);
 }
 
 .language-item:hover span,
 .language-item:hover .language-name {
-    color: #f0f0f0;
+    color: #f5e0dc;
 }
 
 .name-percent-container {
@@ -149,18 +149,17 @@ div[class="name-percent-container"] > img.image {
     border-radius: 2px;
 }
 
-
 .language-item .language-name {
-	cursor: default;
+    cursor: default;
     font-size: 18px;
-    color: #aaaaaa;
+    color: #a6adc8;
     display: inline-block;
     margin-right: 10px;
 }
 
 .language-item .percent {
     font-size: 16px;
-    color: #aaaaaa;
+    color: #a6adc8;
     font-weight: bold;
 }
 
@@ -168,7 +167,7 @@ div[class="name-percent-container"] > img.image {
     display: block;
     width: 100%;
     height: 8px;
-    background-color: #444;
+    background-color: #585b70;
     margin-top: 10px;
     border-radius: 5px;
     position: relative;
@@ -178,16 +177,15 @@ div[class="name-percent-container"] > img.image {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #00aa00;
     border-radius: 5px;
-    background: linear-gradient(to right, #005500 0%, #009900 50%, #005500 100%);
+    background: linear-gradient(to right, #b4befe 0%, #cba6f7 50%, #b4befe 100%);
     background-size: 200% 100%;
     animation: shimmer 2s infinite ease-in;
 }
 
 .language-item:hover .percentage-bar .bar-after {
-    background: linear-gradient(to right, #008800 0%, #00ff00 50%, #008800 100%);
-	animation: shimmer 2s infinite ease-in;
+    background: linear-gradient(to right, #cdd6f4 0%, #b4befe 50%, #cdd6f4 100%);
+    animation: shimmer 2s infinite ease-in;
     background-size: 200% 100%;
 }
 
@@ -197,15 +195,17 @@ div[class="name-percent-container"] > img.image {
     position: relative;
 }
 
-.tooltip::after {
+.tooltip::after,
+a[class="skill-item tooltip"]::after,
+a[class^="software-item tooltip"]::after {
     content: attr(data-tooltip);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 125%;
-    background-color: #2a2a2a;
-    border: 2px solid rgba(150, 150, 150, 0.1);
-    color: #fff;
+    background-color: #1e1e2e;
+    border: 2px solid #6c7086;
+    color: #cdd6f4;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -213,45 +213,16 @@ div[class="name-percent-container"] > img.image {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
-	cursor: default; 
+    cursor: default;
 }
 
 a[class="skill-item tooltip"]::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     bottom: 110%;
-    background-color: #2a2a2a;
-    border: 2px solid rgba(150, 150, 150, 0.1);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-	cursor: default; 
 }
 
 a[class^="software-item tooltip"]::after {
-    content: attr(data-tooltip);
-    position: absolute;
-	left: 50%;
-    transform: translateX(-50%);
     bottom: 100%;
-    background-color: #2a2a2a;
-    border: 2px solid rgba(150, 150, 150, 0.1);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
     font-size: 16px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-	cursor: default; 
 }
 
 .tooltip:hover::after {
@@ -293,77 +264,53 @@ a[class^="software-item tooltip"]::after {
     max-width: 600px;
 }
 
-.skill-item {
-	text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #3b3b3b;
-    padding: 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-	margin: 0 20px;
-}
-
-.contact-item {
-	text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: #3b3b3b;
-    padding: 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-	margin: 10px;
-}
-
+.skill-item,
+.contact-item,
 .software-item {
-	text-decoration: none;
+    text-decoration: none;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #3b3b3b;
+    background-color: #313244;
     padding: 15px;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-	margin: 10px;
+    margin: 10px;
+}
+
+.skill-item {
+    flex-direction: column;
+    margin: 0 20px;
 }
 
 .skill-item:hover,
 .software-item:hover {
-    background-color: #4d4d4d;
+    background-color: #45475a;
     transform: translateY(-5px);
-	filter: brightness(1);
+    filter: brightness(1);
 }
 
 .skill-item:hover .skill-name {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 .skill-item > .image,
 .software-item > .image {
-	margin-bottom: 10px;
-	filter: brightness(0.75);
+    margin-bottom: 10px;
+    filter: brightness(0.75);
 }
 
 .skill-item:hover > .image,
-.software-item:hover> .image {
-	filter: brightness(1);
+.software-item:hover > .image {
+    filter: brightness(1);
 }
 
 .image {
     height: 50px;
     border-radius: 5px;
-	transition: 0.1s;
+    transition: 0.1s;
 }
 
 .software-item > .image {
@@ -373,25 +320,25 @@ a[class^="software-item tooltip"]::after {
 
 .skill-name {
     font-size: 16px;
-    color: #aaaaaa;
-	transition: 0.1s;
+    color: #a6adc8;
+    transition: 0.1s;
 }
 
 .contact-name,
 .software-name {
     font-size: 16px;
-    color: #ccc;
-	margin-left: 10px;
-	transition: 0.1s;
+    color: #bac2de;
+    margin-left: 10px;
+    transition: 0.1s;
 }
 
 .contact-item > .image,
 .software-item > .image {
-	margin-top: 5px;
+    margin-top: 5px;
 }
 
 .card-header {
-    color: white;
+    color: #cdd6f4;
     text-align: left;
     width: 100%;
     grid-column: span 2;
@@ -399,151 +346,137 @@ a[class^="software-item tooltip"]::after {
 
 .contact-item:hover .contact-name,
 .software-item:hover .software-name {
-	color: #fff;
+    color: #ffffff;
 }
 
 .github-contact {
-	background-color: #040404;
+    background-color: #11111b;
 }
 
 .github-contact:hover {
-	background-color: #080808;
+    background-color: #1e1e2e;
 }
 
 .instagram-contact {
-	background-color: #c13584;
+    background-color: #b4befe;
+}
+
+.instagram-contact > span,
+.twitter-contact > span,
+.youtube-contact > span {
+	filter: invert(1);	
 }
 
 .instagram-contact:hover {
-	background-color: #d44190;
+    background-color: #cba6f7;
 }
 
 .twitter-contact {
-	background-color: #1da1f2;
+    background-color: #89b4fa;
 }
 
 .twitter-contact:hover {
-	background-color: #33b2ff;
+    background-color: #b5befe;
 }
 
 .youtube-contact {
-	background-color: #e03535;
+    background-color: #f38ba8;
 }
 
 .youtube-contact:hover {
-	background-color: #ff4444;
+    background-color: #eba0ac;
 }
 
-
 @media (max-width: 768px) {
-	.cards {
+    .cards {
         width: 100% !important;
-		max-width: 80% !important;
+        max-width: 80% !important;
         padding: 15px;
-		margin: 15px;
+        margin: 15px;
     }
-    
-	.language-item {
+    .language-item {
         margin: 10px;
     }
-
     .language-item img.image {
-		height: 1px;
         width: 25px;
         height: 17px;
     }
-
     .language-item .language-name {
         font-size: 16px;
     }
-
     .language-item .percent {
         font-size: 14px;
     }
-	
-	a > img {
-		height: 25px;
-	}
-
-	.music-pop {
+    a > img {
+        height: 25px;
+    }
+    .popup {
         width: 90%;
         padding: 15px;
     }
-
     #song-cover {
-    width: 60px;
-    margin-right: 10px;
+        width: 60px;
+        margin-right: 10px;
     }
-
     .top button,
     #song-url,
     #refresh {
-    max-width: 28px;
-    max-height: 28px;
+        max-width: 28px;
+        max-height: 28px;
     }
 }
 
 @media (max-width: 600px) {
     .cards {
         width: 100% !important;
-		max-width: 80% !important;
+        max-width: 80% !important;
         padding: 15px;
-		margin: 15px;
+        margin: 15px;
     }
-
     .name {
         font-size: 20px;
     }
-
-    .time, .age, .hobbies {
+    .time,
+    .age,
+    .hobbies {
         font-size: 16px;
     }
-
     #profile-picture {
         width: 120px;
         height: 120px;
     }
-
-	.stat-img {
+    .stat-img {
         width: 100%;
     }
-
     .skill-item,
     .contact-item,
-	.software-item {
+    .software-item {
         padding: 10px;
     }
-
-	a > img {
-		height: 25px;
-	}
-
-	.music-pop {
+    a > img {
+        height: 25px;
+    }
+    .popup {
         width: 95%;
         padding: 12px;
     }
-
     .song {
         flex-direction: column;
         align-items: flex-start;
     }
-
     .song > div:nth-of-type(2) {
         width: 100%;
         justify-content: flex-end;
         margin-top: 8px;
     }
-
     #song-cover {
-    width: 56px;
-    margin-right: 10px;
+        width: 56px;
+        margin-right: 10px;
     }
-
     .top {
         flex-direction: column;
         align-items: flex-start;
     }
-
     .top button {
         margin-top: 8px;
         width: 28px;
@@ -555,62 +488,52 @@ a[class^="software-item tooltip"]::after {
     .name {
         font-size: 18px;
     }
-
-    .time, .age, .hobbies {
+    .time,
+    .age,
+    .hobbies {
         font-size: 14px;
     }
-
     #profile-picture {
         width: 100px;
         height: 100px;
     }
-
     .cards {
         width: 100% !important;
-		max-width: 80% !important;
+        max-width: 80% !important;
         padding: 10px;
     }
-
     .skill-item,
     .contact-item,
-	.software-item {
+    .software-item {
         padding: 8px;
     }
-
-	a > img {
-		transform: scale(0.75);
-	}
-
-	.software-name {
-		font-size: 10px;
-	}
-
-	.music-pop {
+    a > img {
+        transform: scale(0.75);
+    }
+    .software-name {
+        font-size: 10px;
+    }
+    .popup {
         width: 95%;
         padding: 10px;
     }
-
     .song {
         flex-direction: column;
         align-items: flex-start;
     }
-
     .song > div:nth-of-type(2) {
         width: 100%;
         justify-content: flex-end;
         margin-top: 10px;
     }
-
     #song-cover {
-    width: 50px;
-    margin-right: 8px;
+        width: 50px;
+        margin-right: 8px;
     }
-
     .top {
         flex-direction: column;
         align-items: flex-start;
     }
-
     .top button {
         margin-top: 10px;
     }
@@ -625,95 +548,94 @@ div[class="stats cards"] > h2 {
 }
 
 div[class="stats cards"] > p {
-	text-align: left;
-	color: #AAAAAA;
+    text-align: left;
+    color: #a6adc8;
 }
 
 div[class="cards sitemap shadow"] > h3,
 div[class="cards sitemap shadow"] > h4 {
-	font-weight: normal;
+    font-weight: normal;
 }
 
 .banan {
-	position: fixed;
-	right: 30px !important;
-	bottom: 30px !important;
-	width: 64px;
+    position: fixed;
+    right: 30px !important;
+    bottom: 30px !important;
+    width: 64px;
     cursor: pointer;
-	pointer-events: all !important;
-	border-radius: 4px;
+    pointer-events: all !important;
+    border-radius: 4px;
 }
 
 .banan:hover {
-	scale: 1.04;
+    transform: scale(1.04);
 }
 
 .banan:active {
-	scale: 0.98;
+    transform: scale(0.98);
 }
 
-.music-pop {
-	text-align: left;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #202020ee;
-	width: 600px;
-	padding: 20px;
-	border-radius: 10px;
-	backdrop-filter: blur(5px);
-	visibility: hidden;
-	border: 2px solid #333;
-	opacity: 0;
-	transition: 0.3s;
-	z-index: 9999;
+.popup {
+    text-align: left;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #313244ee;
+    width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    visibility: hidden;
+    border: 2px solid #45475a;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 9999;
 }
 
-.music-pop:hover {
-	border: 2px solid #444;
+.popup:hover {
+    border: 2px solid #585b70;
 }
 
 .top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .top button {
-	padding: 4px;
-	height: 32px;
-	width: 32px;
-	background-color: #ac2323;
-	color: #fff;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	transition: 0.1s;
+    padding: 4px;
+    height: 32px;
+    width: 32px;
+    background-color: #e06c75;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.1s;
 }
 
-
 #refresh:hover {
-	background-color: #67de50;
+    background-color: #67de50;
 }
 
 .top button:hover {
-	background-color: #bc3333;
+    background-color: #bc3333;
 }
 
 .song {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .song > div {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .song > div:nth-of-type(2) {
-	width: 52px;
+    width: 52px;
 }
 
 #artist {
@@ -721,59 +643,101 @@ div[class="cards sitemap shadow"] > h4 {
 }
 
 #artist:hover {
-	color: #c099ff;
+    color: #cba6f7;
 }
 
 #song-cover {
-	border-radius: 4px;
-	margin-right: 15px;
-	width: 72px;
+    border-radius: 4px;
+    margin-right: 15px;
+    width: 72px;
 }
 
 #song-url {
-	display: flex;
-	background-color: #0778B7;
-	padding: 4px 4px;
-	border-radius: 6px;
-	margin-right: 5px;
-	max-width: 24px;
-	max-height: 24px;
-	align-items: center;
+    display: flex;
+    background-color: #89b4fa;
+    padding: 4px;
+    border-radius: 6px;
+    margin-right: 5px;
+    max-width: 24px;
+    max-height: 24px;
+    align-items: center;
 }
 
 #refresh {
-	display: flex;
-	background-color: #57ce40;
-	padding: 4px 4px;
-	border-radius: 6px;
-	max-width: 24px;
-	max-height: 24px;
-	text-align: center;
-	align-items: center;
-	height: 100%;
-	width: 100%;
-	cursor: pointer;
-	border: none;
+    display: flex;
+    background-color: #a6e3a1;
+    padding: 4px;
+    border-radius: 6px;
+    max-width: 24px;
+    max-height: 24px;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border: none;
 }
 
 #song-url:hover {
-	background-color: #1078C7;
+    background-color: #89b4fa;
 }
 
 #song-url:hover > svg {
-	color: #fff;
+    color: #ffffff;
 }
 
 #overlay {
-	z-index: 10;
-	background-color: #101010bb;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	backdrop-filter: blur(10px);
-	opacity: 0;
-	visibility: hidden;
-	transition: 0.3s;
+    z-index: 10;
+    background-color: #101010bb;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.palette {
+    position: fixed;
+    right: 30px !important;
+    top: 30px !important;
+    width: 32px;
+    cursor: pointer;
+    pointer-events: all !important;
+    transition: transform 0.1s;
+}
+
+.palette:hover {
+    transform: scale(1.04);
+}
+
+.palette:active {
+    transform: scale(0.98);
+}
+
+.themes > button {
+    font-size: 16px;
+    cursor: pointer;
+    color: #cdd6f4;
+    border-radius: 3px;
+    padding: 4px;
+    margin-right: 10px;
+}
+
+.themes {
+    font-size: 0;
+}
+
+.selected-theme {
+    background: #313244;
+    border: 2px solid #45475a;
+    cursor: not-allowed !important;
+}
+
+.unselected-theme {
+    background: #252734;
+    border: 2px solid #353646;
 }

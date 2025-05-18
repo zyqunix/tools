@@ -221,7 +221,6 @@ function fetchSong() {
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
-			//console.log(data);
 			const track = data?.recenttracks?.track?.[0];
 			if (!track) return;
 			const artist = track.artist["#text"];
@@ -240,42 +239,51 @@ function fetchSong() {
 }
 
 function fetchWeather(location) {
-	if (!location) {
-		fetch(`https://wttr.in/muc?format=%t | %C`)
+	const target = document.getElementById('weather');
+	const query = location ? location : "muc";
+	fetch(`https://wttr.in/${query}?format=%t | %C`)
 		.then(response => response.text())
 		.then(data => {
-			document.getElementById('weather').innerText = data;
+			target.innerText = data;
 		})
-	} else {
-		fetch(`https://wttr.in/${location}?format=%t | %C`)
-		.then(data => {
-			document.getElementById('weather').innerText = data;
-		})
-	}
+		.catch(() => {
+			target.innerText = "Weather unavailable";
+		});
 }
 
 fetchWeather();
 fetchSong();
 
+let countdown = 60;
+
 setInterval(() => {
-	fetchSong();
-}, 60000)
+	countdown--;
+	if (countdown <= 0) {
+		countdown = 60;
+		fetchSong();
+	}
+	const refreshElem = document.getElementById('refresh');
+	if (refreshElem) refreshElem.dataset.tooltip = `Refresh in ${countdown}`;
+}, 1000);
 
-function close() {
-	document.getElementById('music-pop').style.opacity = '0';
-	document.getElementById('overlay').style.opacity = '0';
-	document.getElementById('music-pop').style.visibility = 'hidden';
-	document.getElementById('overlay').style.visibility = 'hidden';
+function closeOverlay(popupId, overlayId) {
+	document.getElementById(`${popupId}`).style.opacity = '0';
+	document.getElementById(`${overlayId}`).style.opacity = '0';
+	document.getElementById(`${popupId}`).style.visibility = 'hidden';
+	document.getElementById(`${overlayId}`).style.visibility = 'hidden';
 }
 
-function open() {
-	document.getElementById('music-pop').style.visibility = 'visible';
-	document.getElementById('overlay').style.visibility = 'visible';
-	document.getElementById('music-pop').style.opacity = '1';
-	document.getElementById('overlay').style.opacity = '1';
+function openOverlay(popupId, overlayId) {
+	const popup = document.getElementById(popupId);
+	const overlay = document.getElementById(overlayId);
+
+	popup.style.visibility = 'visible';
+	overlay.style.visibility = 'visible';
+	popup.style.opacity = '1';
+	overlay.style.opacity = '1';
 }
 
-document.getElementById('banan').addEventListener('click', open);
-document.getElementById('close').addEventListener('click', close);
-document.getElementById('overlay').addEventListener('click', close);
+document.getElementById('banan').addEventListener('click', () => { openOverlay("music-pop", "overlay")});
+document.getElementById('close').addEventListener('click', () => { closeOverlay("music-pop", "overlay")});
+document.getElementById('overlay').addEventListener('click', () => { closeOverlay("music-pop", "overlay")});
 document.getElementById('refresh').addEventListener('click', fetchSong);
