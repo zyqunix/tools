@@ -60,6 +60,7 @@ strong {
     margin-top: 10px;
     font-size: 16px;
     color: #bac2de;
+	display: block;
 }
 
 .cards {
