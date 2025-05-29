@@ -1,11 +1,5 @@
 const songs = [
     {
-        song: "YABUJIN - 8888 Dolphin Web",
-        src: "https://atums.world/raw/epic%206455.mp4",
-        duration: 106
-    },
-
-    {
         song: "Tenkay - Jerry Springer Based Freestyle",
         src: "https://atums.world/raw/2025-05-08_22%3A08%3A44.mp4",
         duration: 179 
@@ -24,9 +18,9 @@ const songs = [
     },
 
 	{
-        song: "woody - Heaven & Hell",
-        src: "https://easyfiles.cc/2024/9/20fa08a2-8212-4212-93b7-9c62fc563505/woody%20heaven%20&%20hell%20prod.%201mint%20-%20real1woody%20(1080p,%20h264)(1).mp4",
-        duration: 142
+        song: "M83 - Midnight City",
+        src: "https://thc.fentseller.lol/u/2025-05-29_17:34:05.mp4",
+        duration: 239
     }, 
     
     {
