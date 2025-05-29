@@ -256,7 +256,9 @@ const messages = [
     "Listening to Music",
     "Reverse Engineering",
     "Playing Counter-Strike",
-    "swagman",
+	"Visual Artistry",
+    "swagman",	
+
 ];
 
 let currentMessageIndex = 0;
