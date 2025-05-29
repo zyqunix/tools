@@ -19,7 +19,7 @@ const songs = [
 
 	{
         song: "M83 - Midnight City",
-        src: "https://thc.fentseller.lol/u/2025-05-29_17:34:05.mp4",
+        src: "https://thc.fentseller.lol/raw/2025-05-29_17:34:05.mp4",
         duration: 239
     }, 
     
