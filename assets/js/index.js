@@ -215,7 +215,7 @@ const params = new URLSearchParams({
   limit: "1"
 });
 
-const url = `http://ws.audioscrobbler.com/2.0/?${params.toString()}`;
+const url = `https://ws.audioscrobbler.com/2.0/?${params.toString()}`;
 
 function fetchSong() {
 	fetch(url)
