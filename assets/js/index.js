@@ -28,14 +28,14 @@ const updateAge = () => {
 	const now = new Date();
 	const diff = now.getTime() - birthday.getTime();
 	age = diff / (1000 * 60 * 60 * 24 * 365.25);
-	ageElem.innerHTML = `${age} years old`;
+	ageElem.innerHTML = `${age.toFixed(10)} years old`;
 }
 
 updateAge();
 
 const timeInterval = setInterval(() => {
 	updateAge();
-}, 10);
+}, 100);
 
 function lan() {
 	lanyard({
