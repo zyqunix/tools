@@ -28,7 +28,7 @@ const updateAge = () => {
 	const now = new Date();
 	const diff = now.getTime() - birthday.getTime();
 	age = diff / (1000 * 60 * 60 * 24 * 365.25);
-	ageElem.innerHTML = `${age.toFixed(2)} years old`;
+	ageElem.innerHTML = `${age} years old`;
 }
 
 updateAge();
