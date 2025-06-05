@@ -35,7 +35,7 @@ updateAge();
 
 const timeInterval = setInterval(() => {
 	updateAge();
-}, 3600 * 1000);
+}, 10);
 
 function lan() {
 	lanyard({
