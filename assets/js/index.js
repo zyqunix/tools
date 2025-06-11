@@ -245,7 +245,7 @@ const messages = [
     "Listening to Music",
     "Reverse Engineering",
     "Playing Counter-Strike",
-    "Visual Artistry",
+    "Visual Artist",
     "swagman"
 ];
 
