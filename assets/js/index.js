@@ -232,7 +232,7 @@ function fetchSong() {
 
 function fetchWeather(location) {
     const target = document.getElementById('weather');
-    const query = location ? location : "munich";
+    const query = location ? location : "Munich";
     fetch(`https://wttr.in/${query}?format=%t | %C`).then(response => response.text()).then(data => {
         target.innerText = data;
     }).catch(() => {
