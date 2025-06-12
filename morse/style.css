@@ -13,8 +13,8 @@ textarea, input, button {
 	padding: 10px; 
 	border-radius: 10px; 
 	border: none; 
-	background-color: #333; 
-	color: #f0f0f0; 
+	background-color: var(--surface0); 
+	color: var(--text); 
 }
 
 textarea {
@@ -24,10 +24,10 @@ textarea {
 
 button { 
 	cursor: pointer; 
-	background-color: #444; 
+	background-color: var(--surface0); 
 }
 
 button:hover { 
-	background-color: #555; 
+	background-color: var(--surface1); 
 }
 
