@@ -16,10 +16,7 @@ button:not(#toggle) {
     max-width: 80%;
     text-align: center;
     padding: 30px;
-    background-color: #454545;
     border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(16, 16, 16, 0.5);
-    transform: scale(1.1);
 }
 
 @media (min-width: 1024px) {
