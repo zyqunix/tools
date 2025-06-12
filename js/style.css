@@ -1,6 +1,6 @@
 @import url(/global.css);
 
-.container { 
+.cards { 
 	text-align: center; 
 	padding: 20px; 
 	border-radius: 20px; 
@@ -13,8 +13,8 @@ textarea {
 	padding: 10px;
 	border-radius: 10px;
 	border: none;
-	background-color: #333;
-	color: #f0f0f0;
+	background-color: var(--surface0);
+	color: var(--text);
 	resize: none;
 	outline: none;
 }
@@ -26,22 +26,22 @@ button {
 	border-radius: 10px; 
 	border: none; 
 	background-color: #333; 
-	color: #f0f0f0; 
+	color: var(--text); 
 }
 
 button { 
 	cursor: pointer; 
-	background-color: #444; 
+	background-color: var(--surface1); 
 }
 
 button:hover { 
-	background-color: #555; 
+	background-color: var(--surface2); 
 }
 
 pre {
 	font-family: "JetBrainsMono";
-	background-color: #333;
-	color: #fff;
+	background-color: var(--crust);
+	color: var(--white);
 	text-align: left;
-	padding: 3px;
+	padding: 10px;
 }

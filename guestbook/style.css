@@ -4,11 +4,20 @@ h6 {
     margin-top: -10px;
 }
 
+.cards {
+    margin-bottom: 50px;
+}
+
+hr {
+    background-color: var(--surface2);
+    color: var(--surface2);
+}
+
 .guestbook-entry {
     margin-bottom: 20px;
     padding: 10px;
-    border: 2px solid #3f3f3f;
-    background-color: #2f2f2f;
+    border: 2px solid var(--surface1);
+    background-color: var(--surface0);
     max-width: 50vw;
     text-align: left;
     border-radius: 8px;

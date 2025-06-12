@@ -6,9 +6,9 @@ h1 {
 }
 
 input[type="text"] {
-    background: #1e1e1e;
-    border: 1px solid #444;
-    color: #f0f0f0;
+    background: var(--surface0);
+    border: 1px solid var(--surface1);
+    color: var(--text);
     padding: 12px 15px;
     border-radius: 8px;
     font-size: 1rem;
@@ -20,7 +20,7 @@ input[type="text"] {
 }
 
 button {
-    background: #c099ff;
+    background: var(--mauve);
     color: #1e1e1e;
     border: none;
     padding: 12px 20px;
@@ -32,7 +32,7 @@ button {
 }
 
 button:hover {
-    background: #a875ff;
+    background: var(--pastel-violet);
 }
 
 #output {
@@ -52,13 +52,11 @@ table {
 
 th, td {
 	padding: 10px 14px;
-	border: 2px solid #2a2a2a;
-	background-color: #1f1f1f;
+    border-radius: 12px;
 }
 
-th:hover, 
-td:hover {
-	background-color: #232323;
+tr:hover {
+	background-color: var(--surface1);
 }
 
 th {
@@ -74,35 +72,5 @@ th {
 }
 
 #your-ip:not(:hover) {
-	filter: blur(10px);
-}
-
-.tooltip {
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.tooltip::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 125%;
-    background-color: #2a2a2a;
-    border: 2px solid rgba(150, 150, 150, 0.1);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-	cursor: default; 
-}
-
-.tooltip:hover::after {
-    opacity: 1;
-    visibility: visible;
+	filter: blur(50px);
 }
