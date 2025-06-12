@@ -7,46 +7,31 @@ html {
 button {
     padding: 10px;
     font-size: 1em;
-    background-color: #c099ff;
+    background-color: var(--mauve);
     border-radius: 10px;
-    border: 3px solid #d0aaff;
-    color: #191622;
+    border: 1px solid #d0aaff;
+    color: var(--mantle);
     cursor: pointer;
+}
+
+.cards {
+    text-align: center;
 }
 
 input {
     padding: 10px;
     font-size: 1em;
-    background-color: #886db4;
+    background-color: var(--mauve);
     border-radius: 10px;
-    border: 3px solid #644f84;
-    color: #191622;
+    border: 1px solid #644f84;
+    color: var(--mantle);
     cursor: text;
     outline: none;
     transition: background-color 0.25s, border 0.25s;
 }
 
-.inputButton {
-    padding: 10px;
-    font-size: 1em;
-    background-color: #886db4;
-    border-radius: 10px;
-    border: 3px solid #644f84;
-    color: #191622;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.25s, border 0.25s;
-}
-
 input::placeholder {
-    color: #3f3f3f;
-}
-
-input:not(:placeholder-shown),
-.inputButton:hover {
-    background-color: #a986e2;
-    border-radius: 10px;
-    border-color:rgb(168, 134, 209);
+    color: var(--surface1);
 }
 
 p:not(.hint) {
@@ -55,7 +40,7 @@ p:not(.hint) {
 
 button:hover {
     background-color: #cdadff;
-    border: 3px solid rgb(201, 161, 250);
+    border: 1px solid rgb(201, 161, 250);
 }
 
 button:active {
@@ -64,9 +49,9 @@ button:active {
 
 .main {
     padding: 150px 225px;
-    background-color: #3a3a3a;
+    background-color: var(--surface0);
     border-radius: 10px;
-    border: 5px solid #3f3f3f;
+    border: 1px solid #3f3f3f;
     max-width: 450px;
     max-height: 300px;
     display: flex;
@@ -77,8 +62,8 @@ button:active {
 #offscreenalert {
     position: absolute;
     padding: 20px;
-    background-color: #3a3a3a;
-    border: 3px solid #3f3f3f;
+    background-color: var(--surface0);
+    border: 1px solid var(--surface1);
     border-radius: 4px;
     top: -70px;
     transition: 0.4s cubic-bezier(.68,-0.55,.27,1.55);
