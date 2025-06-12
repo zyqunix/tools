@@ -7,44 +7,16 @@ img[class="img_header"] {
     border-radius: 5px;
 }
 
-div.header-main {
-    width: 100%;
-    padding: 15px 20px 20px 20px;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(59, 59, 59, 0.885);
-    backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-}
-
-div.header-main {
-    height: 1rem;
-}
-
-div.header-main a {
-    color: #c099ff;
-    margin: 0 5px 0 5px;
-}
-
-div.header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.main {
-    width: 90%;
-    max-width: 85%;
+.cards {
+    width: 90% !important;
+    max-width: 85% !important;
     text-align: center;
     margin-bottom: 50px;
     margin-top: 50px;
 }
 
 h2 {
-    color: #ffffff;
+    color: var(--white);
     margin-bottom: 40px;
     font-size: 2rem;
 }
@@ -52,7 +24,7 @@ h2 {
 .projects h2 {
     font-size: 1rem;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .projects {
@@ -67,7 +39,7 @@ h2 {
     width: calc(33% - 40px);
     max-width: 350px;
     padding: 20px;
-    background-color: rgba(59, 59, 59, 0.885);
+    background-color: var(--surface0);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -75,14 +47,14 @@ h2 {
 
 .project-div *,
 .futureproject-div * {
-    color: white;
+    color: var(--white);
 }
 
 .project-div .visit-project,
 .futureproject-div .visit-futureproject {
     padding: 10px 20px;
-    background-color: #569470;
-    color: #cfcfcf;
+    background-color: var(--green);
+    color: var(--mantle);
     border-radius: 5px;
     text-decoration: none;
     margin: 0;
@@ -97,18 +69,7 @@ h2 {
 
 .project-div .visit-project strong,
 .futureproject-div .visit-futureproject strong {
-    color: #cfcfcf;
-}
-
-.project-div .visit-project:hover,
-.futureproject-div .visit-futureproject:hover {
-    background-color: #47785b;
-    color: #ffffff;
-}
-
-.project-div .visit-project:hover strong,
-.futureproject-div .visit-futureproject:hover strong {
-    color: #ffffff;
+    color: var(--mantle);
 }
 
 .project-desc,
@@ -124,7 +85,7 @@ h2 {
 
 .project-desc a:hover,
 .futureproject-desc a:hover {
-    color: #c099ff;
+    color: var(--pastel-violet);
 }
 
 @media (max-width: 768px) {

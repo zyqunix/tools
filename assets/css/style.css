@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #1e1e2e;
+    background-color: var(--base);
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -35,7 +35,7 @@ strong {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid #b4befe;
+    border: 3px solid var(--lavender);
 }
 
 .name {
@@ -47,26 +47,26 @@ strong {
 .weather {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #bac2de;
+    color: var(--subtext1);
 }
 
 .age {
     font-size: 18px;
     margin-top: 5px;
-    color: #bac2de;
+    color: var(--subtext1);
 }
 
 .hobbies {
     margin-top: 10px;
     font-size: 16px;
-    color: #bac2de;
+    color: var(--subtext1);
 	display: block;
 }
 
 .cards {
     margin-top: 30px !important;
-    background-color: #313244;
-    border: 2px solid #45475a;
+    background-color: var(--surface0);
+    border: 2px solid var(--surface1);
     padding: 20px;
     border-radius: 10px;
     width: 600px !important;
@@ -76,7 +76,7 @@ strong {
 }
 
 .cards:hover {
-    border: 2px solid #585b70;
+    border: 2px solid var(--surface2);
 }
 
 footer {
@@ -86,7 +86,7 @@ footer {
 #status {
     font-weight: bold;
     margin: 10px 0 15px 10px;
-    color: #bac2de;
+    color: var(--subtext1);
 }
 
 .activity {
@@ -101,7 +101,7 @@ footer {
 #activity-name {
     flex-grow: 1;
     text-align: left;
-    color: #bac2de;
+    color: var(--subtext1);
 }
 
 #activity-image {
@@ -119,7 +119,7 @@ footer {
 
 .language-item {
     display: block;
-    background-color: #313244;
+    background-color: var(--surface0);
     padding: 10px 15px;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.2s;
@@ -128,13 +128,13 @@ footer {
 }
 
 .language-item:hover {
-    background-color: #45475a;
+    background-color: var(--surface1);
     transform: translateY(-5px);
 }
 
 .language-item:hover span,
 .language-item:hover .language-name {
-    color: #f5e0dc;
+    color: var(--rosewater);
 }
 
 .name-percent-container {
@@ -153,14 +153,14 @@ div[class="name-percent-container"] > img.image {
 .language-item .language-name {
     cursor: default;
     font-size: 18px;
-    color: #a6adc8;
+    color: var(--subtext0);
     display: inline-block;
     margin-right: 10px;
 }
 
 .language-item .percent {
     font-size: 16px;
-    color: #a6adc8;
+    color: var(--subtext0);
     font-weight: bold;
 }
 
@@ -168,7 +168,7 @@ div[class="name-percent-container"] > img.image {
     display: block;
     width: 100%;
     height: 8px;
-    background-color: #585b70;
+    background-color: var(--surface2);
     margin-top: 10px;
     border-radius: 5px;
     position: relative;
@@ -179,13 +179,13 @@ div[class="name-percent-container"] > img.image {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    background: linear-gradient(to right, #b4befe 0%, #cba6f7 50%, #b4befe 100%);
+    background: linear-gradient(to right, var(--lavender) 0%, var(--mauve) 50%, var(--lavender) 100%);
     background-size: 200% 100%;
     animation: shimmer 2s infinite ease-in;
 }
 
 .language-item:hover .percentage-bar .bar-after {
-    background: linear-gradient(to right, var(--text) 0%, #b4befe 50%, var(--text) 100%);
+    background: linear-gradient(to right, var(--text) 0%, var(--lavender) 50%, var(--text) 100%);
     animation: shimmer 2s infinite ease-in;
     background-size: 200% 100%;
 }
@@ -204,8 +204,8 @@ a[class^="software-item tooltip"]::after {
     left: 50%;
     transform: translateX(-50%);
     bottom: 125%;
-    background-color: #1e1e2e;
-    border: 1px solid #6c7086;
+    background-color: var(--base);
+    border: 1px solid var(--overlay0);
     color: var(--text);
     padding: 5px 10px;
     border-radius: 5px;
@@ -272,7 +272,7 @@ a[class^="software-item tooltip"]::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #313244;
+    background-color: var(--surface0);
     padding: 15px;
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.2s;
@@ -288,13 +288,13 @@ a[class^="software-item tooltip"]::after {
 
 .skill-item:hover,
 .software-item:hover {
-    background-color: #45475a;
+    background-color: var(--surface1);
     transform: translateY(-5px);
     filter: brightness(1);
 }
 
 .skill-item:hover .skill-name {
-    color: #ffffff;
+    color: var(--white);
 }
 
 .skill-item > .image,
@@ -321,14 +321,14 @@ a[class^="software-item tooltip"]::after {
 
 .skill-name {
     font-size: 16px;
-    color: #a6adc8;
+    color: var(--subtext0);
     transition: 0.1s;
 }
 
 .contact-name,
 .software-name {
     font-size: 16px;
-    color: #bac2de;
+    color: var(--subtext1);
     margin-left: 10px;
     transition: 0.1s;
 }
@@ -347,19 +347,19 @@ a[class^="software-item tooltip"]::after {
 
 .contact-item:hover .contact-name,
 .software-item:hover .software-name {
-    color: #ffffff;
+    color: var(--white);
 }
 
 .github-contact {
-    background-color: #11111b;
+    background-color: var(--crust);
 }
 
 .github-contact:hover {
-    background-color: #1e1e2e;
+    background-color: var(--base);
 }
 
 .instagram-contact {
-    background-color: #b4befe;
+    background-color: var(--lavender);
 }
 
 .instagram-contact > span,
@@ -369,15 +369,15 @@ a[class^="software-item tooltip"]::after {
 }
 
 .instagram-contact:hover {
-    background-color: #cba6f7;
+    background-color: var(--mauve);
 }
 
 .twitter-contact {
-    background-color: #89b4fa;
+    background-color: var(--blue);
 }
 
 .twitter-contact:hover {
-    background-color: #b5befe;
+    background-color: var(--lavender);
 }
 
 .youtube-contact {
@@ -550,7 +550,7 @@ div[class="stats cards"] > h2 {
 
 div[class="stats cards"] > p {
     text-align: left;
-    color: #a6adc8;
+    color: var(--subtext0);
 }
 
 div[class="cards sitemap shadow"] > h3,
@@ -582,20 +582,20 @@ div[class="cards sitemap shadow"] > h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #313244ee;
+    background-color: var(--surface0)ee;
     width: 600px;
     padding: 20px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
     visibility: hidden;
-    border: 2px solid #45475a;
+    border: 2px solid var(--surface1);
     opacity: 0;
     transition: 0.3s;
     z-index: 9999;
 }
 
 .popup:hover {
-    border: 2px solid #585b70;
+    border: 2px solid var(--surface2);
 }
 
 .top {
@@ -608,8 +608,8 @@ div[class="cards sitemap shadow"] > h4 {
     padding: 4px;
     height: 32px;
     width: 32px;
-    background-color: #e06c75;
-    color: #ffffff;
+    background-color: var(--red);
+    color: var(--white);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -644,7 +644,7 @@ div[class="cards sitemap shadow"] > h4 {
 }
 
 #artist:hover {
-    color: #cba6f7;
+    color: var(--mauve);
 }
 
 #song-cover {
@@ -655,7 +655,7 @@ div[class="cards sitemap shadow"] > h4 {
 
 #song-url {
     display: flex;
-    background-color: #89b4fa;
+    background-color: var(--blue);
     padding: 4px;
     border-radius: 6px;
     margin-right: 5px;
@@ -666,7 +666,7 @@ div[class="cards sitemap shadow"] > h4 {
 
 #refresh {
     display: flex;
-    background-color: #a6e3a1;
+    background-color: var(--green);
     padding: 4px;
     border-radius: 6px;
     max-width: 24px;
@@ -680,16 +680,16 @@ div[class="cards sitemap shadow"] > h4 {
 }
 
 #song-url:hover {
-    background-color: #89b4fa;
+    background-color: var(--blue);
 }
 
 #song-url:hover > svg {
-    color: #ffffff;
+    color: var(--white);
 }
 
 #overlay {
     z-index: 10;
-    background-color: #101010bb;
+    background-color: rgba(16, 16, 16, 0.733);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -699,46 +699,4 @@ div[class="cards sitemap shadow"] > h4 {
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
-}
-
-.palette {
-    position: fixed;
-    right: 30px !important;
-    top: 30px !important;
-    width: 32px;
-    cursor: pointer;
-    pointer-events: all !important;
-    transition: transform 0.1s;
-}
-
-.palette:hover {
-    transform: scale(1.04);
-}
-
-.palette:active {
-    transform: scale(0.98);
-}
-
-.themes > button {
-    font-size: 16px;
-    cursor: pointer;
-    color: var(--text);
-    border-radius: 3px;
-    padding: 4px;
-    margin-right: 10px;
-}
-
-.themes {
-    font-size: 0;
-}
-
-.selected-theme {
-    background: #313244;
-    border: 2px solid #45475a;
-    cursor: not-allowed !important;
-}
-
-.unselected-theme {
-    background: #252734;
-    border: 2px solid #353646;
 }
