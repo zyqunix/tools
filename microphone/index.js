@@ -35,11 +35,11 @@ function draw() {
 
     analyser.getByteTimeDomainData(dataArray);
 
-    ctx.fillStyle = '#fff';
+    ctx.fillStyle = '#313244';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.lineWidth = 2;
-    ctx.strokeStyle = '#000';
+    ctx.strokeStyle = '#fff';
     ctx.beginPath();
 
     const sliceWidth = canvas.width / dataArray.length;

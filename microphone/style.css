@@ -2,24 +2,23 @@
 
 canvas {
     width: 100%;
-    background-color: #fff;
+    background-color: var(--surface0);
     border-radius: 10px;
     pointer-events: none;
 }
 
 button {
     cursor: pointer;
-    background-color: #2a2a2a;
+    background-color: var(--surface0);
     padding: 7px;
-    color: #c0c0c0;
-    border: #2c2c2c solid 2px;
+    color: var(--text);
+    border: var(--surface2) solid 2px;
     border-radius: 4px;
     margin-top: 10px;
     font-size: 16px;
 }
 
 button:hover {
-    background-color: #2c2c2c;
-    color: #d0d0d0;
-    border: #2e2e2e solid 2px;
+    background-color: var(--surface1);
+    border: var(--surface2) solid 2px;
 }
