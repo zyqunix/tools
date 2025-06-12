@@ -6,7 +6,7 @@ img {
 }
 
 body {
-    color: #cdd6f4;
+    color: var(--text);
     padding: 0;
     margin: 0;
     display: flex;
@@ -24,7 +24,7 @@ body {
 
 strong {
     font-weight: 900;
-    color: #cdd6f4;
+    color: var(--text);
 }
 
 .info {
@@ -185,7 +185,7 @@ div[class="name-percent-container"] > img.image {
 }
 
 .language-item:hover .percentage-bar .bar-after {
-    background: linear-gradient(to right, #cdd6f4 0%, #b4befe 50%, #cdd6f4 100%);
+    background: linear-gradient(to right, var(--text) 0%, #b4befe 50%, var(--text) 100%);
     animation: shimmer 2s infinite ease-in;
     background-size: 200% 100%;
 }
@@ -206,7 +206,7 @@ a[class^="software-item tooltip"]::after {
     bottom: 125%;
     background-color: #1e1e2e;
     border: 1px solid #6c7086;
-    color: #cdd6f4;
+    color: var(--text);
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -339,7 +339,7 @@ a[class^="software-item tooltip"]::after {
 }
 
 .card-header {
-    color: #cdd6f4;
+    color: var(--text);
     text-align: left;
     width: 100%;
     grid-column: span 2;
@@ -722,7 +722,7 @@ div[class="cards sitemap shadow"] > h4 {
 .themes > button {
     font-size: 16px;
     cursor: pointer;
-    color: #cdd6f4;
+    color: var(--text);
     border-radius: 3px;
     padding: 4px;
     margin-right: 10px;

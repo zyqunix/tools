@@ -1,57 +1,11 @@
-@font-face {
-    font-family: 'Hack';
-    src: url('/Fonts/Hack/Hack-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'JetBrainsMono';
-    src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: monospace;
-    font-size: 1rem;
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    overflow-x: hidden;
-    font-family: 'Hack', 'JetBrainsMono', monospace;
-}
+@import url(/global.css);
 
 html {
     height: 100%;
 }
 
-::selection {
-    background-color: #c099ff;
-    color: #2a2a2a;
-}
-
 #motd {
     font-style: italic;
-}
-
-.topbar {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 2vw;
-    width: 100%;
-    max-width: 100vw;
-    position: fixed;
-    background-color: rgba(59, 59, 59, 0.885);
-    backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-    font-size: large;
-    top: 0;
-    border-bottom: 1px solid rgba(70, 70, 70, 0.885);
-    z-index: 9999;
-    overflow-x: hidden;
 }
 
 .welcome {
@@ -73,14 +27,9 @@ html {
     margin: 0 0 10px 0;
 }
 
-.tools-main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5vw;
-    justify-content: center;
-    min-height: 10vh;
-    max-width: 80vw;
-    margin-bottom: 100px;
+.cards {
+    margin-top: 50px;
+    text-align: center;
 }
 
 .tool-div {
@@ -98,18 +47,13 @@ html {
     max-width: 90vw;
     width: 50vw;
     box-shadow: 0 4px 10px rgba(16, 16, 16, 0.5);
-    scale: 0.79;
-    margin-bottom: -100px;
 }
 
 .tool-header {
-    margin-bottom: 0;
-    padding-top: 15px;
     text-decoration: underline;
 }
 
 .tool-desc {
-    margin: 5px;
     font-weight: normal;
     max-width: 90%;
 }
@@ -117,24 +61,23 @@ html {
 .tool-media {
     max-width: 30vw;
     border-radius: 5px;
-    margin: 10px;
+    margin: 25px 10px;
 }
 
 .visit-tool {
     padding: 10px 20px;
     background-color: rgb(40, 100, 65);
-    color: #fff;
+    color: var(--subtext1);
     border: 2px solid rgb(75, 135, 100);
     border-radius: 4px;
     transition: 0.1s;
-    font-weight: bolder;
-    font-size: large;
-    margin: 5px 0 15px 0;
+    margin: 10px;
 }
 
 .visit-tool:hover {
     background-color: rgb(35, 95, 60);
     border-color: rgb(90, 150, 115);
+    color: var(--white);
 }
 
 .slideshow-container {
@@ -160,8 +103,12 @@ html {
     margin-left: 30px;
 }
 
+#langauge-selector, option {
+    color: var(--surface0) !important;
+}
+
 @media (max-width: 768px) {
-    .tools-main {
+    .cards {
         max-width: 100%;
         gap: 1.5vw;
     }
@@ -174,7 +121,7 @@ html {
     }
 
     .tool-header {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .tool-desc {
@@ -199,7 +146,7 @@ html {
         margin: 0 10px;
     }
 
-    .tools-main {
+    .cards {
         max-width: 100%;
     }
 

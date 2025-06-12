@@ -8,6 +8,38 @@
     src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
 }
 
+:root {
+    --white: #fff;
+    --pastel-violet: #c099ff;
+    --rosewater: #f5e0dc;
+    --flamingo: #f2cdcd;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --maroon: #eba0ac;
+    --peach: #fab387;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: #94e2d5;
+    --sky: #89dceb;
+    --sapphire: #74c7ec;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+    --overlay2: #9399b2;
+    --overlay1: #7f849c;
+    --overlay0: #6c7086;
+    --surface2: #585b70;
+    --surface1: #45475a;
+    --surface0: #313244;
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+    --bg-primary: #1e1e2e;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -16,8 +48,8 @@ body {
     min-height: 100vh;
     margin: 0;
     font-size: 1rem;
-    background-color: #1e1e2e;
-    color: #cdd6f4;
+    background-color: var(--base);
+    color: var(--text);
     overflow-x: hidden;
 }
 
@@ -26,16 +58,17 @@ body {
 }
 
 a {
-    color: #fff;
+    color: var(--white);
 }
 
-a:hover, svg:hover {
-    color: #c099ff;
+a:hover,
+svg:hover {
+    color: var(--pastel-violet);
 }
 
 .cards {
-    background-color: #313244;
-    border: 2px solid #45475a;
+    background-color: var(--mantle);
+    border: 2px solid var(--surface1);
     padding: 20px;
     border-radius: 10px;
     width: 600px !important;
@@ -44,7 +77,7 @@ a:hover, svg:hover {
 }
 
 .cards:hover {
-    border: 2px solid #585b70;
+    border: 2px solid var(--surface2);
 }
 
 .shadow {
@@ -63,9 +96,9 @@ a:hover, svg:hover {
     left: 50%;
     transform: translateX(-50%);
     bottom: 125%;
-    background-color: #1e1e2e;
-    border: 1px solid #6c7086;
-    color: #cdd6f4;
+    background-color: var(--base);
+    border: 1px solid var(--overlay0);
+    color: var(--text);
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;

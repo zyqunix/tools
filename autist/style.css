@@ -1,23 +1,9 @@
 @import url(/global.css);
 
-.top {
-    top: 0;
-    left: 0;
-}
-
-marquee {
-    position: relative;
-    font-size: 16px;
-    padding: 10px 0;
-    background-color: #454545;
-    color: #fff;
-    width: 100%;
-}
-
 button:not(#toggle) {
-    color: white;
-    background-color: #b49cdf;
-    border: 2px solid  #9f8ac7;
+    color: var(--white);
+    background-color: var(--mauve);
+    border: 2px solid var(--mauve);
     border-radius: 3px;
     cursor: pointer;
     transition: 0.1s ease-in-out;
@@ -26,29 +12,7 @@ button:not(#toggle) {
 
 }
 
-#toggle {
-    left: 10px;
-    bottom: 10px;
-    position: absolute;
-    cursor: pointer;
-    padding: 5px;
-    color: #c0c0c0;
-    background-color: #454545;
-    border: 2px solid #404040;
-    border: none;
-}
-
-#toggle:hover {
-    color: #b49cdf;
-    background-color: #404040;
-}
-
-button:hover:not(#toggle) {
-    background-color: #9f8ac7;
-    border-color: #947fb9;
-}
-
-.main {
+.cards {
     max-width: 80%;
     text-align: center;
     padding: 30px;
@@ -59,7 +23,7 @@ button:hover:not(#toggle) {
 }
 
 @media (min-width: 1024px) {
-    .main {
+    .cards {
         max-width: 50%;
         padding: 40px;
         transform: scale(1.2);
@@ -69,14 +33,10 @@ button:hover:not(#toggle) {
         padding: 12px 30px;
     }
 
-    marquee { 
-        position: absolute;
-        top: 0;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .main {
+    .cards {
         max-width: 70%;
         padding: 35px;
     }
@@ -84,25 +44,13 @@ button:hover:not(#toggle) {
     button {
         padding: 10px 20px;
     }
-
-    marquee { 
-        position: absolute;
-        top: 0;
-    }
-
 }
 
 @media (max-width: 767px) {
-    .main {
+    .cards {
         max-width: 100%;
         padding: 20px;
         transform: scale(1);
-    }
-
-    marquee {
-        font-size: 14px;
-        position: absolute;
-        top: 0;
     }
 
     button {

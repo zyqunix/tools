@@ -25,12 +25,12 @@ function renderTools(filteredTools, language = 'en') {
         };
 
         const toolItem = document.createElement("div");
-        toolItem.className = "tool-div";
+        toolItem.className = "cards";
 
         toolItem.innerHTML = `
-        <h1 class="tool-header">↬ ${toolData.name} ↫</h1>
-        <h2 class="tool-subhead">${toolData.subheader}</h2>
-        <h2 class="tool-desc">${toolData.description}</h2>
+        <h3 class="tool-header">↬ ${toolData.name} ↫</h3>
+        <h4 class="tool-subhead">${toolData.subheader}</h4>
+        <h4 class="tool-desc">${toolData.description}</h4>
         <img class="tool-media" src="assets/${tool.name}.png" alt="${tool.name} Image">
         <a id="visit" class="visit-tool" href="${toolData.url}">Visit "${toolData.name}"!</a>
         `;
