@@ -1,21 +1,20 @@
 @import url(/global.css);
 
+.cards {
+    text-align: center;
+}
+
 input {
     width: 70px;
     padding: 12px;
     margin: 10px 5px;
-    border: 2px solid #5a5a5a;
+    border: 2px solid var(--surface1);
     border-radius: 6px;
-    background-color: #2a2a2a;
+    background-color: var(--surface0);
     color: #ffffff;
     font-size: 16px;
     text-align: center;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-input:focus {
-    border-color: #4caf50;
-    box-shadow: 0 0 5px #4caf50;
     outline: none;
 }
 
@@ -23,12 +22,11 @@ button {
     padding: 12px 20px;
     border: none;
     border-radius: 6px;
-    background-color: #4caf50;
-    color: #ffffff;
+    background-color: var(--green);
+    color: var(--crust);
     font-size: 16px;
     cursor: pointer;
     margin: 10px 5px;
-    font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -40,16 +38,6 @@ button:hover {
 button:active {
     background-color: #3e8e41;
     transform: translateY(0);
-}
-
-div.main {
-    padding: 50px;
-    background-color: #3a3a3a;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    max-width: 600px;
-    margin: 50px auto;
 }
 
 span#time {

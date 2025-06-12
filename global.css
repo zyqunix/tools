@@ -72,7 +72,7 @@ svg:hover {
     padding: 20px;
     border-radius: 10px;
     width: 600px !important;
-    text-align: left;
+    text-align: center;
     transition: border 0.1s;
 }
 
@@ -107,4 +107,9 @@ svg:hover {
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
     cursor: default;
+}
+
+.separator {
+    width: 5px;
+    background-color: var(--overlay0);
 }
