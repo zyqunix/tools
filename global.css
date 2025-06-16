@@ -109,7 +109,66 @@ svg:hover {
     cursor: default;
 }
 
-.separator {
-    width: 5px;
-    background-color: var(--overlay0);
+.text-inp {
+	background-color: var(--base);
+	color: var(--text);
+	padding: 3px
+}
+
+.p1 {
+	padding: 1px;
+}
+
+.p2 {
+	padding: 2px;
+}
+
+.p3 {
+	padding: 3px;
+}
+
+.p4 {
+	padding: 4px;
+}
+
+.p5 {
+	padding: 5px;
+}
+
+.p10 {
+	padding: 10px;
+}
+
+.p15 {
+	padding: 15px;
+}
+
+.p20 {
+	padding: 20px;
+}
+
+/* border */
+
+.no-b {
+	border: none;
+}
+
+.b1 {
+	border-width: 1px;
+	border-style: solid;
+}
+
+.b2 {
+	border-width: 2px;
+	border-style: solid;
+}
+
+.b3 {
+	border-width: 3px;
+	border-style: solid;
+}
+
+.b4 {
+	border-width: 4px;
+	border-style: solid;
 }
