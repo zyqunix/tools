@@ -582,7 +582,7 @@ div[class="cards sitemap shadow"] > h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--surface0)ee;
+    background-color: rgba(49, 50, 68, 0.8);
     width: 600px;
     padding: 20px;
     border-radius: 10px;
@@ -695,8 +695,37 @@ div[class="cards sitemap shadow"] > h4 {
     position: fixed;
     left: 0;
     top: 0;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
+}
+
+summary {
+    font-size: large;
+    user-select: none;
+    cursor: pointer;
+}
+
+details > summary {
+    list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details > summary::before {
+    content: "➤";
+    display: inline-block;
+    margin-right: 6px;
+    transition: transform 0.2s ease;
+}
+  
+details[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+br {
+    margin: 4px 0;
 }

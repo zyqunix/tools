@@ -1,3 +1,4 @@
+import * as wakatime from "./wakatime.js";
 const timeElem = document.getElementById('time');
 const timezone = 'Europe/Berlin';
 
@@ -239,6 +240,8 @@ function fetchWeather(location) {
         target.innerText = "Weather unavailable";
     });
 }
+
+wakatime.fetchWakatime("#wakapi", "zyqunix", "all_time");
 
 const messages = [
     "Coding",
