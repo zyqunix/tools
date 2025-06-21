@@ -729,3 +729,7 @@ details[open] > summary::before {
 br {
     margin: 4px 0;
 }
+
+.twitter-contact > img {
+	color: var(--white);
+}
