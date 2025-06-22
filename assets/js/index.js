@@ -23,7 +23,6 @@ setInterval(() => {
 
 const ageElem = document.getElementById('age');
 let birthday = new Date('2008-12-13');
-let age = 0;
 
 function updateAge(elem, fix, text) {
     const now = new Date();
@@ -112,7 +111,7 @@ function lan() {
     });
 }
 
-window.onload = (event) => {
+window.onload = () => {
     lan();
 };
 
@@ -241,7 +240,7 @@ function fetchWeather(location) {
     });
 }
 
-wakatime.fetchWakatime("#wakapi", "zyqunix", "all_time");
+wakatime.fetchWakatime("#wakapi");
 
 const messages = [
     "Coding",
