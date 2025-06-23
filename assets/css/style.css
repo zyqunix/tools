@@ -733,3 +733,28 @@ br {
 .twitter-contact > img {
 	color: var(--white);
 }
+
+#github-full {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.gitnamepfp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+#github-full a {
+	text-decoration: none;
+	font-weight: 400 !important;
+	color: var(--text) !important;
+}
+
+#github-full a:hover {
+	text-decoration: underline;
+	color: var(--white) !important;
+}

@@ -1,4 +1,5 @@
 import * as wakatime from "./wakatime.js";
+import * as github from "./github.js";
 const timeElem = document.getElementById('time');
 const timezone = 'Europe/Berlin';
 
@@ -241,6 +242,7 @@ function fetchWeather(location) {
 }
 
 wakatime.fetchWakatime("#wakapi");
+github.writeGithubStats("#github-full");
 
 const messages = [
     "Coding",
