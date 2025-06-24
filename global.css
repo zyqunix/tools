@@ -40,6 +40,10 @@
     --bg-primary: #1e1e2e;
 }
 
+::selection {
+	background-color: var(--mauve);
+}
+
 body {
     display: flex;
     justify-content: center;
