@@ -45,9 +45,10 @@ setInterval(() => {
     ageElem.setAttribute("data-tooltip", updateAge(null, 10, "years old"));
 }, 10);
 
+const user = "1201415921802170388";
 
 function lan() {
-    lanyard({userId: "1201415921802170388"}).then(data => {
+    lanyard({userId: user}).then(data => {
         const statusElem = document.getElementById('status');
         const pfpElem = document.getElementById('profile-picture');
         const activity = document.querySelector('.activity');
@@ -62,6 +63,8 @@ function lan() {
             dnd: "#f23f43",
             offline: "#80848e"
         };
+
+		pfpElem.src = `https://cdn.discordapp.com/avatars/${user}/${data.discord_user.avatar}.webp`
 
         const borderColor = statusColors[data.discord_status] || statusColors.offline;
         pfpElem.style.borderColor = borderColor;
@@ -107,8 +110,6 @@ function lan() {
             }
         } else 
             activity.style.display = "none";
-        
-
     });
 }
 
