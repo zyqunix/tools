@@ -29,7 +29,7 @@ export async function writeReviews(target) {
 			<div style="display: flex; justify-content: space-between; align-items: center;">
 				<div style="display: flex; justify-content: left; align-items: center;">
 					<img src="${review.sender.profilePhoto}" style="height: 48px; border-radius: 50%; margin-right: 10px">
-					<a style="margin:0; color: var(--text)" href="https://discord.com/users/${review.sender.discordID}">${review.sender.username}</a>
+					<a style="margin:0; color: var(--text);" id="review-person" href="https://discord.com/users/${review.sender.discordID}">${review.sender.username}</a>
 				</div>
 				<div style="display: flex; justify-content: left; align-items: center;">
 					<span style="margin-left: 10px; color: var(--overlay1); font-size: 0.8rem">${msToDate(review.timestamp * 1000).split('T')[0].replace(/-/g, '/')} @ ${msToTimestamp(review.timestamp * 1000, false)}</span>

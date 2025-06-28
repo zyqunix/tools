@@ -762,3 +762,11 @@ br {
 .review:hover {
 	background: var(--surface1);
 }
+
+#review-person {
+	text-decoration: none;
+}
+
+#review-person:hover {
+	text-decoration: underline;
+}
