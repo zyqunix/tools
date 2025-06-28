@@ -758,3 +758,7 @@ br {
 	text-decoration: underline;
 	color: var(--white) !important;
 }
+
+.review:hover {
+	background: var(--surface1);
+}

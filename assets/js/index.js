@@ -1,5 +1,6 @@
 import * as wakatime from "./wakatime.js";
 import * as github from "./github.js";
+import * as reviewdb from "./reviewdb.js";
 const timeElem = document.getElementById('time');
 const timezone = 'Europe/Berlin';
 
@@ -15,6 +16,45 @@ function getTime(timezone) {
         second: '2-digit'
     });
 };
+
+export function formatTime(ms) {
+	const totalSecs = Math.floor(ms / 1000);
+	const hours = Math.floor(totalSecs / 3600);
+	const mins = Math.floor((totalSecs % 3600) / 60);
+	const secs = totalSecs % 60;
+
+	return `${String(hours).padStart(1, "0")}:${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+}
+
+export function formatVerbose(ms) {
+	const totalSecs = Math.floor(ms / 1000);
+	const hours = Math.floor(totalSecs / 3600);
+	const mins = Math.floor((totalSecs % 3600) / 60);
+	const secs = totalSecs % 60;
+
+	return `${hours}h ${mins}m ${secs}s`;
+}
+
+export function msToTimestamp(ms, seconds=true) {
+	if (seconds) {
+		const timestamp = new Date(ms).toLocaleTimeString('en-GB', {
+			hour: "2-digit",
+			minute: "2-digit",
+			second: "2-digit"
+		});
+		return timestamp;
+	} else {
+		const timestamp = new Date(ms).toLocaleTimeString('en-GB', {
+			hour: "2-digit",
+			minute: "2-digit"
+		});
+		return timestamp;
+	}
+}
+
+export function msToDate(ms) {
+	return new Date(ms).toISOString();
+}
 
 timeElem.innerHTML = getTime(timezone);
 
@@ -54,6 +94,7 @@ function lan() {
         const activity = document.querySelector('.activity');
         const activityNameElem = document.getElementById('activity-name');
         const activityImageElem = document.getElementById('activity-image');
+		const uname = document.getElementById('username');
 
         const gameActivity = data.activities.find(activity => activity.type === 0);
         const status = data.activities.find(activity => activity.type === 4);
@@ -64,26 +105,27 @@ function lan() {
             offline: "#80848e"
         };
 
+		const userName = data.discord_user.display_name
+
+		uname.innerText = userName;
+		uname.href = `https://discord.com/users/${data.discord_user.id}`
+
 		pfpElem.src = `https://cdn.discordapp.com/avatars/${user}/${data.discord_user.avatar}.webp`
 
         const borderColor = statusColors[data.discord_status] || statusColors.offline;
         pfpElem.style.borderColor = borderColor;
 
         if (status) {
-            statusElem.innerHTML = `<strong class="quote">"${
-                status.state
-            }"</strong> - zyqunix`;
+            statusElem.innerHTML = `<strong class="quote">"${status.state}"</strong> - ${userName}`;
         } else {
             statusElem.innerHTML = `<strong class="quote">Empty void. Nothingness.</strong>`;
         }
 
-        if (gameActivity) {
 
+        if (gameActivity) {
             const parts = [];
             if (gameActivity.name) 
-                parts.push(`<strong>Playing</strong> ${
-                    gameActivity.name
-                }`);
+                parts.push(`<strong>Playing</strong> ${gameActivity.name}`);
             
 
             if (gameActivity.details) 
@@ -93,18 +135,20 @@ function lan() {
             if (gameActivity.state) 
                 parts.push(gameActivity.state);
             
+			if (gameActivity.timestamps.start)
+				parts.push(`Since ${new Date(gameActivity.timestamps.start).toLocaleTimeString('en-GB', {
+					hour: "2-digit",
+					minute: "2-digit",
+					second: "2-digit"
+				})}`);
 
             activityNameElem.innerHTML = parts.join(': ');
 
             if (gameActivity.assets && gameActivity.assets.large_image) {
-                const imgId = gameActivity.assets.large_image;
-                const imageUrl = imgId.startsWith("mp:external/") ? `https://media.discordapp.net/${
-                    imgId.replace("mp:", "")
-                }` : `https://cdn.discordapp.com/app-assets/${
-                    gameActivity.application_id
-                }/${imgId}.png`;
-                activityImageElem.src = imageUrl;
+                activityImageElem.src =`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png`;
                 activityImageElem.style.display = "block";
+				activityImageElem.style.width = "64px";
+				activityImageElem.style.height = "64px";
             } else {
                 activityImageElem.style.display = "none";
             }
@@ -119,7 +163,7 @@ window.onload = () => {
 
 setInterval(() => {
     lan();
-}, 6000);
+}, 60000);
 
 function generateLanguageCards(languagesData) {
     const container = document.querySelector('.languages');
@@ -244,6 +288,7 @@ function fetchWeather(location) {
 
 wakatime.fetchWakatime("#wakapi");
 github.writeGithubStats("#github-full");
+reviewdb.writeReviews("#reviews");
 
 const messages = [
     "Coding",
