@@ -255,6 +255,8 @@ export async function fetchWakatime(targetId) {
 
 	const registered = data.data.start;
     document.getElementById("stats_since").innerText = `Registered on ${registered.slice(0, 10).replace(/-/g, "/")}`;
+	document.getElementById("stats_since").classList.add("tooltip");
+	document.getElementById("stats_since").setAttribute("data-tooltip", "In YYYY/MM/DD");
 
     const chartDetails = document.createElement("details");
     const chartSummary = document.createElement("summary");

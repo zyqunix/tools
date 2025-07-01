@@ -65,6 +65,8 @@ export async function writeGithubStats(targetId) {
 
 	const registered = data.created_at;
 	document.getElementById("gh_since").innerText = `Registed on ${registered.slice(0, 10).replace(/-/g, "/")}`;
+	document.getElementById("gh_since").classList.add("tooltip");
+	document.getElementById("gh_since").setAttribute("data-tooltip", "In YYYY/MM/DD");
 
 	mainEl.appendChild(pfp);
 	mainEl.appendChild(name);

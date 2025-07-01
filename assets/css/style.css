@@ -716,7 +716,7 @@ details > summary::-webkit-details-marker {
 }
 
 details > summary::before {
-    content: "➤";
+    content: "▶";
     display: inline-block;
     margin-right: 6px;
     transition: transform 0.2s ease;
