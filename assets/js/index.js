@@ -277,14 +277,19 @@ function fetchSong() {
     });
 }
 
-function fetchWeather(location) {
+async function fetchWeather(location) {
     const target = document.getElementById('weather');
     const query = location ? location : "Munich";
-    fetch(`https://wttr.in/${query}?format=%t | %C`).then(response => response.text()).then(data => {
+
+    try {
+        const response = await fetch(`https://wttr.in/${query}?format=%t | %C`);
+        const data = await response.text();
         target.innerText = data;
-    }).catch(() => {
+        return data;
+    } catch {
         target.innerText = "Weather unavailable";
-    });
+        return null;
+    }
 }
 
 wakatime.fetchWakatime("#wakapi");
@@ -347,8 +352,19 @@ setInterval(() => {
 }, 50);
 
 typeWriter();
-fetchWeather();
 fetchSong();
+
+const weather = await fetchWeather();
+
+if (weather && weather.includes("rain")) {
+	const deco = document.createElement("script");
+	deco.src = "/assets/js/rain.js";
+	document.body.appendChild(deco);
+} else if (weather.includes("snow")) {
+	const deco = document.createElement("script");
+	deco.src = "/assets/js/snow.js";
+	document.body.appendChild(deco);
+} 
 
 let countdown = 60;
 
