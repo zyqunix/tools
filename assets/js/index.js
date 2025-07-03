@@ -1,10 +1,12 @@
 import * as wakatime from "./wakatime.js";
 import * as github from "./github.js";
 import * as reviewdb from "./reviewdb.js";
+import * as badgeapi from "./badgesapi.js";
+
 const timeElem = document.getElementById('time');
 const timezone = 'Europe/Berlin';
 
-timeElem.setAttribute('data-tooltip', timezone);
+export const user = "1201415921802170388";
 
 function getTime(timezone) {
     const now = new Date();
@@ -85,7 +87,6 @@ setInterval(() => {
     ageElem.setAttribute("data-tooltip", updateAge(null, 10, "years old"));
 }, 10);
 
-const user = "1201415921802170388";
 
 function lan() {
     lanyard({userId: user}).then(data => {
@@ -289,6 +290,7 @@ function fetchWeather(location) {
 wakatime.fetchWakatime("#wakapi");
 github.writeGithubStats("#github-full");
 reviewdb.writeReviews("#reviews");
+badgeapi.populateBadges("#badges");
 
 const messages = [
     "Coding",

@@ -770,3 +770,19 @@ br {
 #review-person:hover {
 	text-decoration: underline;
 }
+
+#badges {
+	display: flex;
+	padding: 3px;
+	background-color: var(--surface0);
+	border: 2px solid var(--surface1);
+	align-items: center;
+	justify-content: center;
+	gap: 3px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+#badges > img {
+	border-radius: 50%;
+}
