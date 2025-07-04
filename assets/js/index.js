@@ -282,7 +282,7 @@ async function fetchWeather(location) {
     const query = location ? location : "Munich";
 
     try {
-        const response = await fetch(`https://wttr.in/${query}?format=%t | %C`);
+        const response = await fetch(`https://wttr.in/${query}?format=%t | %C&lang=en`);
         const data = await response.text();
         target.innerText = data;
         return data;
@@ -355,16 +355,39 @@ typeWriter();
 fetchSong();
 
 const weather = await fetchWeather();
+weather.toLowerCase();
 
-if (weather && weather.includes("rain")) {
-	const deco = document.createElement("script");
+let deco = document.createElement("script");
+
+if (weather.includes("rain")) {
 	deco.src = "/assets/js/rain.js";
 	document.body.appendChild(deco);
+
 } else if (weather.includes("snow")) {
-	const deco = document.createElement("script");
 	deco.src = "/assets/js/snow.js";
 	document.body.appendChild(deco);
-} 
+
+} else if (weather.includes("coud")) {
+	deco.src = "/assets/js/clouds.js";
+	document.body.appendChild(deco);
+} else {
+	deco.src = "/assets/js/sun.js";
+	document.body.appendChild(deco);
+}
+
+let decoShowing = true;
+
+function toggleDeco() {
+	decoShowing = !decoShowing;
+
+	const decoElem = document.querySelector("#deco");
+	decoElem.style.display = `${decoShowing ? "block" : "none"}`;
+
+	const btn = document.querySelector("#show-deco")
+	btn.innerHTML = `${decoShowing ? "Hide Decoration" : "Show Decoration"}`
+}
+
+document.querySelector("#show-deco").addEventListener("click", toggleDeco);
 
 let countdown = 60;
 

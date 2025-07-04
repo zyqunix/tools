@@ -5,6 +5,7 @@ snowContainer.style.left = "0";
 snowContainer.style.width = "100vw";
 snowContainer.style.height = "100vh";
 snowContainer.style.pointerEvents = "none";
+snowContainer.id = "deco";
 document.body.appendChild(snowContainer);
 
 const maxSnowflakes = 60;

@@ -449,11 +449,6 @@ a[class^="software-item tooltip"]::after {
     .stat-img {
         width: 100%;
     }
-    .skill-item,
-    .contact-item,
-    .software-item {
-        padding: 10px;
-    }
     a > img {
         height: 25px;
     }
@@ -502,11 +497,6 @@ a[class^="software-item tooltip"]::after {
         width: 100% !important;
         max-width: 80% !important;
         padding: 10px;
-    }
-    .skill-item,
-    .contact-item,
-    .software-item {
-        padding: 8px;
     }
     a > img {
         transform: scale(0.75);
@@ -785,4 +775,16 @@ br {
 
 #badges > img {
 	border-radius: 50%;
+}
+
+#show-deco {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: var(--surface0);
+	color: var(--text);
+	border: 2px solid var(--surface1);
+	border-radius: 4px;
+	cursor: pointer;
+	z-index: 10000;
 }

@@ -7,6 +7,7 @@ container.style.height = "100vh";
 container.style.pointerEvents = "none";
 container.style.overflow = "hidden";
 container.style.zIndex = "9999";
+container.id = "deco";
 document.body.appendChild(container);
 
 for (let i = 0; i < 60; i++) {

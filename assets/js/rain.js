@@ -5,6 +5,7 @@ rainContainer.style.left = "0";
 rainContainer.style.width = "100vw";
 rainContainer.style.height = "100vh";
 rainContainer.style.pointerEvents = "none";
+rainContainer.id = "deco";
 document.body.appendChild(rainContainer);
 
 const maxRaindrops = 100;
