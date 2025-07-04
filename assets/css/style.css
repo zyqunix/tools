@@ -29,6 +29,8 @@ strong {
 
 .info {
     margin-top: 50px;
+    max-width: 600px;
+    width: 100%;
 }
 
 #profile-picture {
@@ -762,7 +764,7 @@ br {
 }
 
 #badges {
-	display: flex;
+	display: inline-flex;
 	padding: 3px;
 	background-color: var(--surface0);
 	border: 2px solid var(--surface1);
@@ -771,6 +773,7 @@ br {
 	gap: 3px;
 	border-radius: 8px;
 	margin-bottom: 10px;
+    max-width: 600px;
 }
 
 #badges > img {
