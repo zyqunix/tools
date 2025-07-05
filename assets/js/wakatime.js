@@ -262,7 +262,7 @@ export async function fetchWakatime(targetId) {
     const chartSummary = document.createElement("summary");
     chartSummary.innerText = "Chart";
     chartSummary.classList.add("tooltip");
-    chartSummary.setAttribute("data-tooltip", "Miscellaneous Coding Info");
+    chartSummary.setAttribute("data-tooltip", "Language Chart");
     chartDetails.appendChild(chartSummary);
     chartDetails.style.marginTop = "15px";
     target.appendChild(chartDetails);
