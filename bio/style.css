@@ -102,13 +102,16 @@ body {
     padding: 20px;
     text-align: center;
     width: 90%;
-    max-width: 400px;
+    max-width: 450px;
     height: auto;
     z-index: 2;
     border: 2px solid rgba(150, 150, 150, 0.25);
     box-sizing: border-box;
     margin: 10px;
     margin-top: 200px;
+	transform-style: preserve-3d;
+	will-change: transform;
+	transition: transform 0.1s ease;
 }
 
 .player p {
