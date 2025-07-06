@@ -370,9 +370,6 @@ if (weather.includes("rain")) {
 } else if (weather.includes("cloud")) {
 	deco.src = "/assets/js/clouds.js";
 	document.body.appendChild(deco);
-} else {
-	deco.src = "/assets/js/sun.js";
-	document.body.appendChild(deco);
 }
 
 let decoShowing = true;
