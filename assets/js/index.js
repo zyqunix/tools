@@ -145,11 +145,11 @@ function lan() {
 
             activityNameElem.innerHTML = parts.join(': ');
 
-            if (gameActivity.assets && gameActivity.assets.large_image) {
-                activityImageElem.src =`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png`;
+            if (gameActivity.assets && gameActivity.assets.large_image && !gameActivity.assets.large_image.includes("http")) {
+                activityImageElem.src = `https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png`;
                 activityImageElem.style.display = "block";
-				activityImageElem.style.width = "64px";
-				activityImageElem.style.height = "64px";
+                activityImageElem.style.width = "64px";
+                activityImageElem.style.height = "64px";
             } else {
                 activityImageElem.style.display = "none";
             }
