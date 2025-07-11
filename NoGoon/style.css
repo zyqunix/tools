@@ -1,0 +1,104 @@
+@import url(/global.css);
+
+img {
+    user-select: none;
+}
+
+.content {
+    margin-bottom: 100px;
+}
+
+.soon {
+    color: var(--subtext0);
+}
+
+strong {
+    color: var(--rosewater)
+}
+
+.download {
+    color: var(--base);
+    outline: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.download:hover {
+    color: var(--base);
+    text-decoration: underline;
+}
+
+footer {
+    padding: 30px 0;
+    bottom: 0 !important;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    border-top: 2px solid var(--rosewater);
+    text-align: center;
+}
+
+.images {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.screenshot {
+    text-align: center;
+}
+
+.screenshot>img {
+    height: 325px;
+    border: 2px solid var(--lavender);
+    border-radius: 4px;
+    cursor: zoom-in;
+}
+
+#download {
+    width: 100%;
+    text-align: center;
+}
+
+.kt {
+    background-color: var(--mauve);
+}
+
+.java {
+    background-color: var(--peach);
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 0 10px;
+    }
+
+    .images {
+        grid-template-columns: 1fr !important;
+        margin: 20px 0;
+    }
+
+    .screenshot>img {
+        height: auto;
+        max-width: 80%;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    #download .download {
+        display: block;
+        width: 90%;
+        box-sizing: border-box;
+        padding: 12px 0;
+        font-size: 1.1rem;
+        text-align: center;
+        margin: 20px;
+    }
+}
