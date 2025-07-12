@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NoGoon</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -14,34 +14,45 @@
         <p>An app that tries to help you stop <strong>masturbating</strong></p>
     </header>
 
-    <div class="content">
-        <h2>NoGoon</h2>
-        <p>NoGoon helps you try not to masturbate, by showing a timer for how long you haven't masturbated for.</p>
+    <main class="content">
+        <section>
+            <h2>About</h2>
+            <p>NoGoon helps you try not to masturbate by showing a timer for how long you've abstained.</p>
+        </section>
 
-        <h2>Features</h2>
-        <ul>
-            <li>Timer</li>
-            <li class="soon">Journal (soon)</li>
-            <li class="soon">Reminders and notifications (soon)</li>
-        </ul>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Timer</li>
+                <li class="soon">Journal (soon)</li>
+                <li class="soon">Reminders and notifications (soon)</li>
+            </ul>
+        </section>
 
-        <div class="images">
+        <section class="images">
             <div class="screenshot">
-                <img src="assets/Main Screen.png" alt="Main Screen">
+                <img src="assets/Main Screen.png" alt="Main Screen" />
                 <h3>Main Screen</h3>
             </div>
             <div class="screenshot">
-                <img src="assets/Settings Screen.png" alt="Settings Screen">
+                <img src="assets/Settings Screen.png" alt="Settings Screen" />
                 <h3>Settings Screen</h3>
             </div>
-        </div>
+        </section>
 
-        <div id="download" class="links">
-            <a class="download java" href="https://heliopolis.live/zyqunix/nogoon/-/raw/master/app/release/app-release.apk">Download Java App on GitLab</a>
-            <a class="download kt" href="https://heliopolis.live/zyqunix/nogoonkt/-/raw/master/app/release/app-release.apk">Download Kotlin App on GitLab</a>
-            <p>The difference between Java and Kotlin are minimal; the speed is the biggest factor.</p>
-        </div>
-    </div>
+        <section id="download" class="links">
+            <div>
+                <a class="download java" target="_blank" href="https://heliopolis.live/zyqunix/nogoon/-/raw/master/app/release/app-release.apk">Download Java App</a>
+                <a class="src java" target="_blank" href="https://heliopolis.live/zyqunix/nogoon">Java App Source</a>
+            </div>
+            <div>
+                <a class="download kt" href="https://heliopolis.live/zyqunix/nogoonkt/-/raw/master/app/release/app-release.apk">Download Kotlin App</a>
+                <a class="src kt" href="https://heliopolis.live/zyqunix/nogoonkt">Kotlin App Source</a>
+            </div>
+            <p style="grid-column: 1 / -1; scale: 0.9;">Differences between Java and Kotlin versions are minimal; performance is the main factor.</p>
+        </section>
+
+    </main>
 
     <footer>
         <a href="/">Contact</a>

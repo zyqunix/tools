@@ -13,26 +13,40 @@ img {
 }
 
 strong {
-    color: var(--rosewater)
+    color: var(--rosewater);
 }
 
-.download {
+.download,
+.src {
     color: var(--base);
     outline: none;
     border-radius: 4px;
     padding: 10px;
     cursor: pointer;
     text-decoration: none;
+    transition: filter 0.2s;
+}
+
+.src {
+    filter: brightness(0.7);
 }
 
 .download:hover {
-    color: var(--base);
-    text-decoration: underline;
+    filter: brightness(1.1)
+}
+
+.src:hover {
+    filter: brightness(0.9)
+}
+
+.java:hover, .kt:hover {
+    color: var(--base) !important;
+    text-decoration: underline !important;
 }
 
 footer {
     padding: 30px 0;
-    bottom: 0 !important;
+    bottom: 0;
     position: fixed;
     backdrop-filter: blur(10px);
     width: 100%;
@@ -60,9 +74,20 @@ footer {
     cursor: zoom-in;
 }
 
-#download {
+.links {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
     text-align: center;
+    justify-content: center;
+
+}
+
+.links>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .kt {
@@ -99,6 +124,6 @@ footer {
         padding: 12px 0;
         font-size: 1.1rem;
         text-align: center;
-        margin: 20px;
+        margin: 20px auto;
     }
 }
