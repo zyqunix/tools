@@ -1,8 +1,15 @@
-export async function fetchGithubStats(user) {
+export async function fetchGithubUserStats(user) {
 	const response = await fetch(`https://api.github.com/users/${user}`);
 	if (!response.ok) throw new Error(`Error fetching Github Info: ${response.statusText}`);
 	return await response.json();
 }
+
+export async function fetchGithubRepoStats(user, repo) {
+	const response = await fetch(`https://api.github.com/repos/${user}/${repo}`);
+	if (!response.ok) throw new Error(`Error fetching Repo Info: ${response.statusText}`);
+	return await response.json();
+}
+
 
 export async function getTotalStars(username) {
     let page = 1;
@@ -22,7 +29,7 @@ export async function getTotalStars(username) {
 }
 
 export async function writeGithubStats(targetId) {
-	const data = await fetchGithubStats("zyqunix");
+	const data = await fetchGithubUserStats("zyqunix");
 	const stars = await getTotalStars("zyqunix");
 
 	const target = document.querySelector(targetId);
