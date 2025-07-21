@@ -254,9 +254,7 @@ export async function fetchWakatime(targetId) {
     miscDetails.appendChild(el);
 
 	const registered = data.data.start;
-    document.getElementById("stats_since").innerText = `Registered on ${registered.slice(0, 10).replace(/-/g, "/")}`;
-	document.getElementById("stats_since").classList.add("tooltip");
-	document.getElementById("stats_since").setAttribute("data-tooltip", "In YYYY/MM/DD");
+    document.getElementById("stats_since").innerText = `Registered on ${new Date(registered).toLocaleDateString("en-GB")}`;
 
     const chartDetails = document.createElement("details");
     const chartSummary = document.createElement("summary");
