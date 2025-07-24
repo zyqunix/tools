@@ -360,6 +360,15 @@ a[class^="software-item tooltip"]::after {
     background-color: var(--base);
 }
 
+.gitlab-contact {
+    background-color: var(--yellow);
+    color: var(--base);
+}
+
+.gitlab-contact:hover {
+    background-color: var(--peach);
+}
+
 .instagram-contact {
     background-color: var(--lavender);
 }
