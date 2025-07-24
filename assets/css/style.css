@@ -347,11 +347,6 @@ a[class^="software-item tooltip"]::after {
     grid-column: span 2;
 }
 
-.contact-item:hover .contact-name,
-.software-item:hover .software-name {
-    color: var(--white);
-}
-
 .github-contact {
     background-color: var(--crust);
 }
@@ -362,6 +357,9 @@ a[class^="software-item tooltip"]::after {
 
 .gitlab-contact {
     background-color: var(--yellow);
+}
+
+.gitlab-contact > span {
     color: var(--base);
 }
 
