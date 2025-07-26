@@ -304,8 +304,6 @@ badgeapi.populateBadges("#badges");
 const repoData = await github.fetchGithubRepoStats("zyqunix", "tools");
 document.getElementById("last_updated").innerHTML = `📆 Last updated on ${new Date(repoData.updated_at).toLocaleString("en-GB")}`;
 
-console.log(timestampToMs(formatTime(repoData.updated_at)))
-
 const messages = [
     "Coding",
     "Listening to Music",
