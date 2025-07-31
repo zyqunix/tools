@@ -281,11 +281,12 @@ a[class^="software-item tooltip"]::after {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     margin: 10px;
+    box-sizing: border-box;
 }
 
 .skill-item {
     flex-direction: column;
-    margin: 0 20px;
+    margin: 10px 20px;
 }
 
 .skill-item:hover,
@@ -398,6 +399,10 @@ a[class^="software-item tooltip"]::after {
 }
 
 @media (max-width: 768px) {
+	.popup {
+		width: 10%;
+		padding: 15px;
+	}
     .cards {
         width: 100% !important;
         max-width: 80% !important;
@@ -420,10 +425,6 @@ a[class^="software-item tooltip"]::after {
     a > img {
         height: 25px;
     }
-    .popup {
-        width: 90%;
-        padding: 15px;
-    }
     #song-cover {
         width: 60px;
         margin-right: 10px;
@@ -434,9 +435,46 @@ a[class^="software-item tooltip"]::after {
         max-width: 28px;
         max-height: 28px;
     }
+	.skill-item {
+		gap: 5px;
+		margin: 5px;
+	}
 }
 
 @media (max-width: 600px) {
+	.popup {
+		width: 90%;
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.song {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.song > div {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.song img {
+		width: 48px;
+		height: 48px;
+	}
+
+	.top {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.top h3, .top button {
+		width: 100%;
+		text-align: center;
+	}
     .cards {
         width: 100% !important;
         max-width: 80% !important;
@@ -460,10 +498,6 @@ a[class^="software-item tooltip"]::after {
     }
     a > img {
         height: 25px;
-    }
-    .popup {
-        width: 95%;
-        padding: 12px;
     }
     .song {
         flex-direction: column;
@@ -513,10 +547,6 @@ a[class^="software-item tooltip"]::after {
     .software-name {
         font-size: 10px;
     }
-    .popup {
-        width: 95%;
-        padding: 10px;
-    }
     .song {
         flex-direction: column;
         align-items: flex-start;
@@ -557,137 +587,8 @@ div[class="cards sitemap shadow"] > h4 {
     font-weight: normal;
 }
 
-.banan {
-    position: fixed;
-    right: 30px !important;
-    bottom: 30px !important;
-    width: 64px;
-    cursor: pointer;
-    pointer-events: all !important;
-    border-radius: 4px;
-}
-
-.banan:hover {
-    transform: scale(1.04);
-}
-
-.banan:active {
-    transform: scale(0.98);
-}
-
-.popup {
-    text-align: left;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(49, 50, 68, 0.8);
-    width: 600px;
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-    visibility: hidden;
-    border: 2px solid var(--surface1);
-    opacity: 0;
-    transition: 0.3s;
-    z-index: 9999;
-}
-
-.popup:hover {
-    border: 2px solid var(--surface2);
-}
-
-.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.top button {
-    padding: 4px;
-    height: 32px;
-    width: 32px;
-    background-color: var(--red);
-    color: var(--white);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.1s;
-}
-
-#refresh:hover {
-    background-color: #67de50;
-}
-
-.top button:hover {
-    background-color: #bc3333;
-}
-
-.song {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.song > div {
-    display: flex;
-    align-items: center;
-}
-
-.song > div:nth-of-type(2) {
-    width: 52px;
-}
-
-#artist {
-    transition: color 0.1s;
-}
-
-#artist:hover {
-    color: var(--mauve);
-}
-
-#song-cover {
-    border-radius: 4px;
-    margin-right: 15px;
-    width: 72px;
-}
-
-#song-url {
-    display: flex;
-    background-color: var(--blue);
-    padding: 4px;
-    border-radius: 6px;
-    margin-right: 5px;
-    max-width: 24px;
-    max-height: 24px;
-    align-items: center;
-}
-
-#refresh {
-    display: flex;
-    background-color: var(--green);
-    padding: 4px;
-    border-radius: 6px;
-    max-width: 24px;
-    max-height: 24px;
-    text-align: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    border: none;
-}
-
-#song-url:hover {
-    background-color: var(--blue);
-}
-
-#song-url:hover > svg {
-    color: var(--white);
-}
-
 #overlay {
-    z-index: 10;
+    z-index: 99999999999999;
     background-color: rgba(16, 16, 16, 0.733);
     width: 100%;
     height: 100%;
@@ -802,4 +703,45 @@ br {
 #deco {
 	width: 100%;
 	height: 100%;
+}
+
+.lfmmain {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 20px;
+}
+
+.lfmmain a {
+	text-decoration: none;
+}
+
+.lfmmain a:hover {
+	text-decoration: underline;
+}
+
+.lfmmain img {
+	border-radius: 12px;
+	height: 128px;
+}
+
+.center {
+	text-align: center;
+}
+
+#song {
+	font-weight: bold;
+	text-overflow: ellipsis;
+}
+
+.right {
+	max-height: 180px;
+	overflow-y: auto;
+}
+
+#lyrics {
+	padding: 5px;
+	border-radius: 4px;
+	backdrop-filter: brightness(0.9)
 }

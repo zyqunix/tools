@@ -25,8 +25,8 @@ export async function writeReviews(target) {
 		el.style.padding = "15px";
 		el.style.border = "2px solid var(--surface1)";
 		el.style.borderRadius = "5px";
-        el.innerHTML = `
-			<div style="display: flex; justify-content: space-between; align-items: center;">
+		el.innerHTML = `
+			<div style="display: flex; justify-content: space-between; align-items: center; max-width: 100vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
 				<div style="display: flex; justify-content: left; align-items: center;">
 					<img src="${review.sender.profilePhoto}" style="height: 48px; border-radius: 50%; margin-right: 10px">
 					<a style="margin:0; color: var(--text);" id="review-person" href="https://discord.com/users/${review.sender.discordID}">${review.sender.username}</a>
@@ -35,7 +35,7 @@ export async function writeReviews(target) {
 					<span style="margin-left: 10px; color: var(--overlay1); font-size: 0.8rem">${msToDate(review.timestamp * 1000).split('T')[0].replace(/-/g, '/')} @ ${msToTimestamp(review.timestamp * 1000, false)}</span>
 				</div>
 			</div>	
-            <p style="margin: 5px">${review.comment}</p>
+			<p style="margin: 5px; max-width: 100vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${review.comment}</p>
 		`;
         element.appendChild(el);
 	});

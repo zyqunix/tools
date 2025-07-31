@@ -128,20 +128,16 @@
 			</details>
 		</div>
 
-		<div class="music">
-			<img src="assets/img/dancing-banan.gif" class="banan" id="banan">
-			<div class="popup shadow" id="music-pop">
-				<div class="top"><h3 id="listening_to">Listening To <a id="artist" target="_blank">No one</a></h3>
-					<button id="close"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Menu / Close_MD"> <path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="--darkreader-inline-stroke: var(--darkreader-text-ffffff, #e8e6e3);" data-darkreader-inline-stroke=""></path> </g> </g></svg></button></div>							
-				<div class="song">
-					<div>
-						<img src="https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg" id="song-cover">
-						<span id="song-name">Untitled</span>
-					</div>
-					<div>
-						<a id="song-url" class="tooltip" data-tooltip="Open in new tab" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-external-link "><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"></path></svg></a>
-						<button id="refresh" class="msb tooltip" data-tooltip="Refresh in 30s"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.06189 13C4.02104 12.6724 4 12.3387 4 12C4 7.58172 7.58172 4 12 4C14.5006 4 16.7332 5.14727 18.2002 6.94416M19.9381 11C19.979 11.3276 20 11.6613 20 12C20 16.4183 16.4183 20 12 20C9.61061 20 7.46589 18.9525 6 17.2916M9 17H6V17.2916M18.2002 4V6.94416M18.2002 6.94416V6.99993L15.2002 7M6 20V17.2916" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="--darkreader-inline-stroke: var(--darkreader-text-ffffff, #e8e6e3);" data-darkreader-inline-stroke=""></path> </g></svg></button>
-					</div>
+		<div class="cards lastfm" id="LastFM">
+			<h2 class="card-header">LastFM</h2>
+			<div class="lfmmain">
+				<div class="center">
+				<img alt="LastFM Song Cover" id="cover" class="shadow">
+					<div id="song"><a id="song-name"></a></div>
+					<div id="artist"><a id="artist-name"></a></div>
+				</div>
+				<div class="right">
+					<div id="lyrics">Sample Lyrics</div>
 				</div>
 			</div>
 		</div>

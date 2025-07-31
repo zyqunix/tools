@@ -2,6 +2,7 @@ import * as wakatime from "./wakatime.js";
 import * as github from "./github.js";
 import * as reviewdb from "./reviewdb.js";
 import * as badgeapi from "./badgesapi.js";
+import * as music from "./music.js";
 
 const timeElem = document.getElementById('time');
 const timezone = 'Europe/Berlin';
@@ -245,41 +246,6 @@ fetch('assets/js/lang.json').then(response => response.json()).then(generateLang
 
 fetch('assets/js/skills.json').then(response => response.json()).then(generateSkillCards).catch(error => console.error('Error fetching skills.json', error));
 
-const LASTFM_API_KEY = "04f747e38bebf69efbbfab7b20612bac";
-const LASTFM_USERNAME = "zyqunix";
-
-const params = new URLSearchParams({
-    method: "user.getrecenttracks",
-    user: LASTFM_USERNAME,
-    api_key: LASTFM_API_KEY,
-    format: "json",
-    limit: "1"
-});
-
-const url = `https://ws.audioscrobbler.com/2.0/?${
-    params.toString()
-}`;
-
-function fetchSong() {
-    fetch(url).then(response => response.json()).then(data => {
-        const track = data ?. recenttracks ?. track ?. [0];
-        if (! track) 
-            return;
-        
-
-        const artist = track.artist["#text"];
-        const title = track.name;
-        const image = track.image.find(img => img.size === "extralarge") ?. ["#text"] || "";
-
-        document.getElementById("artist").innerText = artist;
-        document.getElementById("artist").href = `https://duckduckgo.com/?q=${artist}`;
-        document.getElementById("song-name").innerText = title;
-        document.getElementById("song-cover").src = ! image ? "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg" : image;
-        document.getElementById("song-url").href = track.url;
-    }).catch(error => {
-        console.error("Error:", error);
-    });
-}
 
 async function fetchWeather(location) {
     const target = document.getElementById('weather');
@@ -297,12 +263,32 @@ async function fetchWeather(location) {
 }
 
 wakatime.fetchWakatime("#wakapi");
-github.writeGithubStats("#github-full");
+
+try {
+	const repoData = await github.fetchGithubRepoStats("zyqunix", "tools");
+	github.writeGithubStats("#github-full");
+	document.getElementById("last_updated").innerHTML = `📆 Last updated on ${new Date(repoData.updated_at).toLocaleString("en-GB")}`;
+} catch (e) {
+	document.getElementById("github-full").innerHTML = `<h1>403 Error: Rate Limited</h1>`;
+}
+
 reviewdb.writeReviews("#reviews");
 badgeapi.populateBadges("#badges");
+music.populate();
 
-const repoData = await github.fetchGithubRepoStats("zyqunix", "tools");
-document.getElementById("last_updated").innerHTML = `📆 Last updated on ${new Date(repoData.updated_at).toLocaleString("en-GB")}`;
+setInterval(() => {
+	(async () => {
+		const song = await music.fetchSong();
+		const lyrics = await music.fetchLyrics(song.artist, song.name);
+
+		if (!lyrics) {
+			document.querySelector("right");
+		} else {
+			document.getElementById("lyrics").innerText = lyrics;
+		}
+	})();
+}, 30000);
+
 
 const messages = [
     "Coding",
@@ -359,7 +345,6 @@ setInterval(() => {
 }, 50);
 
 typeWriter();
-fetchSong();
 
 const weather = await fetchWeather();
 weather.toLowerCase();
@@ -393,21 +378,6 @@ function toggleDeco() {
 
 document.querySelector("#show-deco").addEventListener("click", toggleDeco);
 
-let countdown = 60;
-
-setInterval(() => {
-    countdown--;
-    if (countdown <= 0) {
-        countdown = 60;
-        fetchSong();
-    }
-    const refreshElem = document.getElementById('refresh');
-    if (refreshElem) 
-        refreshElem.dataset.tooltip = `Refresh in ${countdown}`;
-    
-
-}, 1000);
-
 function closeOverlay(popupId, overlayId) {
     document.getElementById(`${popupId}`).style.opacity = '0';
     document.getElementById(`${overlayId}`).style.opacity = '0';
@@ -424,21 +394,3 @@ function openOverlay(popupId, overlayId) {
     popup.style.opacity = '1';
     overlay.style.opacity = '1';
 }
-
-document.getElementById('banan').addEventListener('click', () => {
-    openOverlay("music-pop", "overlay")
-});
-
-document.getElementById('close').addEventListener('click', () => {
-    closeOverlay("music-pop", "overlay")
-});
-
-document.getElementById('overlay').addEventListener('click', () => {
-    closeOverlay("music-pop", "overlay")
-});
-
-document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeOverlay("music-pop", "overlay");
-});
-
-document.getElementById('refresh').addEventListener('click', fetchSong);
