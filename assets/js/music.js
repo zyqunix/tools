@@ -32,9 +32,8 @@ export async function fetchSong() {
 export async function populate() {
     fetch(url).then(response => response.json()).then(data => {
         const track = data ?. recenttracks ?. track ?. [0];
-        if (! track) 
+        if (!track) 
             return;
-        
 
         const artist = track.artist["#text"];
         const name = track.name;
@@ -44,9 +43,9 @@ export async function populate() {
         document.getElementById("artist-name").href = `https://duckduckgo.com/?q=${artist}`;
         document.getElementById("song-name").innerText = name;
         document.getElementById("song-name").href = track.url;
-        document.getElementById("cover").src = ! image ? "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg" : image;
+        document.getElementById("cover").src = !image ? "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg" : image;
     }).catch(error => {
-        console.error("Error:", error);
+        console.error("Error: ", error);
     });
 }
 

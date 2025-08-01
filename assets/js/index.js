@@ -278,7 +278,8 @@ music.populate();
 
 setInterval(() => {
 	(async () => {
-		const song = await music.fetchSong();
+        music.populate();
+        const song = await music.fetchSong();
 		const lyrics = await music.fetchLyrics(song.artist, song.name);
 
 		if (!lyrics) {
