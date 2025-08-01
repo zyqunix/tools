@@ -276,14 +276,17 @@ reviewdb.writeReviews("#reviews");
 badgeapi.populateBadges("#badges");
 music.populate();
 
+let song = await music.fetchSong();
+document.getElementById("lyrics").innerText = await music.fetchLyrics(song.artist, song.name);
+
 setInterval(() => {
 	(async () => {
-        music.populate();
-        const song = await music.fetchSong();
+		music.populate();
+		song = await music.fetchSong();
 		const lyrics = await music.fetchLyrics(song.artist, song.name);
 
 		if (!lyrics) {
-			document.querySelector("right");
+			document.querySelector("right").innerText = "No lyrics found";
 		} else {
 			document.getElementById("lyrics").innerText = lyrics;
 		}
