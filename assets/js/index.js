@@ -276,30 +276,16 @@ reviewdb.writeReviews("#reviews");
 badgeapi.populateBadges("#badges");
 
 
-music.populate();
-let song = await music.fetchSong();
-let lyrics = await music.fetchLyrics(song.artist, song.name);
-
-if (!lyrics) {
-	document.querySelector("right").innerText = "No Lyrics";
-} else {
-	document.getElementById("lyrics").innerText = lyrics;
+async function updateSong() {
+	music.populate(document.getElementById("artist-name"), document.getElementById("song-name"), document.getElementById("cover"));
+	const song = await music.fetchSong();
+	const lyrics = await music.fetchLyrics(song.artist, song.name, document.getElementById("song-name"));
+	music.songInfo(song.artist, song.name, document.getElementById("songinfo"));
+	document.getElementById("lyrics").innerHTML = lyrics || "No Lyrics";
 }
 
-setInterval(() => {
-	(async () => {
-		music.populate();
-		song = await music.fetchSong();
-		lyrics = await music.fetchLyrics(song.artist, song.name);
-
-		if (!lyrics) {
-			document.querySelector("right").innerText = "No Lyrics";
-		} else {
-			document.getElementById("lyrics").innerText = lyrics;
-		}
-	})();
-}, 30000);
-
+await updateSong();
+setInterval(updateSong, 30000);
 
 const messages = [
     "Coding",

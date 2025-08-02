@@ -713,7 +713,12 @@ br {
 	gap: 20px;
 }
 
+.lfmmain > h4 {
+	margin: 0 !important;
+}
+
 .lfmmain a {
+	margin-top: 5px;
 	text-decoration: none;
 }
 
@@ -744,4 +749,24 @@ br {
 	padding: 5px;
 	border-radius: 4px;
 	backdrop-filter: brightness(0.9)
+}
+
+#songinfo {
+	margin-top: 15px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: 1rem;
+}
+
+#songinfo > div {
+	backdrop-filter: brightness(0.9);
+	padding: 5px 10px;
+	border-radius: 10px;
+}
+
+#songinfo > div > :not(div) {
+	font-weight: bold;
+	color: var(--sapphire);
 }
