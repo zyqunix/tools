@@ -71,7 +71,7 @@ export async function writeGithubStats(targetId) {
 	tStars.innerText = `${stars} Total Stars`;
 
 	const registered = data.created_at;
-	document.getElementById("gh_since").innerText = `Registed on ${new Date(registered).toLocaleDateString("en-GB")}`;
+	document.getElementById("gh_since").innerText = `Registered on ${new Date(registered).toLocaleDateString("en-GB")}`;
 
 	mainEl.appendChild(pfp);
 	mainEl.appendChild(name);
