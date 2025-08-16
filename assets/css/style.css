@@ -105,7 +105,7 @@ footer {
 }
 
 .activity:hover {
-    backdrop-filter: brightness(0.95);
+    backdrop-filter: brightness(0.950);
     border-color: var(--surface2);
 }
 
