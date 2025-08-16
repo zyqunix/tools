@@ -88,6 +88,30 @@ setInterval(() => {
     ageElem.setAttribute("data-tooltip", updateAge(null, 10, "years old"));
 }, 10);
 
+function resolveActivityImage(img, applicationId) {
+	if (!img) return null;
+
+	if (img.startsWith("mp:external/")) {
+		return `https://media.discordapp.net/external/${img.slice("mp:external/".length)}`;
+	}
+
+	if (img.includes("/https/")) {
+		const clean = img.split("/https/")[1];
+		return clean ? `https://${clean}` : null;
+	}
+
+	if (img.startsWith("spotify:")) {
+		return `https://i.scdn.co/image/${img.split(":")[1]}`;
+	}
+
+	if (img.startsWith("twitch:")) {
+		const username = img.split(":")[1];
+		return `https://static-cdn.jtvnw.net/previews-ttv/live_user_${username}-440x248.jpg`;
+	}
+
+	return `https://cdn.discordapp.com/app-assets/${applicationId}/${img}.png`;
+}
+
 
 function lan() {
     lanyard({userId: user}).then(data => {
@@ -133,9 +157,8 @@ function lan() {
 				</div>
 				<div style="display: flex; justify-content: left; flex-direction: row; gap: 1.5rem;">
 					<div class="activityimages" style="position: relative; width: 80px; height: 80px;">
-						<img style="height: 80px; width: 80px; position: relative" src="https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png">
-						<img style="height: 25px; width: 25px; border-radius: 50%; object-fit: cover; position: absolute; bottom: -6px; right: -6px" src="https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png">
-					</div>
+						<img style="height: 80px; width: 80px; position: relative" src="${resolveActivityImage(gameActivity.assets.large_image, gameActivity.application_id)}">
+                        <img style="height: 25px; width:25px; border-radius: 50%; object-fit: cover; position: absolute; bottom: -6px; right: -6px; ${gameActivity.assets.small_image ? '' : 'display: none;'}" src="${resolveActivityImage(gameActivity.assets.small_image, gameActivity.application_id)}">					</div>
 					<div class="activitymain" style="display: flex; flex-direction: column; gap: 0.25rem">
 						<strong>${gameActivity.name}</strong>
 						<span>${gameActivity.state}</span>

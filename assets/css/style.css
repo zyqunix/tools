@@ -99,6 +99,14 @@ footer {
 	border-radius: 5px;
 	padding: 10px;
 	flex-direction: column;
+    gap: 0.5rem;
+    border: 2px solid var(--surface1);
+    transition: backdrop-filter 0.1s, border-color 0.1s;
+}
+
+.activity:hover {
+    backdrop-filter: brightness(0.95);
+    border-color: var(--surface2);
 }
 
 #activity-name {
