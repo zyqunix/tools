@@ -29,7 +29,7 @@ export async function fetchSong() {
 	};
 }
 
-export async function populate(artistElement, songElement, coverElement) {
+export async function populate(artistElement, songElement, coverElement, scrobblesElement) {
     fetch(url).then(response => response.json()).then(data => {
         const track = data ?. recenttracks ?. track ?. [0];
         if (!track) 
@@ -44,6 +44,7 @@ export async function populate(artistElement, songElement, coverElement) {
         songElement.innerText = name;
         songElement.href = track.url;
         coverElement.src = !image ? "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg" : image;
+		scrobblesElement.innerText = `${data?.recenttracks?.["@attr"]?.total} scrobbles`;
     }).catch(error => {
         console.error("Error: ", error);
     });
@@ -87,27 +88,27 @@ export async function songInfo(artist, track, targetElement) {
 	} else {
 		return targetElement.innerHTML = `
 			<div class="danceability">
-				<span>Danceability</span>
+				<span style="color: var(--flamingo)">Danceability</span>
 				<div class="danceabilitytext">${data.audioFeatures.danceability.toFixed(2)}</div>
 			</div>
 			<div class="energy">
-				<span>Energy</span>
+				<span style="color: var(--mauve)">Energy</span>
 				<div class="energytext">${data.audioFeatures.energy.toFixed(2)}</div>
 			</div>
 			<div class="speechiness">
-				<span>Speechiness</span>
+				<span style="color: var(--maroon)">Speechiness</span>
 				<div class="speechinesstext">${data.audioFeatures.speechiness.toFixed(2)}</div>
 			</div>
 			<div class="acousticness">
-				<span>Acousticness</span>
+				<span style="color: var(--sapphire)">Acousticness</span>
 				<div class="acousticnesstext">${data.audioFeatures.acousticness.toFixed(2)}</div>
 			</div>
 			<div class="instrumentalness">
-				<span>Instrumentalness</span>
+				<span style="color: var(--lavender)">Instrumentalness</span>
 				<div class="instrumentalnesstext">${data.audioFeatures.instrumentalness.toFixed(2)}</div>
 			</div>
 			<div class="liveness">
-				<span>Liveness</span>
+				<span style="color: var(--green)">Liveness</span>
 				<div class="livenesstext">${data.audioFeatures.liveness.toFixed(2)}</div>
 			</div>
 		`

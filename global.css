@@ -8,6 +8,11 @@
     src: url('/Fonts/JetBrainsMono/JetBrainsMono-Regular.woff2');
 }
 
+@font-face {
+	font-family: 'DroidSerif';
+	src: url('/Fonts/DroidSerif/DroidSerif-Regular.ttf') format('truetype');
+}
+
 :root {
     --white: #fff;
     --pastel-violet: #c099ff;

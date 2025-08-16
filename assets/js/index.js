@@ -30,12 +30,8 @@ export function formatTime(ms) {
 }
 
 export function formatVerbose(ms) {
-	const totalSecs = Math.floor(ms / 1000);
-	const hours = Math.floor(totalSecs / 3600);
-	const mins = Math.floor((totalSecs % 3600) / 60);
-	const secs = totalSecs % 60;
-
-	return `${hours}h ${mins}m ${secs}s`;
+	const d = new Date(ms);
+	return `${d.getUTCHours()}h ${d.getUTCMinutes()}m ${d.getUTCSeconds()}s`;
 }
 
 export function msToTimestamp(ms, seconds=true) {
@@ -95,11 +91,10 @@ setInterval(() => {
 
 function lan() {
     lanyard({userId: user}).then(data => {
+		console.log(data);
         const statusElem = document.getElementById('status');
         const pfpElem = document.getElementById('profile-picture');
         const activity = document.querySelector('.activity');
-        const activityNameElem = document.getElementById('activity-name');
-        const activityImageElem = document.getElementById('activity-image');
 		const uname = document.getElementById('username');
 
         const gameActivity = data.activities.find(activity => activity.type === 0);
@@ -127,39 +122,24 @@ function lan() {
             statusElem.innerHTML = `<strong class="quote">Empty void. Nothingness.</strong>`;
         }
 
+		activity.innerHTML = `
+			<div style="filter: brightness(0.8); display: flex; justify-content: space-between; width: 100%; flex-direction: row;">
+				<div>Playing</div>
+				<div>Since ${msToTimestamp(new Date(gameActivity.timestamps.start))}</div>
+			</div>
+			<div style="display: flex; justify-content: left; flex-direction: row; gap: 1.5rem;">
+				<div class="activityimages" style="position: relative; width: 80px; height: 80px;">
+					<img style="height: 80px; width: 80px; position: relative" src="https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png">
+					<img style="height: 25px; width: 25px; border-radius: 50%; object-fit: cover; position: absolute; bottom: -6px; right: -6px" src="https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png">
+				</div>
+				<div class="activitymain" style="display: flex; flex-direction: column; gap: 0.25rem">
+					<strong>${gameActivity.name}</strong>
+					<span>${gameActivity.state}</span>
+					<span>${gameActivity.details}</span>
+				</div>
+			</div>
+		`;
 
-        if (gameActivity) {
-            const parts = [];
-            if (gameActivity.name) 
-                parts.push(`<strong>Playing</strong> ${gameActivity.name}`);
-            
-
-            if (gameActivity.details) 
-                parts.push(gameActivity.details);
-            
-
-            if (gameActivity.state) 
-                parts.push(gameActivity.state);
-            
-			if (gameActivity.timestamps.start)
-				parts.push(`Since ${new Date(gameActivity.timestamps.start).toLocaleTimeString('en-GB', {
-					hour: "2-digit",
-					minute: "2-digit",
-					second: "2-digit"
-				})}`);
-
-            activityNameElem.innerHTML = parts.join(': ');
-
-            if (gameActivity.assets && gameActivity.assets.large_image && !gameActivity.assets.large_image.includes("http")) {
-                activityImageElem.src = `https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png`;
-                activityImageElem.style.display = "block";
-                activityImageElem.style.width = "64px";
-                activityImageElem.style.height = "64px";
-            } else {
-                activityImageElem.style.display = "none";
-            }
-        } else 
-            activity.style.display = "none";
     });
 }
 
@@ -277,14 +257,14 @@ badgeapi.populateBadges("#badges");
 
 
 async function updateSong() {
-	music.populate(document.getElementById("artist-name"), document.getElementById("song-name"), document.getElementById("cover"));
+	music.populate(document.getElementById("artist-name"), document.getElementById("song-name"), document.getElementById("cover"), document.getElementById("scrobbles"));
 	const song = await music.fetchSong();
 	const lyrics = await music.fetchLyrics(song.artist, song.name, document.getElementById("song-name"));
 	music.songInfo(song.artist, song.name, document.getElementById("songinfo"));
 	document.getElementById("lyrics").innerHTML = lyrics || "No Lyrics";
 }
 
-await updateSong();
+updateSong();
 setInterval(updateSong, 30000);
 
 const messages = [

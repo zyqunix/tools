@@ -93,11 +93,12 @@ footer {
 
 .activity {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
     text-align: left;
-    width: 100%;
-    gap: 2px;
+	backdrop-filter: brightness(0.9);
+	border-radius: 5px;
+	padding: 10px;
+	flex-direction: column;
 }
 
 #activity-name {
