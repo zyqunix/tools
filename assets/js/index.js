@@ -119,26 +119,31 @@ function lan() {
         if (status) {
             statusElem.innerHTML = `<strong class="quote">"${status.state}"</strong> - ${userName}`;
         } else {
-            statusElem.innerHTML = `<strong class="quote">Empty void. Nothingness.</strong>`;
+            statusElem.innerHTML = `<strong class="quote">No smart quote.</strong>`;
         }
 
-		activity.innerHTML = `
-			<div style="filter: brightness(0.8); display: flex; justify-content: space-between; width: 100%; flex-direction: row;">
-				<div>Playing</div>
-				<div>Since ${msToTimestamp(new Date(gameActivity.timestamps.start))}</div>
-			</div>
-			<div style="display: flex; justify-content: left; flex-direction: row; gap: 1.5rem;">
-				<div class="activityimages" style="position: relative; width: 80px; height: 80px;">
-					<img style="height: 80px; width: 80px; position: relative" src="https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png">
-					<img style="height: 25px; width: 25px; border-radius: 50%; object-fit: cover; position: absolute; bottom: -6px; right: -6px" src="https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png">
+		if (!gameActivity) {
+			activity.style.display = "none";
+		} else {
+			activity.style.display = "flex";
+			activity.innerHTML = `
+				<div style="filter: brightness(0.8); display: flex; justify-content: space-between; width: 100%; flex-direction: row;">
+					<div>Playing</div>
+					<div>Since ${msToTimestamp(new Date(gameActivity.timestamps.start))}</div>
 				</div>
-				<div class="activitymain" style="display: flex; flex-direction: column; gap: 0.25rem">
-					<strong>${gameActivity.name}</strong>
-					<span>${gameActivity.state}</span>
-					<span>${gameActivity.details}</span>
+				<div style="display: flex; justify-content: left; flex-direction: row; gap: 1.5rem;">
+					<div class="activityimages" style="position: relative; width: 80px; height: 80px;">
+						<img style="height: 80px; width: 80px; position: relative" src="https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png">
+						<img style="height: 25px; width: 25px; border-radius: 50%; object-fit: cover; position: absolute; bottom: -6px; right: -6px" src="https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png">
+					</div>
+					<div class="activitymain" style="display: flex; flex-direction: column; gap: 0.25rem">
+						<strong>${gameActivity.name}</strong>
+						<span>${gameActivity.state}</span>
+						<span>${gameActivity.details}</span>
+					</div>
 				</div>
-			</div>
-		`;
+			`;
+		}
 
     });
 }
