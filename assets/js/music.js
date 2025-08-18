@@ -6,7 +6,7 @@ const params = new URLSearchParams({
     user: LASTFM_USERNAME,
     api_key: LASTFM_API_KEY,
     format: "json",
-    limit: "1"
+    limit: "10"
 });
 
 const url = `https://ws.audioscrobbler.com/2.0/?${
@@ -27,6 +27,34 @@ export async function fetchSong() {
 		name: track.name,
 		image: track.image.find(img => img.size === "extralarge")?.["#text"] || ""
 	};
+}
+
+export async function fetchRecents(targetElement) {
+    const response = await fetch(url);
+    if (response.status !== 200) return;
+
+    const data = await response.json();
+
+    console.log(data);
+
+    let inner = "";
+    data.recenttracks.track.slice(0, 10).forEach(track => {
+        inner += `
+        <a href="${track.url}" target="_blank" style="border-color: ${track["@attr"]?.nowplaying === "true" ? "var(--green)" : ""}">
+            <div class="left-recent">
+                <img style="width: 72px; border-radius: 0.5rem" src="${track.image.find(img => img.size === "extralarge")?.["#text"] || ""}">
+            </div>
+            <div class="right-recent">
+                <strong>${track.artist["#text"]}</strong>
+                <div class="track-name">${track.name}</div>
+                <div>${track.album["#text"]}</div>
+                <div style="font-size: 12px; color: var(--green)">${track["@attr"]?.nowplaying === "true" ? "Now Playing" : ""}</div>
+            </div>
+        </a>
+        `;
+    });
+    targetElement.innerHTML = inner;
+
 }
 
 export async function populate(artistElement, songElement, coverElement, scrobblesElement) {
@@ -63,9 +91,9 @@ export async function fetchLyrics(artist, track, tooltipElement) {
     const data = await response.json();
     if (data.code === 404) return "No Lyrics";
 
-	if (data.lastfmData.album.name) {
+	if (data.lastfmData.album["#text"]) {
 		tooltipElement.classList.add("tooltip")
-		tooltipElement.setAttribute("data-tooltip", `On ${data.lastfmData.album.name}`);
+		tooltipElement.setAttribute("data-tooltip", `On ${data.lastfmData.album["#text"]}`);
 	} else {
 		tooltipElement.classList.remove("tooltip");
 	}

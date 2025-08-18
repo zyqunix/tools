@@ -130,8 +130,11 @@
 
 		<div class="cards lastfm" id="LastFM">
 			<h2 class="card-header">LastFM</h2>
-			<h6 id="scrobbles"></h6>
-			<div class="lfmmain">
+			<div class="top-lfm">
+                <button id="recent-plays">Recent Plays</button>
+                <span id="scrobbles"></span>
+            </div>
+            <div class="lfmmain">
 				<div class="center">
 					<img alt="LastFM Song Cover" id="cover" class="shadow">
 						<div id="song"><a id="song-name"></a></div>
@@ -143,6 +146,17 @@
 				</div>
 				<div id="songinfo"></div>
 			</div>
+
+
+            <div id="recentsmain">
+                <div class="top">
+                    <h2>Recent Plays</h2>
+                    <button id="close-recents"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+                </div>
+                <div class="bottom">
+                    <div id="recents"></div>
+                </div>
+            </div>
 		</div>
 		
 		<div id="overlay" tabindex="0"></div>

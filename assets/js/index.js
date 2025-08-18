@@ -157,7 +157,7 @@ function lan() {
 				</div>
 				<div style="display: flex; justify-content: left; flex-direction: row; gap: 1.5rem;">
 					<div class="activityimages" style="position: relative; width: 80px; height: 80px;">
-						<img style="height: 80px; width: 80px; position: relative" src="${resolveActivityImage(gameActivity.assets.large_image, gameActivity.application_id)}">
+						<img style="height: 80px; width: 80px; position: relative; border-radius: 0.25rem" src="${resolveActivityImage(gameActivity.assets.large_image, gameActivity.application_id)}">
                         <img style="height: 25px; width:25px; border-radius: 50%; object-fit: cover; position: absolute; bottom: -6px; right: -6px; ${gameActivity.assets.small_image ? '' : 'display: none;'}" src="${resolveActivityImage(gameActivity.assets.small_image, gameActivity.application_id)}">					</div>
 					<div class="activitymain" style="display: flex; flex-direction: column; gap: 0.25rem">
 						<strong>${gameActivity.name}</strong>
@@ -290,6 +290,7 @@ async function updateSong() {
 	const lyrics = await music.fetchLyrics(song.artist, song.name, document.getElementById("song-name"));
 	music.songInfo(song.artist, song.name, document.getElementById("songinfo"));
 	document.getElementById("lyrics").innerHTML = lyrics || "No Lyrics";
+    music.fetchRecents(document.getElementById("recents"));
 }
 
 updateSong();
@@ -383,19 +384,27 @@ function toggleDeco() {
 
 document.querySelector("#show-deco").addEventListener("click", toggleDeco);
 
-function closeOverlay(popupId, overlayId) {
-    document.getElementById(`${popupId}`).style.opacity = '0';
+export function closeOverlay(popupId, overlayId, display) {
     document.getElementById(`${overlayId}`).style.opacity = '0';
-    document.getElementById(`${popupId}`).style.visibility = 'hidden';
-    document.getElementById(`${overlayId}`).style.visibility = 'hidden';
+    document.getElementById(`${overlayId}`).style.display = display;
 }
 
-function openOverlay(popupId, overlayId) {
+export function openOverlay(popupId, overlayId, display) {
     const popup = document.getElementById(popupId);
     const overlay = document.getElementById(overlayId);
 
-    popup.style.visibility = 'visible';
-    overlay.style.visibility = 'visible';
+    popup.style.display = display;
+    overlay.style.display = display;
     popup.style.opacity = '1';
     overlay.style.opacity = '1';
 }
+
+
+
+document.getElementById("recent-plays").addEventListener("click", () => {
+    openOverlay("recent-plays", "recentsmain", "flex");
+})
+
+document.getElementById("close-recents").addEventListener("click", () => {
+    closeOverlay("recents", "recentsmain", "none");
+})

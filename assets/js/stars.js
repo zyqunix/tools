@@ -6,7 +6,7 @@ container.style.width = "100vw";
 container.style.height = "100vh";
 container.style.pointerEvents = "none";
 container.style.overflow = "hidden";
-container.style.zIndex = "9999";
+container.style.zIndex = "998";
 container.id = "deco";
 document.body.appendChild(container);
 
