@@ -399,8 +399,6 @@ export function openOverlay(popupId, overlayId, display) {
     overlay.style.opacity = '1';
 }
 
-
-
 document.getElementById("recent-plays").addEventListener("click", () => {
     openOverlay("recent-plays", "recentsmain", "flex");
 })
