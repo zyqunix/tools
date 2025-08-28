@@ -25,7 +25,7 @@ export async function fetchSong() {
 	return { 
 		artist: track.artist["#text"],
 		name: track.name,
-		image: track.image.find(img => img.size === "extralarge")?.["#text"] || ""
+		image: track.image.find(img => img.size === "extralarge")?.["#text"] || "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg"
 	};
 }
 
@@ -42,7 +42,7 @@ export async function fetchRecents(targetElement) {
         inner += `
         <a href="${track.url}" target="_blank" style="border-color: ${track["@attr"]?.nowplaying === "true" ? "var(--green)" : ""}">
             <div class="left-recent">
-                <img style="width: 72px; border-radius: 0.5rem" src="${track.image.find(img => img.size === "extralarge")?.["#text"] || ""}">
+                <img style="width: 72px; border-radius: 0.5rem" src="${track.image.find(img => img.size === "extralarge")?.["#text"] || "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg"}">
             </div>
             <div class="right-recent">
                 <strong>${track.artist["#text"]}</strong>
