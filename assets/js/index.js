@@ -285,12 +285,17 @@ badgeapi.populateBadges("#badges");
 
 
 async function updateSong() {
-	music.populate(document.getElementById("artist-name"), document.getElementById("song-name"), document.getElementById("cover"), document.getElementById("scrobbles"));
-	const song = await music.fetchSong();
-	const lyrics = await music.fetchLyrics(song.artist, song.name, document.getElementById("song-name"));
-	music.songInfo(song.artist, song.name, document.getElementById("songinfo"));
-	document.getElementById("lyrics").innerHTML = lyrics || "No Lyrics";
+    music.populate(document.getElementById("artist-name"), document.getElementById("song-name"), document.getElementById("cover"), document.getElementById("scrobbles"));
+    const song = await music.fetchSong();
+    const lyrics = await music.fetchLyrics(song.artist, song.name, document.getElementById("song-name"));
+    music.songInfo(song.artist, song.name, document.getElementById("songinfo"));
+    document.getElementById("lyrics").innerHTML = lyrics || "No Lyrics";
     music.fetchRecents(document.getElementById("recents"));
+
+    music.fetchPreview(song.name, song.artist, document.getElementById("preview"));
+    document.getElementById("preview-cover").src = song?.image || "";
+    document.getElementById("preview-title").innerText = song?.name;
+    document.getElementById("preview-artist").innerText = song?.artist;
 }
 
 updateSong();
@@ -406,3 +411,17 @@ document.getElementById("recent-plays").addEventListener("click", () => {
 document.getElementById("close-recents").addEventListener("click", () => {
     closeOverlay("recents", "recentsmain", "none");
 })
+
+function togglePlaying(el, btn) {
+  if (el.paused) {
+      el.play();
+      btn.innerHTML = `<svg viewBox="0 0 16 16" class="bi bi-pause-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: white"><path fill="white" d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/></svg>`;
+  } else {
+      el.pause();
+      btn.innerHTML = `<svg viewBox="0 0 16 16" class="bi bi-play-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: white"><path fill="white" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>`;
+  }
+}
+
+document.getElementById("playpause").addEventListener("click", function() {
+    togglePlaying(document.getElementById("preview"), this);
+});

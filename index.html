@@ -144,18 +144,32 @@
 						<div id="lyrics">No Lyrics</div>
 					</div>
 				</div>
-				<div id="songinfo"></div>
-			</div>
 
+				<div id="songinfo"></div>
+                <div class="player">
+                    <div class="audio-player">
+                        <img id="preview-cover"></img>
+                        <div class="player-controls">
+                            <div class="song-info">
+                                <div id="preview-title">song title</div>
+                                <p id="preview-artist">artist</p>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button id="playpause"><svg viewBox="0 0 16 16" class="bi bi-play-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: white"> <path fill="white" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path> </svg></button>
+                        </div>
+                        <audio id="preview"></audio>
+                    </div>
+                </div>
+                <p>Data provided by <a href="https://api.vmohammad.dev">vMohammad's API</a></p>
+			</div>
 
             <div id="recentsmain">
                 <div class="top">
                     <h2>Recent Plays</h2>
                     <button id="close-recents"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
                 </div>
-                <div class="bottom">
-                    <div id="recents"></div>
-                </div>
+                <div class="bottom" id="recents"></div>
             </div>
 		</div>
 		

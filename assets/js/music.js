@@ -104,45 +104,61 @@ export async function fetchLyrics(artist, track, tooltipElement) {
     return data.enhancedLyrics.map(lyric => (lyric.text || "No Lyrics") + "<br>").join("");
 }
 
+export async function fetchPreview(artist, track, previewEl) {
+    if (!track) return "";
+
+    const url = `https://api.vmohammad.dev/apple/search?q=${track} ${artist}`;
+
+    const response = await fetch(url);
+    if (!response || response.status !== 200) return;
+
+    const data = await response.json();
+    console.log(data)
+
+    previewEl.src = data.results.song.data[0].attributes.previews[0].url;
+}
+
 export async function songInfo(artist, track, targetElement) {
 	if (!track) return "No Lyrics"
 
-    const url = artist
-        ? `https://api.vmohammad.dev/lyrics?artist=${artist}&track=${track}`
-        : `https://api.vmohammad.dev/lyrics?track=${track}`;
+	const url = artist
+		? `https://api.vmohammad.dev/lyrics?artist=${artist}&track=${track}`
+		: `https://api.vmohammad.dev/lyrics?track=${track}`
 
-	const response = await fetch(url);
-	if (!response || response.status !== 200) return;
 
-	const data = await response.json();
+	const response = await fetch(url)
+	if (!response || response.status !== 200) return
+
+	const data = await response.json()
 	if (data.code === 404) {
-		return targetElement = ``;
-	} else {
-		return targetElement.innerHTML = `
-			<div class="danceability">
-				<span style="color: var(--flamingo)">Danceability</span>
-				<div class="danceabilitytext">${data.audioFeatures.danceability.toFixed(2)}</div>
-			</div>
-			<div class="energy">
-				<span style="color: var(--mauve)">Energy</span>
-				<div class="energytext">${data.audioFeatures.energy.toFixed(2)}</div>
-			</div>
-			<div class="speechiness">
-				<span style="color: var(--maroon)">Speechiness</span>
-				<div class="speechinesstext">${data.audioFeatures.speechiness.toFixed(2)}</div>
-			</div>
-			<div class="acousticness">
-				<span style="color: var(--sapphire)">Acousticness</span>
-				<div class="acousticnesstext">${data.audioFeatures.acousticness.toFixed(2)}</div>
-			</div>
-			<div class="instrumentalness">
-				<span style="color: var(--lavender)">Instrumentalness</span>
-				<div class="instrumentalnesstext">${data.audioFeatures.instrumentalness.toFixed(2)}</div>
-			</div>
-			<div class="liveness">
-				<span style="color: var(--green)">Liveness</span>
-				<div class="livenesstext">${data.audioFeatures.liveness.toFixed(2)}</div>
-			</div>
-		`
+		targetElement.innerHTML = ``
+		return
 	}
+
+	targetElement.innerHTML = `
+		<div class="danceability">
+			<span style="color: var(--flamingo)">Danceability</span>
+			<div class="danceabilitytext">${data.audioFeatures.danceability.toFixed(2)}</div>
+		</div>
+		<div class="energy">
+			<span style="color: var(--mauve)">Energy</span>
+			<div class="energytext">${data.audioFeatures.energy.toFixed(2)}</div>
+		</div>
+		<div class="speechiness">
+			<span style="color: var(--maroon)">Speechiness</span>
+			<div class="speechinesstext">${data.audioFeatures.speechiness.toFixed(2)}</div>
+		</div>
+		<div class="acousticness">
+			<span style="color: var(--sapphire)">Acousticness</span>
+			<div class="acousticnesstext">${data.audioFeatures.acousticness.toFixed(2)}</div>
+		</div>
+		<div class="instrumentalness">
+			<span style="color: var(--lavender)">Instrumentalness</span>
+			<div class="instrumentalnesstext">${data.audioFeatures.instrumentalness.toFixed(2)}</div>
+		</div>
+		<div class="liveness">
+			<span style="color: var(--green)">Liveness</span>
+			<div class="livenesstext">${data.audioFeatures.liveness.toFixed(2)}</div>
+		</div>
+	`
 }
