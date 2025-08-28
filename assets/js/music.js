@@ -13,6 +13,10 @@ const url = `https://ws.audioscrobbler.com/2.0/?${
     params.toString()
 }`;
 
+export function clean(str) {
+   return str.replace(/$.*?$/g, "").trim(); 
+}
+
 export async function fetchSong() {
 	const response = await fetch(url);
 	if (response.status !== 200) return;
@@ -46,7 +50,7 @@ export async function fetchRecents(targetElement) {
             </div>
             <div class="right-recent">
                 <strong>${track.artist["#text"]}</strong>
-                <div class="track-name">${track.name}</div>
+                <div class="track-name">${clean(track.name)}</div>
                 <div>${track.album["#text"]}</div>
                 <div style="font-size: 12px; color: var(--green)">${track["@attr"]?.nowplaying === "true" ? "Now Playing" : ""}</div>
             </div>
@@ -59,17 +63,17 @@ export async function fetchRecents(targetElement) {
 
 export async function populate(artistElement, songElement, coverElement, scrobblesElement) {
     fetch(url).then(response => response.json()).then(data => {
-        const track = data ?. recenttracks ?. track ?. [0];
+        const track = data?.recenttracks?.track?.[0];
         if (!track) 
             return;
 
         const artist = track.artist["#text"];
         const name = track.name;
-        const image = track.image.find(img => img.size === "extralarge") ?. ["#text"] || "";
+        const image = track.image.find(img => img.size === "extralarge")?.["#text"] || "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg";
 
         artistElement.innerText = artist;
         artistElement.href = `https://duckduckgo.com/?q=${artist}`;
-        songElement.innerText = name;
+        songElement.innerText = clean(name);
         songElement.href = track.url;
         coverElement.src = !image ? "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg" : image;
 		scrobblesElement.innerText = `${data?.recenttracks?.["@attr"]?.total} scrobbles`;
@@ -104,7 +108,7 @@ export async function songInfo(artist, track, targetElement) {
 	if (!track) return "No Lyrics"
 
     const url = artist
-        ? `https://api.vmohammad.dev/lyrics?artist=${artist}&track=${track}`
+        ? `https://api.vmohammad.dev/lyrics?artist=${artist}&track=${clean(track)}`
         : `https://api.vmohammad.dev/lyrics?track=${track}`;
 
 	const response = await fetch(url);
