@@ -69,11 +69,11 @@ export async function populate(artistElement, songElement, coverElement, scrobbl
 
         const artist = track.artist["#text"];
         const name = track.name;
-        const image = track.image.find(img => img.size === "extralarge")?.["#text"] || "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg";
+        const image = track.image.find(img => img.size === "extralarge")?.["#text"] || "";
 
         artistElement.innerText = artist;
         artistElement.href = `https://duckduckgo.com/?q=${artist}`;
-        songElement.innerText = clean(name);
+        songElement.innerText = name;
         songElement.href = track.url;
         coverElement.src = !image ? "https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg" : image;
 		scrobblesElement.innerText = `${data?.recenttracks?.["@attr"]?.total} scrobbles`;
@@ -108,7 +108,7 @@ export async function songInfo(artist, track, targetElement) {
 	if (!track) return "No Lyrics"
 
     const url = artist
-        ? `https://api.vmohammad.dev/lyrics?artist=${artist}&track=${clean(track)}`
+        ? `https://api.vmohammad.dev/lyrics?artist=${artist}&track=${track}`
         : `https://api.vmohammad.dev/lyrics?track=${track}`;
 
 	const response = await fetch(url);
