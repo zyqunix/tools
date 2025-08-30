@@ -1,7 +1,7 @@
 const options = document.getElementById("options");
 const amount = document.getElementById("amount");
 const fetchBtn = document.getElementById("fetch");
-const output = document.getElementById("output")
+const output = document.getElementById("output");
 
 fetchBtn.addEventListener("click", async function() {
     await fetchData(options.value, amount.value);
@@ -9,13 +9,16 @@ fetchBtn.addEventListener("click", async function() {
 
 async function fetchData(type, amount) {
     let body;
-    if (type === 'layer2') {
-        body = JSON.stringify({
-            query: `{ layer(amount: ${amount}, minDim: 0, maxDim: 200) { texts } }`
-        });
+
+    if (type === "layer2") {
+        const layers = Array.from({length: amount}, (_, i) => 
+            `l${i}: layer(amount: 1, minDim: 0, maxDim: 200){texts}`
+        );
+        body = JSON.stringify({ query: `{${layers.join(" ")}}` });
     } else {
         body = JSON.stringify({ query: `{${type}(amount: ${amount})}` });
     }
+
     const res = await fetch("https://api.yyyyyyy.info/", {
         method: "POST",
         headers: {
@@ -27,16 +30,17 @@ async function fetchData(type, amount) {
         body
     });
     const data = await res.json();
+    console.log(data);
 
     output.innerHTML = "";
 
     if (type === "layer2") {
-        console.log(data);
-        const texts = data.data.layer.texts;
-        texts.forEach(text => {
-            const p = document.createElement("p");
-            p.innerHTML = text;
-            output.appendChild(p);
+        Object.values(data.data).forEach(layer => {
+            layer.texts.forEach(text => {
+                const p = document.createElement("p");
+                p.innerHTML = text;
+                output.appendChild(p);
+            });
         });
     } else {
         const list = data.data[type];
