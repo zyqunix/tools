@@ -12,11 +12,11 @@ async function fetchData(type, amount) {
 
     if (type === "layer2") {
         const layers = Array.from({length: amount}, (_, i) => 
-            `l${i}: layer(amount: 1, minDim: 0, maxDim: 200){texts}`
+            `l${i}: layer(amount: 1, minDim: 0, maxDim: 9999){texts}`
         );
         body = JSON.stringify({ query: `{${layers.join(" ")}}` });
     } else {
-        body = JSON.stringify({ query: `{${type}(amount: ${amount})}` });
+        body = JSON.stringify({ query: `{${type}(amount: ${amount}, minDim: 0, maxDim: 9999)}` });
     }
 
     const res = await fetch("https://api.yyyyyyy.info/", {
