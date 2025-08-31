@@ -36,7 +36,7 @@ export async function populateLeetify(target) {
     console.log(data);
 
     target.innerHTML = `
-        <a href="https://steamcommunity.com/id/${data.steam64_id}"><div class="h2" style="margin-bottom: 8px;">${data.name}</div></a>
+        <a href="https://steamcommunity.com/profiles/${data.steam64_id}"><div class="h2" style="margin-bottom: 8px;">${data.name}</div></a>
         <table style="margin:auto; text-align:left; width: 100%; border:2px solid var(--overlay0); border-radius: 8px">
             <tr>
                 <th class="table-header" colspan="2">Ranks</th>
