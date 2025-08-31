@@ -1,6 +1,6 @@
 import * as main from "./index.js";
 const API = "https://api-public.cs-prod.leetify.com/v3/profile?steam64_id=";
-
+// bru
 const ranks = {
     1: "Silver 1",
     2: "Silver 2",
