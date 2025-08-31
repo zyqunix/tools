@@ -1001,4 +1001,18 @@ button {
 #playpause:hover {
     transform: scale(1.2);
 }
-/* */
+
+td, th {
+    padding: 6px;
+    transition: 0.2s;
+    color: var(--white);
+    border-radius: 4px;
+}
+
+tr:hover, th:hover {
+    backdrop-filter: brightness(1.1);
+}
+
+.table-header {
+    font-weight: bold;
+}

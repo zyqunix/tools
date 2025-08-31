@@ -3,11 +3,17 @@ import * as github from "./github.js";
 import * as reviewdb from "./reviewdb.js";
 import * as badgeapi from "./badgesapi.js";
 import * as music from "./music.js";
+import * as cs from "./cs.js";
+
 
 const timeElem = document.getElementById('time');
 const timezone = 'Europe/Berlin';
 
 export const user = "1201415921802170388";
+
+export function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 function getTime(timezone) {
     const now = new Date();
@@ -425,3 +431,9 @@ function togglePlaying(el, btn) {
 document.getElementById("playpause").addEventListener("click", function() {
     togglePlaying(document.getElementById("preview"), this);
 });
+
+cs.populateLeetify(document.getElementById("cs2-full"));
+
+if (document.referrer.includes("steampowered.com")) {
+    window.location.href = "#CS Stats";
+}
