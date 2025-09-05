@@ -15,6 +15,8 @@ async function fetchData(type, amount) {
             `l${i}: layer(amount: 1, minDim: 0, maxDim: 9999){texts}`
         );
         body = JSON.stringify({ query: `{${layers.join(" ")}}` });
+    } else if (type === "bg2") {
+        body = JSON.stringify({query: `{ layer2: layer(amount: ${amount}, minDim: 0, maxDim: 10000) { images { key, width, height} } }`})
     } else {
         body = JSON.stringify({ query: `{${type}(amount: ${amount}, minDim: 0, maxDim: 9999)}` });
     }

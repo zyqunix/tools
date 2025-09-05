@@ -1006,6 +1006,10 @@ td, th {
     padding: 6px;
     transition: 0.2s;
     color: var(--white);
+    border-radius: 4px !important;
+}
+
+td.tooltip {
     border-radius: 4px;
 }
 

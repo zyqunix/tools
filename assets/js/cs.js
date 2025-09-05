@@ -102,7 +102,7 @@ export async function populateLeetify(target) {
             </tr>
             <tr>
                 <td>Win Rate</td>
-                <td>${data.winrate.toFixed(2) * 100}%</td>
+                <td>${(data.winrate * 100).toFixed(2)}%</td>
             </tr>
             <tr>
                 <td>Total Matches</td>
@@ -145,11 +145,12 @@ export async function populateLeetify(target) {
             ${data.recent_matches.slice(0, 5).map(match => `
                 <tr style="background-color: ${match.outcome === 'win' ? '#4dc49e' : match.outcome === 'loss' ? '#f77c60' : 'gray'}">
                     <td><a href="https://leetify.com/app/match-details/${match.id}" target="_blank">${match.map_name}</a></td>
-                    <td>${ranks[match.rank] || "Unranked"}</td>
+                    <td>${match.data_source === 'matchmaking_wingman' ? ranks[match.rank] : match.rank || "Unranked"}</td>
                     <td class="tooltip" data-tooltip="${match.score[0]}:${match.score[1]}">${main.capitalize(match.outcome)}</td>
                 </tr>
             `).join('')}
         </table>
+        <p>${data.recent_matches.filter(m => m.outcome === "win").length} Wins / 100 Games</p>
         <br>
         <details>
             <summary>Show all matches (${data.recent_matches.length})</summary>
@@ -158,12 +159,16 @@ export async function populateLeetify(target) {
                     <td>Map Name</td>
                     <td>Rank</td>
                     <td>Outcome</td>
+                    <td>Date</td>
+                    <td>Leetify Rat.</td>
                 </tr>
                 ${data.recent_matches.map(match => `
                     <tr style="background-color: ${match.outcome === 'win' ? '#4dc49e' : match.outcome === 'loss' ? '#f77c60' : 'gray'}; backdrop-filter: opacity(0.3)">
                         <td><a href="https://leetify.com/app/match-details/${match.id}" target="_blank">${match.map_name}</a></td>
-                        <td>${ranks[match.rank] || "Unranked"}</td>
+                        <td>${match.data_source === 'matchmaking_wingman' ? ranks[match.rank] : match.rank || "Unranked"}</td>
                         <td class="tooltip" data-tooltip="${match.score[0]}:${match.score[1]}">${main.capitalize(match.outcome)}</td>
+                        <td>${new Date(match.finished_at).toLocaleString()}</td>
+                        <td>${match.leetify_rating}</td>
                     </tr>
                 `).join('')}
             </table>
