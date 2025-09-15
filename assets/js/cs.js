@@ -143,7 +143,7 @@ export async function populateLeetify(target) {
                 <td>Outcome</td>
             </tr>
             ${data.recent_matches.slice(0, 5).map(match => `
-                <tr style="background-color: ${match.outcome === 'win' ? '#4dc49e' : match.outcome === 'loss' ? '#f77c60' : 'gray'}">
+                <tr style="background-color: ${match.outcome === 'win' ? 'var(--green)' : match.outcome === 'loss' ? 'var(--red)' : 'var(--subtext0)'}">
                     <td><a href="https://leetify.com/app/match-details/${match.id}" target="_blank">${match.map_name}</a></td>
                     <td>${match.data_source === 'matchmaking_wingman' ? ranks[match.rank] : match.rank || "Unranked"}</td>
                     <td class="tooltip" data-tooltip="${match.score[0]}:${match.score[1]}">${main.capitalize(match.outcome)}</td>
@@ -163,7 +163,7 @@ export async function populateLeetify(target) {
                     <td>Leetify Rat.</td>
                 </tr>
                 ${data.recent_matches.map(match => `
-                    <tr style="background-color: ${match.outcome === 'win' ? '#4dc49e' : match.outcome === 'loss' ? '#f77c60' : 'gray'}; backdrop-filter: opacity(0.3)">
+                    <tr style="background-color: ${match.outcome === 'win' ? 'var(--green)' : match.outcome === 'loss' ? 'var(--red)' : 'var(--subtext0)'}"; backdrop-filter: opacity(0.3)">
                         <td><a href="https://leetify.com/app/match-details/${match.id}" target="_blank">${match.map_name}</a></td>
                         <td>${match.data_source === 'matchmaking_wingman' ? ranks[match.rank] : match.rank || "Unranked"}</td>
                         <td class="tooltip" data-tooltip="${match.score[0]}:${match.score[1]}">${main.capitalize(match.outcome)}</td>

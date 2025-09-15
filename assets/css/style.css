@@ -1024,3 +1024,7 @@ tr:hover, th:hover {
 tr td:first-child {
     font-weight: bold
 }
+
+tr a:hover {
+    color: var(--text);
+}
