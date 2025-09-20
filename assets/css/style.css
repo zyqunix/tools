@@ -867,17 +867,26 @@ br {
 }
 
 #recent-plays {
-    border: 2px solid var(--overlay2);
-    border-radius: 4px;
+    border-radius: 8px;
     color: var(--white);
-    background-color: var(--overlay0);
+    background: linear-gradient(270deg, var(--mauve), var(--sapphire), var(--mauve));
+    background-size: 200% 200%;
     cursor: pointer;
-    padding: 3px;
-    margin: 3px;
+    padding: 6px 10px;
+    margin: 5px;
+    user-select: none;
+    animation: bg 6s ease-in-out infinite;
+    transition: 0.04s ease-in;
 }
 
 #recent-plays:hover {
-    background-color: var(--overlay1);
+    transform: scale(1.04);
+}
+
+@keyframes bg {
+    0%   { background-position: 0% 50% }
+    50%  { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
 }
 
 #scrobbles {
@@ -1028,3 +1037,5 @@ tr td:first-child {
 tr a:hover {
     color: var(--text);
 }
+
+

@@ -5,7 +5,6 @@ import * as badgeapi from "./badgesapi.js";
 import * as music from "./music.js";
 import * as cs from "./cs.js";
 
-
 const timeElem = document.getElementById('time');
 const timezone = 'Europe/Berlin';
 
