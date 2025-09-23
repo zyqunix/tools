@@ -4,6 +4,7 @@ import * as reviewdb from "./reviewdb.js";
 import * as badgeapi from "./badgesapi.js";
 import * as music from "./music.js";
 import * as cs from "./cs.js";
+import * as mm from "./my_music.js";
 
 const timeElem = document.getElementById('time');
 const timezone = 'Europe/Berlin';
@@ -414,12 +415,12 @@ document.getElementById("close-recents").addEventListener("click", () => {
     closeOverlay("recents", "recentsmain", "none");
 })
 
-function togglePlaying(el, btn) {
-  if (el.paused) {
-      el.play();
+function togglePlaying(audio, btn) {
+  if (audio.paused) {
+      audio.play();
       btn.innerHTML = `<svg viewBox="0 0 16 16" class="bi bi-pause-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: white"><path fill="white" d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/></svg>`;
   } else {
-      el.pause();
+      audio.pause();
       btn.innerHTML = `<svg viewBox="0 0 16 16" class="bi bi-play-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: white"><path fill="white" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>`;
   }
 }
@@ -433,3 +434,9 @@ cs.populateLeetify(document.getElementById("cs2-full"));
 if (document.referrer.includes("steampowered.com")) {
     window.location.href = "#CS Stats";
 }
+
+mm.populateMyMusic(mm.songs, document.getElementById("music-container"));
+
+document.querySelector("#playpause-thegirlfromhamina").onclick = () => togglePlaying(document.querySelector("#thegirlfromhamina"), document.querySelector("#playpause-thegirlfromhamina"));
+document.querySelector("#playpause-circumbinaryearth").onclick = () => togglePlaying(document.querySelector("#circumbinaryearth"), document.querySelector("#playpause-circumbinaryearth"));
+document.querySelector("#playpause-thehourwasnow").onclick = () => togglePlaying(document.querySelector("#thehourwasnow"), document.querySelector("#playpause-thehourwasnow"));

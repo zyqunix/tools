@@ -383,7 +383,8 @@ a[class^="software-item tooltip"]::after {
 
 .instagram-contact > span,
 .twitter-contact > span,
-.youtube-contact > span {
+.youtube-contact > span,
+.soundcloud-contact > span {
 	filter: invert(1);	
 }
 
@@ -405,6 +406,14 @@ a[class^="software-item tooltip"]::after {
 
 .youtube-contact:hover {
     background-color: #eba0ac;
+}
+
+.soundcloud-contact {
+    background-color: var(--peach);
+}
+
+.soundcloud-contact:hover {
+    background-color: var(--yellow);
 }
 
 @media (max-width: 768px) {
@@ -1038,4 +1047,9 @@ tr a:hover {
     color: var(--text);
 }
 
-
+#music-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
