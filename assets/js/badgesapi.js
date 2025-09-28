@@ -1,7 +1,6 @@
 import { user } from "./index.js";
 const apiUrl = "https://badges.atums.world";
 
-
 export async function getBadges(user) {
     const response = await fetch(`${apiUrl}/${user}`);
     if (!response.ok) throw new Error(`Error fetching reviews: ${response.status} ${response.statusText}`);
