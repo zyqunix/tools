@@ -5,6 +5,7 @@ import * as badgeapi from "./badgesapi.js";
 import * as music from "./music.js";
 import * as cs from "./cs.js";
 import * as mm from "./my_music.js";
+import * as projects from "./projects.js";
 
 const timeElem = document.getElementById('time');
 const timezone = 'Europe/Berlin';
@@ -297,11 +298,6 @@ async function updateSong() {
     music.songInfo(song.artist, song.name, document.getElementById("songinfo"));
     document.getElementById("lyrics").innerHTML = lyrics || "No Lyrics";
     music.fetchRecents(document.getElementById("recents"));
-
-    music.fetchPreview(song.name, song.artist, document.getElementById("preview"));
-    document.getElementById("preview-cover").src = song?.image || "";
-    document.getElementById("preview-title").innerText = song?.name;
-    document.getElementById("preview-artist").innerText = song?.artist;
 }
 
 updateSong();
@@ -363,35 +359,6 @@ setInterval(() => {
 
 typeWriter();
 
-const weather = await fetchWeather();
-weather.toLowerCase();
-
-let deco = document.createElement("script");
-
-if (weather.includes("rain")) {
-	deco.src = "/assets/js/rain.js";
-	document.body.appendChild(deco);
-
-} else if (weather.includes("snow")) {
-	deco.src = "/assets/js/snow.js";
-	document.body.appendChild(deco);
-
-} 
-
-let decoShowing = true;
-
-function toggleDeco() {
-	decoShowing = !decoShowing;
-
-	const decoElem = document.querySelector("#deco");
-	decoElem.style.display = `${decoShowing ? "block" : "none"}`;
-
-	const btn = document.querySelector("#show-deco")
-	btn.innerHTML = `${decoShowing ? "Hide Decoration" : "Show Decoration"}`
-}
-
-document.querySelector("#show-deco").addEventListener("click", toggleDeco);
-
 export function closeOverlay(popupId, overlayId, display) {
     document.getElementById(`${overlayId}`).style.opacity = '0';
     document.getElementById(`${overlayId}`).style.display = display;
@@ -425,10 +392,6 @@ function togglePlaying(audio, btn) {
   }
 }
 
-document.getElementById("playpause").addEventListener("click", function() {
-    togglePlaying(document.getElementById("preview"), this);
-});
-
 cs.populateLeetify(document.getElementById("cs2-full"));
 
 if (document.referrer.includes("steampowered.com")) {
@@ -440,3 +403,6 @@ mm.populateMyMusic(mm.songs, document.getElementById("music-container"));
 document.querySelector("#playpause-thegirlfromhamina").onclick = () => togglePlaying(document.querySelector("#thegirlfromhamina"), document.querySelector("#playpause-thegirlfromhamina"));
 document.querySelector("#playpause-circumbinaryearth").onclick = () => togglePlaying(document.querySelector("#circumbinaryearth"), document.querySelector("#playpause-circumbinaryearth"));
 document.querySelector("#playpause-thehourwasnow").onclick = () => togglePlaying(document.querySelector("#thehourwasnow"), document.querySelector("#playpause-thehourwasnow"));
+
+
+projects.populateProjects(document.getElementById("projects-main"))

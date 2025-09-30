@@ -74,11 +74,12 @@ strong {
     width: 600px !important;
     text-align: left;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: border 0.1s;
+    transition: all 0.1s;
 }
 
 .cards:hover {
     border: 2px solid var(--surface2);
+    box-shadow: 0 4px 10px rgba(12, 12, 12, 0.3);
 }
 
 footer {
@@ -261,16 +262,15 @@ a[class^="software-item tooltip"]::after {
 
 #skills-div:not(#skills-div > h2) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
     margin: 20px auto 0 auto;
-    width: calc(100% - 40px);
     max-width: 600px;
 }
 
 .software:not(.software > h2) {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     width: 100%;
     max-width: 600px;
@@ -1052,4 +1052,31 @@ tr a:hover {
     justify-content: center;
     align-items: center;
     gap: 16px;
+}
+
+.contact-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#projects-main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    grid-template-columns: 2fr 2fr;
+}
+
+#projects-main > * {
+    color: var(--white) !important;
+    text-decoration: none !important;
+}
+
+#projects-main > a {
+    transition: 0.2s;
+}
+
+#projects-main > a:hover {
+    transform: scale(1.03);
 }

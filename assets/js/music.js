@@ -90,7 +90,7 @@ export async function fetchLyrics(artist, track, tooltipElement) {
         : `https://api.vmohammad.dev/lyrics?track=${track}`;
 
     const response = await fetch(url);
-    if (!response.ok) return "No Lyrics";
+    if (response.status !== 200) return "No Lyrics";
 
     const data = await response.json();
     if (data.code === 404) return "No Lyrics";
