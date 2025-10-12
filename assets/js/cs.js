@@ -145,7 +145,7 @@ export async function populateLeetify(target) {
             ${data.recent_matches.slice(0, 5).map(match => `
                 <tr style="background-color: ${match.outcome === 'win' ? 'var(--green)' : match.outcome === 'loss' ? 'var(--red)' : 'var(--subtext0)'}">
                     <td><a href="https://leetify.com/app/match-details/${match.id}" target="_blank">${match.map_name}</a></td>
-                    <td>${match.data_source === 'matchmaking_wingman' ? ranks[match.rank] : match.rank || "Unranked"}</td>
+                    <td>${match.data_source === 'matchmaking_wingman' || match.data_source === "matchmaking" ? ranks[match.rank] : match.rank || "Unranked"}</td>
                     <td class="tooltip" data-tooltip="${match.score[0]}:${match.score[1]}">${main.capitalize(match.outcome)}</td>
                 </tr>
             `).join('')}
