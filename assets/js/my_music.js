@@ -2,17 +2,17 @@ export const songs = [
     {
         song: "the girl from hamina",
         src: "/assets/music/the-girl-from-hamina.flac",
-        img: "/assets/music/the-girl-from-hamina.jpg"
+        img: "https://i1.sndcdn.com/artworks-QZxlFaBJh6nNH5nZ-I2YzRA-t1080x1080.png"
     },
     {
         song: "circumbinary earth",
         src: "/assets/music/circumbinary-earth.flac",
-        img: "/assets/music/circumbinary-earth.jpg"
+        img: "https://i1.sndcdn.com/artworks-nyHypTmTTfi4EEuv-VYXOQA-t500x500.png"
     },
     {
         song: "the hour was now",
         src: "/assets/music/the-hour-was-now.flac",
-        img: "/assets/music/the-hour-was-now.jpg"
+        img: "https://i1.sndcdn.com/artworks-ARTB8351MR2hhPgY-7rFcYg-t500x500.jpg"
     }
 ]
 
