@@ -19,7 +19,7 @@ button:not(:disabled) {
     cursor: pointer;
 }
 
-button:disabled {
+button:disabled, input:disabled {
     filter: brightness(0.7);
 }
 
@@ -44,12 +44,128 @@ input, button:disabled {
 .game-main {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .game-main > * {
     margin: 4px;
 }
 
-#card:not(:hover) {
-    filter: blur(10px);
+.game-main:not(:hover) {
+    filter: blur(10px) brightness(0);
+}
+
+.cards > div {
+    margin: 8px;
+}
+
+@media (max-width: 768px) {
+
+    .cards {
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .cards > div {
+        margin: 6px;
+    }
+
+    .game-main > * {
+        margin: 3px;
+    }
+
+    button:not(:disabled),
+    input,
+    button:disabled {
+        padding: 10px 12px;
+        margin: 3px;
+        font-size: 16px;
+    }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards {
+        max-width: 80%;
+    }
+
+
+    h1 {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+
+    .cards {
+        text-align: left;
+    }
+
+    .cards > div {
+        margin: 4px;
+    }
+
+    .game-main {
+        padding: 10px;
+    }
+
+    .game-main > * {
+        margin: 2px;
+        width: 100%;
+    }
+
+    button:not(:disabled),
+    input,
+    button:disabled {
+        padding: 12px;
+        margin: 2px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button:hover:not(:disabled) {
+        background-color: var(--overlay0);
+        border-color: var(--overlay1);
+    }
+
+    .game-main:not(:hover) {
+        filter: blur(5px) brightness(0);
+    }
+}
+
+@media (max-width: 320px) {
+    .cards {
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    button:not(:disabled),
+    input,
+    button:disabled {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    
+    .game-main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .game-main > * {
+        flex: 0 1 auto;
+        width: auto;
+    }
 }

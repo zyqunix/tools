@@ -11,18 +11,20 @@
 	<body>
 		<h1>Clash Royale Imposter</h1>
 		<div class="cards shadow">
-			<input id="input" placeholder="Enter Players">
-            <button type="button" id="submit">Player Name</button>
-            <br>
+			<input id="input" placeholder="Player Name">
+            <button type="button" id="submit">Add Player</button>
+			<br>
+			<div id="addedplayer"></div>
+			<button type="submit" id="start">Start</button>
+			<br>
+			<div id="random-player"></div>
             <div class="game-main">
-            	<button type="submit" id="start">Start</button>
-                <span id="random-player"></span>
 				<img id="card-img" width="36px">
-                <span id="card"></span>
-                <span id="hint"></span>
-				<button id="next-player" disabled>Next Player</button>
-				<span id="imposter"></span>
+                <div id="card"></div>
+                <div id="hint"></div>
+				<div id="imposter"></div>
             </div>
+			<button id="next-player" disabled>Next Player</button>
             <br>
             <button type="button" disabled id="giveup">Give Up</button>
 		</div>
