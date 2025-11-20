@@ -1,0 +1,55 @@
+@import url(/global.css);
+
+.cards {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+button:not(:disabled) {
+    background-color: var(--overlay0);
+    color: var(--white);
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid var(--overlay1);
+    margin: 2px;
+    cursor: pointer;
+}
+
+button:disabled {
+    filter: brightness(0.7);
+}
+
+input::placeholder {
+    color: var(--text);
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--overlay1);
+    border-color: var(--overlay2);
+}
+
+input, button:disabled {
+    background-color: var(--overlay0);
+    color: var(--white);
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid var(--overlay1);
+    margin: 2px;
+}
+
+.game-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-main > * {
+    margin: 4px;
+}
+
+#card:not(:hover) {
+    filter: blur(10px);
+}

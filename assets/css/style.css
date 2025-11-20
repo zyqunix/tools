@@ -1080,3 +1080,7 @@ tr a:hover {
 #projects-main > a:hover {
     transform: scale(1.03);
 }
+
+thead > tr > th{
+    border-radius: 0 !important;
+}
