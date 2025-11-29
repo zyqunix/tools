@@ -12,7 +12,8 @@ const cardImg = document.getElementById("card-img")
 
 let nextPlayerHandler, giveUpHandler;
 
-let players = ["player 1", "player 2", "player 3", "player 4", "player 5", "player 6"];
+//let players = ["player 1", "player 2", "player 3", "player 4", "player 5", "player 6"];
+let players = [];
 
 submit.addEventListener("click", function() {
     console.log("players:");
