@@ -9,6 +9,14 @@ h1 {
     margin-bottom: 30px;
 }
 
+summary {
+    cursor: pointer;
+}
+
+br {
+    user-select: none;
+}
+
 button:not(:disabled) {
     background-color: var(--overlay0);
     color: var(--white);

@@ -12,20 +12,24 @@ const cardImg = document.getElementById("card-img")
 
 let nextPlayerHandler, giveUpHandler;
 
-let players = [];
+let players = ["player 1", "player 2", "player 3", "player 4", "player 5", "player 6"];
 
 submit.addEventListener("click", function() {
     console.log("players:");
     players.push(player.value);
     players.forEach(player_name => {
         console.log(`- ${player_name}`);
+        document.getElementById("players-summary").innerHTML += `${player_name}<br>`;
     })
     if (player.value != "") {
         document.getElementById("addedplayer").innerText = `${player.value} added`;
     } else {
         document.getElementById("addedplayer").innerText = `Add a player name!`;
     }
+    
+
     player.value = "";
+    
 })
 
 start.addEventListener("click", function() {
@@ -62,7 +66,7 @@ start.addEventListener("click", function() {
         if (current === imposter) {
             cardImg.src = "";
             card.innerText = `Imposter: ${cards[randomKey]["type"]}`;
-            cardImg.src = "https://images.halloweencostumes.com.au/products/88551/2-1-310707/adult-jinxed-jester-clown-costume-alt-2.jpg";
+            cardImg.src = "./img/imposter.jpg";
         } else {
             card.innerText = cards[randomKey]["name"];
             cardImg.src = `https://clash-royale-wordle.com${cards[randomKey]["img"]}`;
@@ -70,7 +74,7 @@ start.addEventListener("click", function() {
         
         playersViewed++;
         
-        if (playersViewed >= players.length) {
+        if (playersViewed == players.length + 1) {
             nextPlayer.disabled = true;
             cardImg.src = "";
             randPlayerEl.style.display = "none";
@@ -89,3 +93,4 @@ start.addEventListener("click", function() {
     nextPlayer.addEventListener("click", nextPlayerHandler);
     giveUp.addEventListener("click", giveup);
 });
+
