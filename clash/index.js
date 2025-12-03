@@ -18,10 +18,8 @@ let players = [];
 submit.addEventListener("click", function() {
     console.log("players:");
     players.push(player.value);
-    players.forEach(player_name => {
-        console.log(`- ${player_name}`);
-        document.getElementById("players-summary").innerHTML += `${player_name}<br>`;
-    })
+    document.getElementById("players-summary").innerHTML += `${player.value}<br>`;
+
     if (player.value != "") {
         document.getElementById("addedplayer").innerText = `${player.value} added`;
     } else {
@@ -67,7 +65,7 @@ start.addEventListener("click", function() {
         if (current === imposter) {
             cardImg.src = "";
             card.innerText = `Imposter: ${cards[randomKey]["type"]}`;
-            cardImg.src = "./img/imposter.jpg";
+            cardImg.src = `https://clash-royale-wordle.com${cards[Object.keys(cards)[Math.floor(Math.random() * Object.keys(cards).length)]]["img"]}`;
         } else {
             card.innerText = cards[randomKey]["name"];
             cardImg.src = `https://clash-royale-wordle.com${cards[randomKey]["img"]}`;

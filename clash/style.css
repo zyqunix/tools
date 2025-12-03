@@ -144,6 +144,7 @@ input, button:disabled {
 
     .game-main:not(:hover) {
         filter: blur(5px) brightness(0);
+        background: var(--overlay0);
     }
 }
 
