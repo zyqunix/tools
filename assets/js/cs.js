@@ -37,7 +37,8 @@ export async function populateLeetify(target) {
 
     target.innerHTML = `
         <a href="https://steamcommunity.com/profiles/${data.steam64_id}"><div class="h2" style="margin-bottom: 8px;">${data.name}</div></a>
-        <table style="margin:auto; text-align:left; width: 100%; border:2px solid var(--overlay0); border-radius: 8px">
+        <div style="max-height: 400px; overflow-y: auto; border: 2px solid var(--overlay0); border-radius: 8px;">
+        <table style="margin:auto; text-align:left; width: 100%;">
             <tr>
                 <th class="table-header" colspan="2">Ranks</th>
             </tr>
@@ -129,7 +130,7 @@ export async function populateLeetify(target) {
                 <td>${data.stats.preaim.toFixed(2)}°</td>
             </tr>
         </table>
-        
+        </div>
 
         <br>
         <br>
